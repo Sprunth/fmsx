@@ -1,7 +1,7 @@
 ==Frequently Asked Questions for FM11SX==
 
 
-*Q)* What is fm10sx?
+*Q)* What is FM11SX?
 
 *A)* It is a Mac OS X "in game" editor and scout for the game Football Manager 2011.  PLEASE NOTE: The program is currently in beta and some functionality is not yet complete.
 
