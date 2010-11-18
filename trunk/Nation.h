@@ -88,7 +88,7 @@
 		*u21DefShortlist, *u21MidShortlist, *u21FwShortlist, *u19GkShortlist, *u19DefShortlist, *u19MidShortlist, 
 		*u19FwShortlist, *transferInfos, *bannedPlayers, *futureRegenPlayers, *futureRegenStaff, *famousPlayers,
 		*spokenLanguages, *transferPreferences, *infos, *unknowns1, *unknowns2, *unknowns3, *unknowns4, *unknowns5,
-		*agreements;
+		*agreements, *agents;
 }
 
 @property(readwrite,assign) char databaseClass, wageBudget, styleOfFootball, stateOfDevelopment, gameImportance, leagueStandard,
@@ -107,7 +107,7 @@ continentID, regionID, capitalID, rowID, UID, length, width, area, population;
 @property(readwrite,assign) TeamContainer *teamContainer;
 @property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
 @property(readwrite,copy) NSMutableArray *rankingPoints, *rankingMatches, *coefficients, *humanPlayerPool, *mainSquadGkShortlist,
-*mainSquadDefShortlist, *mainSquadMidShortlist, *mainSquadFwShortlist, *u21GkShortlist, *agreements,
+*mainSquadDefShortlist, *mainSquadMidShortlist, *mainSquadFwShortlist, *u21GkShortlist, *agreements, *agents,
 *u21DefShortlist, *u21MidShortlist, *u21FwShortlist, *u19GkShortlist, *u19DefShortlist, *u19MidShortlist, 
 *u19FwShortlist, *transferInfos, *bannedPlayers, *futureRegenPlayers, *futureRegenStaff, *famousPlayers,
 *spokenLanguages, *transferPreferences, *infos, *unknowns1, *unknowns2, *unknowns3, *unknowns4, *unknowns5;

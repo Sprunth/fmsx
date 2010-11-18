@@ -338,14 +338,14 @@
 	[object setBannedPlayers:tempArray];
 	[tempArray release];
 	
-	/**** DONE TO HERE ****/
-	
 	[data getBytes:&count range:NSMakeRange(offset, 4)]; offset += 4;
+	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<count;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	//	NSLog(@"%d",ibuffer);
-		//	[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
+		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
 	}
+	[object setAgents:tempArray];
+	[tempArray release];
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
@@ -465,10 +465,6 @@
 	
 	if (debug) { NSLog(@"at new things at %d",offset); }
 	
-	// agrrements?
-	// 100 bytes for spain
-	// 12 bytes (all 0) for algeria
-	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	offset += (ibuffer*20);
 	
@@ -476,6 +472,7 @@
 	offset += (ibuffer*20);
 	
 	[data getBytes:&count range:NSMakeRange(offset, 4)]; offset += 4;
+	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<count;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
@@ -528,7 +525,6 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
 	
-	NSLog(@"%@",[[object teamContainer] name]);
 	if (debug) { NSLog(@"Nation %d (%@) at %d",[object rowID],[[object teamContainer] name], offset); }
 	
 	*byteOffset = offset;
