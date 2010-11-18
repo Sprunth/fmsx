@@ -230,6 +230,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -269,7 +271,6 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>FBFD90961092B2E60023F307</string>
 								<string>FBE75994126B73EC00A01209</string>
-								<string>FB9630DE109869F1007F25F6</string>
 								<string>FB85D9711094832E00C4639A</string>
 								<string>FB8221081092ACD7008B13CD</string>
 								<string>FB85D94C109480BF00C4639A</string>
@@ -286,13 +287,18 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>407</integer>
-									<integer>403</integer>
+									<integer>260</integer>
+									<integer>203</integer>
+									<integer>0</integer>
+								</array>
+								<array>
+									<integer>261</integer>
+									<integer>203</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 6644}, {232, 652}}</string>
+							<string>{{0, 3944}, {232, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -313,7 +319,7 @@
 							<real>210</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>86 167 997 711 0 0 1440 878 </string>
+						<string>52 167 997 711 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -324,14 +330,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Nation.h</string>
+								<string>TreatedNationsLoader.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -339,21 +343,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Nation.h</string>
+										<string>TreatedNationsLoader.h</string>
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>FB0C3FFA12954DC50086D410</string>
+										<string>FB0C4018129550A50086D410</string>
 										<key>history</key>
 										<array>
-											<string>FBF4CAA0129364D9002E5632</string>
-											<string>FBF4CAA1129364D9002E5632</string>
-											<string>FBF4CAA2129364D9002E5632</string>
-											<string>FBF4CAA3129364D9002E5632</string>
-											<string>FBF4CAA4129364D9002E5632</string>
-											<string>FBF4CAA5129364D9002E5632</string>
-											<string>FBF4CAA6129364D9002E5632</string>
-											<string>FBF4CAA7129364D9002E5632</string>
 											<string>FBF4CAA8129364D9002E5632</string>
 											<string>FBF4CAA9129364D9002E5632</string>
 											<string>FBF4CAAA129364D9002E5632</string>
@@ -362,10 +358,18 @@
 											<string>FB0C3FBC1294B6BB0086D410</string>
 											<string>FB0C3FE612954ABC0086D410</string>
 											<string>FB0C3FF112954CAD0086D410</string>
-											<string>FB0C3FF712954DC50086D410</string>
 											<string>FB0C3FF812954DC50086D410</string>
-											<string>FB0C3FF912954DC50086D410</string>
-											<string>FB0C3FE812954ABC0086D410</string>
+											<string>FB0C400D129550A50086D410</string>
+											<string>FB0C400E129550A50086D410</string>
+											<string>FB0C400F129550A50086D410</string>
+											<string>FB0C4010129550A50086D410</string>
+											<string>FB0C4011129550A50086D410</string>
+											<string>FB0C4012129550A50086D410</string>
+											<string>FB0C4013129550A50086D410</string>
+											<string>FB0C4014129550A50086D410</string>
+											<string>FB0C4015129550A50086D410</string>
+											<string>FB0C4016129550A50086D410</string>
+											<string>FB0C4017129550A50086D410</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -379,7 +383,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {743, 456}}</string>
 								<key>RubberWindowFrame</key>
-								<string>86 167 997 711 0 0 1440 878 </string>
+								<string>52 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -399,7 +403,7 @@
 								<key>Frame</key>
 								<string>{{0, 461}, {743, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>86 167 997 711 0 0 1440 878 </string>
+								<string>52 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -571,7 +575,7 @@
 		<string>/Users/littleblue/ソフト/FM11SX/FM11SX.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>86 167 997 711 0 0 1440 878 </string>
+	<string>52 167 997 711 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -587,12 +591,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>TreatedNationsLoader.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -609,8 +615,6 @@
 							<string>262pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

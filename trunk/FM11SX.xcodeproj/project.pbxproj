@@ -32,6 +32,8 @@
 		FB0C0A9510DE812B009BD9DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB0C0A9410DE812B009BD9DE /* Localizable.strings */; };
 		FB0C0AC810DE8251009BD9DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB0C0AC710DE8251009BD9DE /* InfoPlist.strings */; };
 		FB0C0B7610DF8E87009BD9DE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446980DB6B7EA00F9684A /* MainMenu.xib */; };
+		FB0C400012954F560086D410 /* TreatedNationsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0C3FFF12954F560086D410 /* TreatedNationsLoader.m */; };
+		FB0C4003129550290086D410 /* TreatedNations.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0C4002129550290086D410 /* TreatedNations.m */; };
 		FB17EDC910B6B5F4006B17CE /* StaffLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17EDC810B6B5F4006B17CE /* StaffLoader.m */; };
 		FB17EDCF10B6B676006B17CE /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17EDCE10B6B676006B17CE /* Staff.m */; };
 		FB17EDD210B6B7F1006B17CE /* ActualPersonLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB17EDD110B6B7F1006B17CE /* ActualPersonLoader.m */; };
@@ -480,6 +482,10 @@
 		FB0C0AC910DE8256009BD9DE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB0C0B0610DEB1DD009BD9DE /* pt-br */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "pt-br"; path = "pt-br.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FB0C0B3710DF2B36009BD9DE /* no */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = no; path = no.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB0C3FFE12954F560086D410 /* TreatedNationsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreatedNationsLoader.h; sourceTree = "<group>"; };
+		FB0C3FFF12954F560086D410 /* TreatedNationsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreatedNationsLoader.m; sourceTree = "<group>"; };
+		FB0C4001129550290086D410 /* TreatedNations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreatedNations.h; sourceTree = "<group>"; };
+		FB0C4002129550290086D410 /* TreatedNations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreatedNations.m; sourceTree = "<group>"; };
 		FB17EDC710B6B5F4006B17CE /* StaffLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaffLoader.h; sourceTree = "<group>"; };
 		FB17EDC810B6B5F4006B17CE /* StaffLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaffLoader.m; sourceTree = "<group>"; };
 		FB17EDCD10B6B676006B17CE /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Staff.h; sourceTree = "<group>"; };
@@ -1561,6 +1567,8 @@
 				FB59989910F60AB9008BDB2C /* Unknown6.m */,
 				FBA1962311FC85E7003B3F74 /* Unknown8.h */,
 				FBA1962411FC85E7003B3F74 /* Unknown8.m */,
+				FB0C4001129550290086D410 /* TreatedNations.h */,
+				FB0C4002129550290086D410 /* TreatedNations.m */,
 			);
 			name = "Sub-Entities";
 			sourceTree = "<group>";
@@ -1634,6 +1642,8 @@
 				FB59989C10F60AF4008BDB2C /* Unknown6Loader.m */,
 				FBA1964511FC863C003B3F74 /* Unknown8Loader.h */,
 				FBA1964611FC863C003B3F74 /* Unknown8Loader.m */,
+				FB0C3FFE12954F560086D410 /* TreatedNationsLoader.h */,
+				FB0C3FFF12954F560086D410 /* TreatedNationsLoader.m */,
 			);
 			name = "Sub-Entities";
 			sourceTree = "<group>";
@@ -2568,6 +2578,8 @@
 				FBF4C9B21292CF93002E5632 /* LocationDaysLoader.m in Sources */,
 				FBF4C9EA1292D1B7002E5632 /* ContractBonusLoader.m in Sources */,
 				FBF4C9ED1292D1C5002E5632 /* ContractBonus.m in Sources */,
+				FB0C400012954F560086D410 /* TreatedNationsLoader.m in Sources */,
+				FB0C4003129550290086D410 /* TreatedNations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

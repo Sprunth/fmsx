@@ -12,6 +12,7 @@
 #import "TransferInfoLoader.h"
 #import "TransferPreferenceLoader.h"
 #import "TeamContainerLoader.h"
+#import "TreatedNationsLoader.h"
 #import "SpokenLanguageLoader.h"
 #import "FutureRegenLoader.h"
 #import "FamousPlayerLoader.h"
@@ -466,10 +467,20 @@
 	if (debug) { NSLog(@"at new things at %d",offset); }
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	offset += (ibuffer*20);
+	tempArray = [[NSMutableArray alloc] init];
+	for (int i=0;i<ibuffer;i++) {
+		[tempArray addObject:[TreatedNationsLoader readFromData:data atOffset:&offset]];
+	}
+	[object setEUTreatedNations:tempArray];
+	[tempArray release];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	offset += (ibuffer*20);
+	tempArray = [[NSMutableArray alloc] init];
+	for (int i=0;i<ibuffer;i++) {
+		[tempArray addObject:[TreatedNationsLoader readFromData:data atOffset:&offset]];
+	}
+	[object setNonEUTreatedNations:tempArray];
+	[tempArray release];
 	
 	[data getBytes:&count range:NSMakeRange(offset, 4)]; offset += 4;
 	tempArray = [[NSMutableArray alloc] init];
@@ -525,6 +536,7 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
 	
+	debug = YES;
 	if (debug) { NSLog(@"Nation %d (%@) at %d",[object rowID],[[object teamContainer] name], offset); }
 	
 	*byteOffset = offset;
