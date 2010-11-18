@@ -737,7 +737,8 @@ teamsController, weatherController, currentDate, gameDBVersion, databaseChanges,
 	else if ([sender tag]==1) { URL = [NSURL URLWithString:@"http://www.sigames.com"]; }
 	else if ([sender tag]==2) { URL = [NSURL URLWithString:@"http://code.google.com/p/fm10sx/wiki/UserManual"]; }
 	else if ([sender tag]==3) { URL = [NSURL URLWithString:@"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=aoumi83%40gmail%2ecom&lc=GB&item_name=FM11SX&currency_code=GBP"]; }
-
+	else if ([sender tag]==4) { URL = [NSURL URLWithString:@"http://www.fmcenter.co.uk"]; }
+	
 	[[NSWorkspace sharedWorkspace] openURL:URL];
 }
 

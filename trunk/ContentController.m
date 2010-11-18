@@ -268,10 +268,10 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[cityTable tableColumns] objectEnumerator];
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-	oEnum = [[clubTable tableColumns] objectEnumerator];
-	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-	oEnum = [[competitionTable tableColumns] objectEnumerator];
-	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
+//	oEnum = [[clubTable tableColumns] objectEnumerator];
+//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
+//	oEnum = [[competitionTable tableColumns] objectEnumerator];
+//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[continentTable tableColumns] objectEnumerator];
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[currencyTable tableColumns] objectEnumerator];
@@ -284,8 +284,8 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[mediaTable tableColumns] objectEnumerator];
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-	oEnum = [[nationTable tableColumns] objectEnumerator];
-	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
+//	oEnum = [[nationTable tableColumns] objectEnumerator];
+//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[sponsorTable tableColumns] objectEnumerator];
 //	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 //	oEnum = [[stadiumTable tableColumns] objectEnumerator];
@@ -438,6 +438,21 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 //		[viewItem release];
 	}
 	else if (aTableView==clubTable) {
+	/*	[aCell setDrawsBackground:YES];
+		if ([[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] count] > 0) {
+			[aCell setBackgroundColor:[[[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] objectAtIndex:0] backgroundColour]];
+			if ([[[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] objectAtIndex:0] numberColour]==
+				[[[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] objectAtIndex:0] backgroundColour]) {
+				[aCell setTextColor:[[[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] objectAtIndex:0] foregroundColour]];
+			}
+			else {
+				[aCell setTextColor:[[[[[[clubController arrangedObjects] objectAtIndex:rowIndex] teamContainer] colours] objectAtIndex:0] numberColour]];
+			}
+		}
+		else {
+			[aCell setBackgroundColor:[NSColor whiteColor]];
+			[aCell setTextColor:[NSColor blackColor]];
+		}
 //		viewItem = [[NSMenuItem alloc] initWithTitle:@"View" action:@selector(performClubMenuAction:) keyEquivalent:@""];
 //		[viewItem setTarget:self];
 //		[viewItem setImage:[NSImage imageNamed:@"View"]];
@@ -460,8 +475,9 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 //		[viewItem setTarget:self];
 //		[viewItem setImage:[NSImage imageNamed:@"View"]];
 //		[rightClick addItem:viewItem];
+		[aCell setDrawsBackground:YES];
 		[aCell setBackgroundColor:[[[[competitionController arrangedObjects] objectAtIndex:rowIndex] colour] backgroundColour]];
-		[aCell setColor:[[[[competitionController arrangedObjects] objectAtIndex:rowIndex] colour] foregroundColour]];
+		[aCell setTextColor:[[[[competitionController arrangedObjects] objectAtIndex:rowIndex] colour] foregroundColour]];
 		
 //		[viewItem release];
 	}
