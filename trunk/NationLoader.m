@@ -28,7 +28,7 @@
 	char cbuffer;
 	short sbuffer;
 	float fbuffer;
-	int ibuffer;
+	int ibuffer, count;
 	BOOL debug = NO;
 	NSMutableArray *tempArray;
 	
@@ -340,8 +340,12 @@
 	
 	/**** DONE TO HERE ****/
 	
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	offset += (4*ibuffer);
+	[data getBytes:&count range:NSMakeRange(offset, 4)]; offset += 4;
+	for (int i=0;i<count;i++) {
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	//	NSLog(@"%d",ibuffer);
+		//	[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
+	}
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
@@ -471,9 +475,13 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	offset += (ibuffer*20);
 	
-	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	offset += (ibuffer*4);
-
+	[data getBytes:&count range:NSMakeRange(offset, 4)]; offset += 4;
+	for (int i=0;i<count;i++) {
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
+	}
+	[object setAgreements:tempArray];
+	[tempArray release];
 	
 //	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 //	offset += (ibuffer*22);
@@ -520,6 +528,7 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
 	
+	NSLog(@"%@",[[object teamContainer] name]);
 	if (debug) { NSLog(@"Nation %d (%@) at %d",[object rowID],[[object teamContainer] name], offset); }
 	
 	*byteOffset = offset;

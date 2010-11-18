@@ -467,6 +467,16 @@ teamsController, weatherController, currentDate, gameDBVersion, databaseChanges,
 
 - (IBAction)saveGame:(id)sender
 {
+	BOOL canSave = NO;
+	
+	if (!canSave) {
+		// If not loaded, inform user
+		NSAlert *alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Saving Disabled",@"error - saving is disabled") defaultButton:@"OK" alternateButton:nil 
+										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"Game saving is currently disabled.",@"error - no game loaded")];
+		[alert runModal];
+		return;
+	}
+	
 	// Can only use this function if game already successfully loaded
 	if (!dataLoaded) {
 		// If not loaded, inform user
