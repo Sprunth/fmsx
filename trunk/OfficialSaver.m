@@ -19,7 +19,7 @@
 	int ibuffer;
 	BOOL bbuffer;
 	
-	ibuffer = [object cityOfBirthID];
+	ibuffer = [object cityID];
 	[data appendBytes:&ibuffer length:4];
 	sbuffer = [object currentAbility];
 	[data appendBytes:&sbuffer length:2];

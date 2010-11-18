@@ -13,7 +13,7 @@
 	char allowingFlow, discipline, importantMatches, pressure, refereeing, runningLine, timekeeping;
 	BOOL FIFAOfficial, continentalOfficial, assistantRefereeOnly;
 	short currentAbility, potentialAbility, reputation;
-	int cityOfBirthID;
+	int cityID;
 	FMDate *unknownDate1;
 	NSMutableArray *competitionsAsReferee, *competitionsAsAssistant, *pastGames;
 }
@@ -22,7 +22,7 @@
 runningLine, timekeeping;
 @property(readwrite,assign) BOOL FIFAOfficial, continentalOfficial, assistantRefereeOnly;
 @property(readwrite,assign) short currentAbility, potentialAbility, reputation;
-@property(readwrite,assign) int cityOfBirthID;
+@property(readwrite,assign) int cityID;
 @property(readwrite,assign) FMDate *unknownDate1;
 @property(readwrite,copy) NSMutableArray *competitionsAsReferee, *competitionsAsAssistant, *pastGames;
 

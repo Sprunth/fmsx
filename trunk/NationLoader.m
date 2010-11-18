@@ -536,7 +536,6 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUID:ibuffer];
 	
-	debug = YES;
 	if (debug) { NSLog(@"Nation %d (%@) at %d",[object rowID],[[object teamContainer] name], offset); }
 	
 	*byteOffset = offset;

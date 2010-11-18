@@ -181,6 +181,9 @@
 - (IBAction)showStadiumPicker:(id)sender;
 - (IBAction)setStadiumPickerObject:(id)object;
 - (IBAction)pickStadium:(id)sender;
+- (IBAction)showCityPicker:(id)sender;
+- (IBAction)setCityPickerObject:(id)object;
+- (IBAction)pickCity:(id)sender;
 
 - (IBAction)scoutClubs:(id)sender;
 - (IBAction)scoutStaff:(id)sender;

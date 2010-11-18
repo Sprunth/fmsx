@@ -24,7 +24,7 @@
 	Official *object = [[Official alloc] init];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-	[object setCityOfBirthID:ibuffer];
+	[object setCityID:ibuffer];
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setCurrentAbility:sbuffer];
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;

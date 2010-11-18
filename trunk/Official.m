@@ -12,6 +12,6 @@
 
 @synthesize allowingFlow, discipline, importantMatches, pressure, refereeing, runningLine, timekeeping,
 FIFAOfficial, continentalOfficial, assistantRefereeOnly, currentAbility, potentialAbility, reputation,
-cityOfBirthID, competitionsAsReferee, competitionsAsAssistant, pastGames, unknownDate1;
+cityID, competitionsAsReferee, competitionsAsAssistant, pastGames, unknownDate1;
 
 @end

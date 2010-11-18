@@ -1734,6 +1734,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 	else if ([sender tag]==4)	{ stadiumPickerSelector = @"alternativeStadiumID"; }
 	else if ([sender tag]==5)	{ stadiumPickerSelector = @"nearbyStadiumID"; }
 	else if ([sender tag]==6)	{ stadiumPickerSelector = @"firstMatchStadiumID"; }
+	else if ([sender tag]==7)	{ stadiumPickerSelector = @"nationalStadiumID"; }
 }
 
 - (IBAction)setStadiumPickerObject:(id)object { stadiumPickerObject = object; }
@@ -1777,6 +1778,31 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController;
 	[competitionPickerObject performSelector:thisSelector withObject:[[[competitionPickerController arrangedObjects] objectAtIndex:[competitionPickerController selectionIndex]] rowID]];
 	
 	[competitionPicker closeSheet:self];
+}
+
+- (IBAction)showCityPicker:(id)sender
+{
+	cityPickerSelector = @"";
+	[cityPicker openSheet:self];
+	if ([sender tag]==1)		{ cityPickerSelector = @"cityID"; }
+	else if ([sender tag]==2)	{ cityPickerSelector = @"capitalID"; }
+	else if ([sender tag]==3)	{ cityPickerSelector = @"cityOfBirthID"; }
+}	
+
+- (IBAction)setCityPickerObject:(id)object
+{
+	cityPickerObject = object;
+}
+
+- (IBAction)pickCity:(id)sender
+{
+	SEL thisSelector = NSSelectorFromString([NSString stringWithFormat:@"set%@%@:",
+											 [[cityPickerSelector substringToIndex:1] capitalizedString],
+											 [cityPickerSelector substringFromIndex:1]]);
+	
+	[cityPickerObject performSelector:thisSelector withObject:[[[cityPickerController arrangedObjects] objectAtIndex:[cityPickerController selectionIndex]] rowID]];
+	
+	[cityPicker closeSheet:self];
 }
 
 - (IBAction)deleteHistory:(id)sender { [[self mutableArrayValueForKey:@"recentlyViewed"] removeAllObjects]; }
