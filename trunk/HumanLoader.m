@@ -165,8 +165,14 @@
 	offset += (ibuffer*18);
 	
 	// ???
-	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 46)]]; 
-	offset += 46;
+	offset += 4;
+	
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	offset += (ibuffer*18);
+	
+	// ???
+	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 38)]]; 
+	offset += 38;
 	
 
 	NSLog(@"at bookmarks at %d",offset);
