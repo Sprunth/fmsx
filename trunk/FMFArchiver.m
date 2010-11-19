@@ -71,9 +71,8 @@
 		[decompressedData getBytes:&ibuffer range:NSMakeRange(fmf2Offset, 4)]; fmf2Offset += 4;
 		[fileInfo setObject:[NSNumber numberWithUnsignedInt:ibuffer] forKey:@"startOffset"];
 	
-		fmf2Offset += 4;
-	//	[decompressedData getBytes:&ibuffer range:NSMakeRange(fmf2Offset, 4)]; fmf2Offset += 4;
-	//	[fileInfo setObject:[NSNumber numberWithUnsignedInt:ibuffer] forKey:@"compressedFileLength"];
+		[decompressedData getBytes:&ibuffer range:NSMakeRange(fmf2Offset, 4)]; fmf2Offset += 4;
+		[fileInfo setObject:[NSNumber numberWithUnsignedInt:ibuffer] forKey:@"compressedFileLength"];
 		
 		[decompressedData getBytes:&ibuffer range:NSMakeRange(fmf2Offset, 4)]; fmf2Offset += 4;
 		[fileInfo setObject:[NSNumber numberWithUnsignedInt:ibuffer] forKey:@"fileLength"];
@@ -85,7 +84,7 @@
 		NSData *newData;
 		
 		if (compressed) {
-			newData = [[fileData subdataWithRange:NSMakeRange(([[fileInfo objectForKey:@"startOffset"] intValue] +18),[[fileInfo objectForKey:@"fileLength"] intValue])] zlibInflate];
+			newData = [[fileData subdataWithRange:NSMakeRange(([[fileInfo objectForKey:@"startOffset"] intValue] +18),[[fileInfo objectForKey:@"compressedFileLength"] intValue])] zlibInflate];
 		}
 		else {
 			newData = [fileData subdataWithRange:NSMakeRange(([[fileInfo objectForKey:@"startOffset"] intValue] +18),[[fileInfo objectForKey:@"fileLength"] intValue])];
