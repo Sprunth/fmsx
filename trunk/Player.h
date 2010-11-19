@@ -138,7 +138,7 @@ fileListID, unknownInt1, teamLastPlayedForID, internationalDebutOpposition, MLSR
 *unknownData17, *unknownData18, *unknownData19, *unknownData21, *unknownData22;
 @property(copy,readwrite) NSMutableArray *injuries, *bans, *forms, *bookingCounts;
 @property(assign,readwrite) FMDate *nextFitnessDropDate, *lastUpdateDate, *unknownDate1, *unknownDate2, *unknownDate3, *unknownDate4, 
-*unknownDate5, *unknownDate6, *unknownDate7, *unknownDate8, *internationalRetirementDate, *lastInternationalMatch, *unknownDate10, *unknownDate11, *unknownDate12, *internationalDebutDate, 
+*unknownDate5, *unknownDate6, *unknownDate7, *unknownDate8, *internationalRetirementDate, *lastInternationalMatch, *unknownDate10, *unknownDate11, *internationalDebutDate, 
 *unknownDate14, *MLSDiscoveryPlayerDate, *MLSRightsExpiryDate;
 
 - (int)conditionPercent;

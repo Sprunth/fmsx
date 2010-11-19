@@ -256,10 +256,8 @@ teamsController, weatherController, currentDate, gameDBVersion, databaseChanges,
 	//	0x04 unknown (-1)
 	//	0x01 unknown
 	
-	// Skip 8 bytes (as comment above)
-	fileOffset += 8;
-	
-	if (isNewFormat) { fileOffset += 1; }
+	// Skip 9 bytes (as comment above)
+	fileOffset += 9;
 	
 	// Start Date
 	[FMDateLoader readFromData:fileData atOffset:&fileOffset];

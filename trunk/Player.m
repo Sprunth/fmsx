@@ -22,7 +22,7 @@ unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownDat
 unknownData9, unknownData10, unknownData11, unknownData13, unknownData14, unknownData15, unknownData16, 
 unknownData17, unknownData18, unknownData19, unknownData21, unknownData22, unknownChar9,
 unknownDate1, unknownDate2, unknownDate3, unknownDate4, unknownDate5, unknownDate6, unknownDate7, 
-internationalRetirementDate, unknownDate10, unknownDate11, unknownDate12, unknownDate14,
+internationalRetirementDate, unknownDate10, unknownDate11, unknownDate14,
 unknownFloat1, unknownInt1, unknownShort1, unknownBool1, unknownBool2, unknownDate8,
 unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7, 
 unknownChar8, lastInternationalMatch, hasMLSData, unknownChar11, unknownChar12, unknownChar13, unknownChar14, 
