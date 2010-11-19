@@ -39,7 +39,7 @@ recentlyViewed, mainContainer, awardController, cityController, clubController, 
 competitionController, continentController, injuryController, currencyController, 
 languageController, localAreaController, mediaController, peopleController,
 sponsorController, stadiumController, stadiumChangeController, weatherController, awardRulesView, 
-awardMainView, derbyGeneralView, derbySearchView, derbyController;
+awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 
 - (id)init
 {

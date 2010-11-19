@@ -506,15 +506,39 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 
 - (BOOL)canTransfer
 {
-	if (playerData || nonPlayerData) { return TRUE; }
+	if (playerData) { return TRUE; }
 	return FALSE;
 }
 
 - (void)transfer
 {
-	if (![self canTransfer] || transferID < 0 || transferID >= [[[controller database] clubs] count]) { return; }
+	if (![self canTransfer] || transferID < 0 || transferID >= [[[controller database] clubs] count] ||
+		[[[[[[controller database] clubs] objectAtIndex:transferID] teamContainer] teams] count]==0) { return; }
+	
+	Team *currentTeam;
+	Club *currentClub;
+	
+	if ([staffData clubTeamID]>-1) {
+		currentTeam = [[[controller database] teams] objectAtIndex:[staffData clubTeamID]];
+		currentClub = [[[controller database] clubs] objectAtIndex:[currentTeam teamContainerID]];
+	}
 	
 	
+	// remove from old teams list
+	if (playerData && [staffData clubTeamID]>-1 && [[currentTeam players] containsObject:[NSNumber numberWithInt:rowID]]) {
+		[[currentTeam players] removeObject:[NSNumber numberWithInt:rowID]];
+	}
+
+	// add to new teams list
+	int newTeamID = [[[[[[[controller database] clubs] objectAtIndex:transferID] teamContainer] teams] objectAtIndex:0] intValue];
+	
+	[[[[[controller database] teams] objectAtIndex:newTeamID] players] addObject:[NSNumber numberWithInt:newTeamID]];
+	
+	// change club in players contract
+	if ([[staffData contracts] count]>0) {
+		[[[staffData contracts] objectAtIndex:0] setStartDate:[controller currentDate]];
+		[[[staffData contracts] objectAtIndex:0] setClubID:transferID];
+	}
 }
 
 @end
