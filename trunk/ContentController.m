@@ -39,7 +39,7 @@ recentlyViewed, mainContainer, awardController, cityController, clubController, 
 competitionController, continentController, injuryController, currencyController, 
 languageController, localAreaController, mediaController, peopleController, clubKitView,
 sponsorController, stadiumController, stadiumChangeController, weatherController, awardRulesView, 
-awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
+awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, locationString;
 
 - (id)init
 {
@@ -53,7 +53,6 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 	clubSections = [[NSMutableArray alloc] init];
 	nationSections = [[NSMutableArray alloc] init];
 	personSections = [[NSMutableArray alloc] init];
-	
 	
 	id playerStatsTransformer = [[[PlayerStatsTransformer alloc] init] autorelease];
 	[NSValueTransformer setValueTransformer:playerStatsTransformer forName:@"PlayerStatsTransformer"];

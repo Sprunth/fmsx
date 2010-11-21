@@ -158,6 +158,8 @@
 	NSMutableArray *sections, *awardSections, *clubSections, *nationSections, *personSections, *scoutResults, 
 	*activeShortlist, *clubScoutResults, *staffScoutResults, *playerScoutResults, *recentlyViewed;
 	NSMutableDictionary *selectedRows;
+	
+	NSString *locationString;
 }
 
 - (void)setFavourites;
@@ -211,6 +213,7 @@
 *clubRelationshipsView, *nationRelationshipsView, *derbyGeneralView, *derbySearchView,
 *clubKitView;
 
+@property(readwrite,copy) NSString *locationString;
 @property(readwrite,copy) NSMutableArray *scoutResults, *clubScoutResults, *staffScoutResults, 
 *playerScoutResults, *recentlyViewed;
 @property(readwrite,copy) NSMutableDictionary *selectedRows;
