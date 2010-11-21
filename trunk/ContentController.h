@@ -128,7 +128,7 @@
 	IBOutlet NSPopUpButton *playerScoutPositionBox;
 	IBOutlet NSTableView *playerScoutResultsTable;
 	IBOutlet NSButton *playerScoutRegenButton, *playerScoutNonRegenButton, *playerScoutFemaleButton, 
-	*playerScoutMaleButton, *playerScoutShowECPlayersOnlyBox;
+	*playerScoutMaleButton, *playerScoutShowECPlayersOnlyBox, *playerScoutShowInjuredBox, *playerScoutShowBannedBox;
 	
 	// Pickers
 	IBOutlet NSArrayController *nationPickerController;

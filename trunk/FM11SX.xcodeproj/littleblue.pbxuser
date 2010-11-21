@@ -131,13 +131,11 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312053910;
-			PBXWorkspaceStateSaveDate = 312053910;
+			PBXPerProjectTemplateStateSaveDate = 312056134;
+			PBXWorkspaceStateSaveDate = 312056134;
 		};
 		perUserProjectItems = {
-			FB816BEE129990A80009CED0 /* PBXTextBookmark */ = FB816BEE129990A80009CED0 /* PBXTextBookmark */;
-			FBC70EF61296F0210075539C = FBC70EF61296F0210075539C /* PBXTextBookmark */;
-			FBC70EF71296F0210075539C = FBC70EF71296F0210075539C /* PBXTextBookmark */;
+			FB816BF6129992600009CED0 = FB816BF6129992600009CED0 /* PBXTextBookmark */;
 			FBC70EF81296F0210075539C = FBC70EF81296F0210075539C /* PBXTextBookmark */;
 			FBC70EF91296F0210075539C = FBC70EF91296F0210075539C /* PBXTextBookmark */;
 			FBC70F1E129835490075539C = FBC70F1E129835490075539C /* PBXTextBookmark */;
@@ -147,6 +145,10 @@
 			FBDAD16212997A940016415C = FBDAD16212997A940016415C /* PBXTextBookmark */;
 			FBDAD16312997A940016415C = FBDAD16312997A940016415C /* PBXTextBookmark */;
 			FBDAD16412997A940016415C = FBDAD16412997A940016415C /* PlistBookmark */;
+			FBDCDDF1129992A700A10950 = FBDCDDF1129992A700A10950 /* PBXTextBookmark */;
+			FBDCDDF2129992A700A10950 = FBDCDDF2129992A700A10950 /* PBXTextBookmark */;
+			FBDCDDF3129992A700A10950 = FBDCDDF3129992A700A10950 /* PBXTextBookmark */;
+			FBDCDE0E1299995100A10950 /* PBXTextBookmark */ = FBDCDE0E1299995100A10950 /* PBXTextBookmark */;
 			FBFC9E5A12998F54005089E8 = FBFC9E5A12998F54005089E8 /* PBXTextBookmark */;
 			FBFC9E5B12998F54005089E8 = FBFC9E5B12998F54005089E8 /* PBXBookmark */;
 			FBFC9E5C12998F54005089E8 = FBFC9E5C12998F54005089E8 /* PBXBookmark */;
@@ -155,8 +157,6 @@
 			FBFC9E7E12999085005089E8 = FBFC9E7E12999085005089E8 /* PBXTextBookmark */;
 			FBFC9E8012999085005089E8 = FBFC9E8012999085005089E8 /* PBXTextBookmark */;
 			FBFC9E8212999085005089E8 = FBFC9E8212999085005089E8 /* PBXTextBookmark */;
-			FBFC9E8412999085005089E8 = FBFC9E8412999085005089E8 /* PBXBookmark */;
-			FBFC9E8512999085005089E8 = FBFC9E8512999085005089E8 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FB9D33D510923BAA000883FF /* Source Control */;
 		userBookmarkGroup = FB6B8E1510A1BE8F00993212 /* PBXBookmarkGroup */;
@@ -796,17 +796,17 @@
 	};
 	FB1D74EB1098840B00EC8BBB /* ContentController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {824, 2808}}";
-			sepNavSelRange = "{9110, 11}";
-			sepNavVisRange = "{7476, 1849}";
+			sepNavIntBoundsRect = "{{0, 0}, {824, 2847}}";
+			sepNavSelRange = "{5593, 0}";
+			sepNavVisRange = "{7721, 1740}";
 			sepNavWindowFrame = "{{15, 189}, {717, 584}}";
 		};
 	};
 	FB1D74EC1098840B00EC8BBB /* ContentController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {908, 23075}}";
-			sepNavSelRange = "{54793, 9}";
-			sepNavVisRange = "{54003, 1212}";
+			sepNavIntBoundsRect = "{{0, 0}, {740, 23491}}";
+			sepNavSelRange = "{2819, 0}";
+			sepNavVisRange = "{1189, 1561}";
 			sepNavWindowFrame = "{{499, 151}, {717, 584}}";
 		};
 	};
@@ -1566,7 +1566,7 @@
 			sepNavVisRange = "{546, 815}";
 		};
 	};
-	FB816BEE129990A80009CED0 /* PBXTextBookmark */ = {
+	FB816BF6129992600009CED0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FBFC9E8612999085005089E8 /* Sparkle.h */;
 		name = "Sparkle.h: 1";
@@ -3287,26 +3287,6 @@
 			sepNavWindowFrame = "{{532, 193}, {717, 584}}";
 		};
 	};
-	FBC70EF61296F0210075539C /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FB1D74EC1098840B00EC8BBB /* ContentController.m */;
-		name = "ContentController.m: 1810";
-		rLen = 0;
-		rLoc = 77710;
-		rType = 0;
-		vrLen = 976;
-		vrLoc = 76754;
-	};
-	FBC70EF71296F0210075539C /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FB6B35A010B313840098125F /* Team.m */;
-		name = "Team.m: 52";
-		rLen = 0;
-		rLoc = 1510;
-		rType = 0;
-		vrLen = 1103;
-		vrLoc = 14;
-	};
 	FBC70EF81296F0210075539C /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FB6B359F10B313840098125F /* Team.h */;
@@ -3731,6 +3711,46 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
+	FBDCDDF1129992A700A10950 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB1D74EC1098840B00EC8BBB /* ContentController.m */;
+		name = "ContentController.m: 64";
+		rLen = 0;
+		rLoc = 2819;
+		rType = 0;
+		vrLen = 1561;
+		vrLoc = 1189;
+	};
+	FBDCDDF2129992A700A10950 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB1D74EB1098840B00EC8BBB /* ContentController.h */;
+		name = "ContentController.h: 216";
+		rLen = 14;
+		rLoc = 9244;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 7630;
+	};
+	FBDCDDF3129992A700A10950 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB1D74EB1098840B00EC8BBB /* ContentController.h */;
+		name = "ContentController.h: 216";
+		rLen = 14;
+		rLoc = 9244;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 7630;
+	};
+	FBDCDE0E1299995100A10950 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB1D74EB1098840B00EC8BBB /* ContentController.h */;
+		name = "ContentController.h: 216";
+		rLen = 14;
+		rLoc = 9244;
+		rType = 0;
+		vrLen = 1776;
+		vrLoc = 7630;
+	};
 	FBDFCDD6109DFE77007C5866 /* PersonLoader.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {754, 318}}";
@@ -4085,7 +4105,7 @@
 	};
 	FBE96FC210B823E7001F3139 /* MatchFormLoader.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {696, 281}}";
+			sepNavIntBoundsRect = "{{0, 0}, {682, 339}}";
 			sepNavSelRange = "{315, 0}";
 			sepNavVisRange = "{0, 322}";
 		};
@@ -4664,12 +4684,6 @@
 		isa = PBXBookmark;
 		fRef = FBFC9D7B12998D9A005089E8 /* info.png */;
 	};
-	FBFC9E7212999006005089E8 /* Sparkle.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		path = Sparkle.h;
-		sourceTree = "<group>";
-	};
 	FBFC9E7B12999085005089E8 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = FBA2B7FA109275D700C1A669 /* Updates.png */;
@@ -4742,31 +4756,12 @@
 		path = "/Users/littleblue/ソフト/FM11SX/Sparkle.framework/Headers/SUAppcast.h";
 		sourceTree = "<absolute>";
 	};
-	FBFC9E8412999085005089E8 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FBFC9E7212999006005089E8 /* Sparkle.h */;
-	};
-	FBFC9E8512999085005089E8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = FBFC9E8612999085005089E8 /* Sparkle.h */;
-		name = "Sparkle.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 536;
-		vrLoc = 0;
-	};
 	FBFC9E8612999085005089E8 /* Sparkle.h */ = {
 		isa = PBXFileReference;
 		lastKnownFileType = sourcecode.c.h;
 		name = Sparkle.h;
 		path = "/Users/littleblue/ソフト/FM11SX/Sparkle.framework/Headers/Sparkle.h";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {733, 357}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 536}";
-		};
 	};
 	FBFD90751092AF860023F307 /* Alliteration.h */ = {
 		uiCtxt = {

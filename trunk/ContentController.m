@@ -12,6 +12,7 @@
 #import "Team.h"
 #import "Contract.h"
 #import "Controller.h"
+#import "DatabaseTypes.h"
 #import "Database.h"
 #import "FMString.h"
 #import "LangDB.h"
@@ -1417,7 +1418,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 		
 		// find teams in that nation
 		for (int i = 0; i<[nationResults count]; i++) {
-			[expression appendFormat:@"(club.nationID = %d)", [[nationResults objectAtIndex:i] rowID]];
+			[expression appendFormat:@"(databaseClass==%d) AND (club.nationID = %d)", DBC_TEAM, [[nationResults objectAtIndex:i] rowID]];
 			if (i<([nationResults count]-1)) { [expression appendString:@" OR "]; }
 		}
 		// close the nation expression
@@ -1610,6 +1611,16 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	if ([playerScoutShowECPlayersOnlyBox state]==NSOnState) {
 		if ([expression length] > 0) { [expression appendString:@" AND "]; }
 		[expression appendString:@"(isECNational = TRUE)"];
+	}
+	
+	if ([playerScoutShowInjuredBox state]==NSOffState) {
+		if ([expression length] > 0) { [expression appendString:@" AND "]; }
+		[expression appendString:@"(playerData.injuries.@count = 0)"];
+	}
+	
+	if ([playerScoutShowBannedBox state]==NSOffState) {
+		if ([expression length] > 0) { [expression appendString:@" AND "]; }
+		[expression appendString:@"(playerData.bans.@count = 0)"];
 	}
 	
 	if ([playerScoutPositionBox indexOfSelectedItem] > 0) {
