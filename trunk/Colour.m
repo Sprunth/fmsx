@@ -199,7 +199,7 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 		[filter3 setValue:[filter1 valueForKey:@"outputImage"] forKey:@"inputBackgroundImage"];
 		[filter3 setValue:effectImage forKey:@"inputImage"];
 		
-		finalImage = [[NSImage alloc] initWithSize:[[filter3 valueForKey:@"outputImage"] extent].size];
+		finalImage = [[NSImage alloc] initWithSize:NSMakeSize([[filter3 valueForKey:@"outputImage"] extent].size.width,[[filter3 valueForKey:@"outputImage"] extent].size.height)];
 		NSCIImageRep *rep = [NSCIImageRep imageRepWithCIImage:[filter3 valueForKey:@"outputImage"]];
 		
 		[finalImage addRepresentation:rep];
