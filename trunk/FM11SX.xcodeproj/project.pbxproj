@@ -535,6 +535,8 @@
 		FBFC9D8012998D9A005089E8 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFC9D7C12998D9A005089E8 /* open.png */; };
 		FBFC9D8112998D9A005089E8 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFC9D7D12998D9A005089E8 /* save.png */; };
 		FBFC9D8212998D9A005089E8 /* scout.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFC9D7E12998D9A005089E8 /* scout.png */; };
+		FBFC9E6A12998FFF005089E8 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFC9E6912998FFF005089E8 /* Sparkle.framework */; };
+		FBFC9E7312999008005089E8 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBFC9E6912998FFF005089E8 /* Sparkle.framework */; };
 		FBFD90771092AF860023F307 /* Alliteration.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD90761092AF860023F307 /* Alliteration.m */; };
 		FBFD90951092B2D90023F307 /* Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD90941092B2D90023F307 /* Loader.m */; };
 		FBFD909D1092B3BD0023F307 /* AlliterationLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFD909C1092B3BD0023F307 /* AlliterationLoader.m */; };
@@ -552,6 +554,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FBFC9E7312999008005089E8 /* Sparkle.framework in CopyFiles */,
 				FBF865C610D3E46E0069B01D /* BWToolkitFramework.framework in CopyFiles */,
 				FB9D33E910923BCF000883FF /* PSMTabBarFramework.framework in CopyFiles */,
 			);
@@ -1390,6 +1393,7 @@
 		FBFC9D7C12998D9A005089E8 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = open.png; sourceTree = "<group>"; };
 		FBFC9D7D12998D9A005089E8 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		FBFC9D7E12998D9A005089E8 /* scout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout.png; sourceTree = "<group>"; };
+		FBFC9E6912998FFF005089E8 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		FBFD90751092AF860023F307 /* Alliteration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alliteration.h; sourceTree = "<group>"; };
 		FBFD90761092AF860023F307 /* Alliteration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alliteration.m; sourceTree = "<group>"; };
 		FBFD90781092AFE40023F307 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
@@ -1419,6 +1423,7 @@
 				FB9D33D910923BB6000883FF /* PSMTabBarFramework.framework in Frameworks */,
 				FBF8659310D3E45F0069B01D /* BWToolkitFramework.framework in Frameworks */,
 				FB4B6B4712994D68007C50C1 /* QuartzCore.framework in Frameworks */,
+				FBFC9E6A12998FFF005089E8 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1451,6 +1456,7 @@
 				77C82804067257F0000B614F /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				FBFC9E6912998FFF005089E8 /* Sparkle.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
