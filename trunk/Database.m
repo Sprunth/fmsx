@@ -74,7 +74,7 @@ totalRecords, status, clubs, graphics, media, languages, currencies, continents,
 injuries, firstNames, surnames, commonNames, sponsors, stadiums, stadiumChanges,
 teams, localAreas, stageNames, weather, descriptions, people, personStats, playerStats,
 nonPlayerStats, competitions, nations, controller, langDBLoaded, competitionHistories,
-clubLinks, saveEndOffset, unknowns1, derbies, agreements;
+clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
 
 - (id)init
 {
@@ -1280,6 +1280,7 @@ clubLinks, saveEndOffset, unknowns1, derbies, agreements;
 
 #pragma mark DB Changes
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	[self setDatabaseChanges:count];
 	for (int i=0;i<count;i++) {
 		[GeneralInfoLoader readFromData:data atOffset:byteOffset readInfo:NO];
 	}

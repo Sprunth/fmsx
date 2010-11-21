@@ -21,6 +21,7 @@
 	unsigned int currentRecord;
 	unsigned int totalRecords;
 	unsigned int saveEndOffset;
+	unsigned int databaseChanges;
 	
 	NSMutableArray *badAlliterations, *competitions, *nations, *competitionHistories;
 	NSMutableArray *goodAlliterations, *personStats, *playerStats, *nonPlayerStats;
@@ -45,7 +46,7 @@
 *competitions, *nations, *competitionHistories, *clubLinks, *unknowns1, *derbies, *agreements;
 @property(copy,readwrite) NSString *status;
 @property(assign,readwrite) Controller *controller;
-@property(assign,readwrite) unsigned int currentRecord, totalRecords, saveEndOffset;
+@property(assign,readwrite) unsigned int currentRecord, totalRecords, saveEndOffset, databaseChanges;
 @property(assign,readwrite) BOOL langDBLoaded;
 @property(assign,readwrite) LangDB *langDB;
 @property(assign,readwrite) SXImageXMLParser *graphics;
