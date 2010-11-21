@@ -37,11 +37,11 @@
 	IBOutlet NSArrayController *cityController;
 	
 	IBOutlet NSBox *clubContainer;
-	IBOutlet NSTableView *clubTable, *clubAlternateKitsTable;
+	IBOutlet NSTableView *clubTable, *clubAlternateKitsTable, *clubKitTable;
 	IBOutlet NSView *clubSearchView, *clubGeneralView, *clubTacticsView, *clubMainView, *clubTrainingView,
 	*clubCoefficientView, *clubScoutingKnowledgeView, *clubRegionalDivisionsView, *clubSponsorView, *clubIDPCView,
 	*clubShortlistedPeopleView, *clubAlternateKitView, *clubFinanceView, *clubStaffView, *clubTeamsView,
-	*clubRelationshipsView;
+	*clubRelationshipsView, *clubKitView;
 	IBOutlet NSArrayController *clubController;
 	
 	IBOutlet NSBox *nationContainer;
@@ -208,7 +208,8 @@
 *peopleSearchView, *peopleGeneralView, *competitionGeneralView, *competitionSearchView,
 *actualPersonView, *actualPlayerView, *sponsorGeneralView, *sponsorSearchView,
 *nationGeneralView, *nationMainView, *nationSearchView, *personRelationshipsView,
-*clubRelationshipsView, *nationRelationshipsView, *derbyGeneralView, *derbySearchView;
+*clubRelationshipsView, *nationRelationshipsView, *derbyGeneralView, *derbySearchView,
+*clubKitView;
 
 @property(readwrite,copy) NSMutableArray *scoutResults, *clubScoutResults, *staffScoutResults, 
 *playerScoutResults, *recentlyViewed;

@@ -37,7 +37,7 @@ nationGeneralView, nationMainView, nationSearchView, personRelationshipsView,
 clubRelationshipsView, nationRelationshipsView, clubScoutResults, staffScoutResults, playerScoutResults,
 recentlyViewed, mainContainer, awardController, cityController, clubController, nationController, 
 competitionController, continentController, injuryController, currencyController, 
-languageController, localAreaController, mediaController, peopleController,
+languageController, localAreaController, mediaController, peopleController, clubKitView,
 sponsorController, stadiumController, stadiumChangeController, weatherController, awardRulesView, 
 awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 
@@ -418,7 +418,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 		[aCell setBackgroundColor:[[[[awardController arrangedObjects] objectAtIndex:rowIndex] colour] backgroundColour]];
 		[aCell setTextColor:[[[[awardController arrangedObjects] objectAtIndex:rowIndex] colour] foregroundColour]];
 	}
-	else if (aTableView==clubAlternateKitsTable) {
+	else if (aTableView==clubKitTable) {
 		if ([[aTableColumn identifier] isEqualToString:@"compcol"]) {
 			int UID = [[aCell stringValue] intValue];
 		
@@ -791,8 +791,8 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 								 @"General", MGSB_ITEM_NAME, 
 								 nil]];
 		[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"AlternateKitsItem", MGSB_ITEM_IDENTIFIER, 
-								 @"Alternate Kits", MGSB_ITEM_NAME, 
+								 @"KitsItem", MGSB_ITEM_IDENTIFIER, 
+								 @"Kits & Colours", MGSB_ITEM_NAME, 
 								 nil]];
 		[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"StaffItem", MGSB_ITEM_IDENTIFIER, 
@@ -1201,7 +1201,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView;
 		if ([section isEqualToString:@"General"]) { [clubContainer setContentView:clubMainView]; }
 		else if ([section isEqualToString:@"IDPCs"]) { [clubContainer setContentView:clubIDPCView]; }
 		else if ([section isEqualToString:@"Staff"]) { [clubContainer setContentView:clubStaffView]; }
-		else if ([section isEqualToString:@"Alternate Kits"]) { [clubContainer setContentView:clubAlternateKitView]; }
+		else if ([section isEqualToString:@"Kits & Colours"]) { [clubContainer setContentView:clubKitView]; }
 		else if ([section isEqualToString:@"Finances"]) { [clubContainer setContentView:clubFinanceView]; }
 		else if ([section isEqualToString:@"Shortlisted People"]) { [clubContainer setContentView:clubShortlistedPeopleView]; }
 		else if ([section isEqualToString:@"Scouting Knowledges"]) { [clubContainer setContentView:clubScoutingKnowledgeView]; }

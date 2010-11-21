@@ -7,6 +7,7 @@
 //
 
 #import "Colour.h"
+#import "QuartzCore/CIFilter.h"
 
 @implementation Colour
 
@@ -94,6 +95,26 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 						NSLocalizedString(@"Double Vertical Stripe (Right Space)", @"kit style"),
 						NSLocalizedString(@"Double Vertical Stripe (Left Space)", @"kit style"),
 						NSLocalizedString(@"Double Vertical Stripe (Centre Space)", @"kit style"),
+						NSLocalizedString(@"Bold Top Panel", @"kit style"),
+						NSLocalizedString(@"Large V Area", @"kit style"),
+						NSLocalizedString(@"Shoulder Stripe Down (Epaulets)", @"kit style"),
+						NSLocalizedString(@"Five Stripes", @"kit style"),
+						NSLocalizedString(@"Dual Striped Sash", @"kit style"),
+						NSLocalizedString(@"Dual Striped Sash (Reversed)", @"kit style"),
+						NSLocalizedString(@"Two Chevrons", @"kit style"),
+						NSLocalizedString(@"Seven Stripes With Outline", @"kit style"),
+						NSLocalizedString(@"Vertical Thirds", @"kit style"),
+						NSLocalizedString(@"Digonal Halves (Reversed)", @"kit style"),
+						NSLocalizedString(@"Thinner Hoops", @"kit style"),
+						NSLocalizedString(@"Central Cross", @"kit style"),
+						NSLocalizedString(@"Left Cross", @"kit style"),
+						NSLocalizedString(@"Right Cross", @"kit style"),
+						NSLocalizedString(@"Seven Stripes Plain Arms", @"kit style"),
+						NSLocalizedString(@"Hoops Plain Arms", @"kit style"),
+						NSLocalizedString(@"Horizontal Sections Split", @"kit style"),
+						NSLocalizedString(@"Hoops With Outline", @"kit style"),
+						NSLocalizedString(@"Double Chevrons", @"kit style"),
+						NSLocalizedString(@"Vertical Thirds Same Sleeves", @"kit style"),
 						nil];
 	return strings;
 }
@@ -120,5 +141,89 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 						nil];
 	return strings;
 }
+
+- (NSImage *)image1
+{
+	char styleImage;
+	if (kitStyle>53 || kitStyle<1) { styleImage = 1; }
+	else { styleImage = kitStyle; }
+	
+	NSString *imgType;
+	
+	if (type==AKT_SHIRT) { imgType = @"front"; }
+	else if (type==AKT_SHORTS) { imgType = @"shorts"; }
+	else if (type==AKT_SOCKS) { imgType = @"socks"; }
+	
+	NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithData:[[NSImage imageNamed:[NSString stringWithFormat:@"kit_%@_%d.png",imgType,styleImage]] TIFFRepresentation]];
+	
+	float foreRed = [[self foregroundColour] redComponent];
+	float foreGreen = [[self foregroundColour] greenComponent];
+	float foreBlue = [[self foregroundColour] blueComponent];
+	float backRed = [[self backgroundColour] redComponent];
+	float backGreen = [[self backgroundColour] greenComponent];
+	float backBlue = [[self backgroundColour] blueComponent];
+	float trimRed = [[self trimColour] redComponent];
+	float trimGreen = [[self trimColour] greenComponent];
+	float trimBlue = [[self trimColour] blueComponent];
+	
+	for (int x=0; x<=[bitmapImageRep pixelsWide]; x++) {
+		for (int y=0; y<=[bitmapImageRep pixelsHigh]; y++) {
+			float oRed = [[bitmapImageRep colorAtX:x y:y] redComponent];
+			float oGreen = [[bitmapImageRep colorAtX:x y:y] greenComponent];
+			float oBlue = [[bitmapImageRep colorAtX:x y:y] blueComponent];
+				
+			float rcalc = (foreRed * oGreen) + (backRed * oRed) + (trimRed * oBlue);
+			float gcalc = (foreGreen * oGreen) + (backGreen * oRed) + (trimGreen * oBlue);
+			float bcalc = (foreBlue *oGreen) + (backBlue * oRed) + (trimBlue * oBlue);
+			[bitmapImageRep setColor:[NSColor colorWithCalibratedRed:rcalc green:gcalc blue:bcalc alpha:[[bitmapImageRep colorAtX:x y:y] alphaComponent]] atX:x y:y];
+		}
+	}
+		
+	NSImage *colouredImage = [[NSImage alloc] init];
+	[colouredImage addRepresentation:bitmapImageRep];
+	[bitmapImageRep release];
+	
+	if (type==AKT_SHIRT) {
+		NSImage *finalImage;
+	
+		CIImage *inputImage = [[CIImage alloc] initWithData:[colouredImage TIFFRepresentation]];
+		CIImage *effectImage = [[CIImage alloc] initWithData:[[NSImage imageNamed:@"kit_front_effect.png"] TIFFRepresentation]];
+		
+		CIFilter *filter1 = [CIFilter filterWithName:@"CISourceOverCompositing"];
+		[filter1 setDefaults];
+		[filter1 setValue:inputImage forKey:@"inputBackgroundImage"];
+		[filter1 setValue:effectImage forKey:@"inputImage"];
+		
+		CIFilter *filter3 = [CIFilter filterWithName:@"CISourceOverCompositing"];
+		[filter3 setDefaults];
+		[filter3 setValue:[filter1 valueForKey:@"outputImage"] forKey:@"inputBackgroundImage"];
+		[filter3 setValue:effectImage forKey:@"inputImage"];
+		
+		finalImage = [[NSImage alloc] initWithSize:[[filter3 valueForKey:@"outputImage"] extent].size];
+		NSCIImageRep *rep = [NSCIImageRep imageRepWithCIImage:[filter3 valueForKey:@"outputImage"]];
+		
+		[finalImage addRepresentation:rep];
+		return finalImage;
+	}
+	else if (type==AKT_SHORTS) {
+		return colouredImage;
+	}
+	else if (type==AKT_SOCKS) {
+		return colouredImage;
+	}
+	
+	return nil;
+}
+- (void)setImage1:(NSImage *)img
+{
+	image1 = [img copy];
+}
+
+- (NSImage *)image2
+{
+	return nil;
+}
+
+- (void)redrawImages { [self setImage1:[self image1]]; }
 
 @end
