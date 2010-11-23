@@ -153,6 +153,7 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 	if (type==AKT_SHIRT) { imgType = @"front"; }
 	else if (type==AKT_SHORTS) { imgType = @"shorts"; }
 	else if (type==AKT_SOCKS) { imgType = @"socks"; }
+	else { return nil; }
 	
 	NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithData:[[NSImage imageNamed:[NSString stringWithFormat:@"kit_%@_%d.png",imgType,styleImage]] TIFFRepresentation]];
 	
