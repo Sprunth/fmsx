@@ -12,17 +12,19 @@
 @interface Continent : NSObject {
 	char databaseClass, nameGender, federationNameGender, shortFederationNameGender;
 	float regionalStrength;
-	BOOL continentSelected;
+	BOOL continentSelected, hasInfos;
 	int rowID, UID;
 	
 	NSString *name, *threeLetterName, *continentialityName, *federationName,
 	*federationShortName;
+	NSMutableArray *infos;
 }
 
 @property(assign,readwrite) char databaseClass, nameGender, federationNameGender, shortFederationNameGender;
 @property(assign,readwrite) float regionalStrength;
-@property(assign,readwrite) BOOL continentSelected;
+@property(assign,readwrite) BOOL continentSelected, hasInfos;
 @property(assign,readwrite) int rowID, UID;
 @property(copy,readwrite) NSString *name, *threeLetterName, *continentialityName, *federationName, *federationShortName;
+@property(copy,readwrite) NSMutableArray *infos;
 
 @end

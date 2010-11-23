@@ -7,6 +7,7 @@
 //
 
 #import "ContinentLoader.h"
+#import "GeneralInfoLoader.h"
 
 @implementation Loader (ContinentLoader)
 
@@ -15,6 +16,7 @@
 	char cbuffer;
 	float fbuffer;
 	int ibuffer;
+	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
 	
@@ -30,11 +32,29 @@
 	[object setShortFederationNameGender:cbuffer];
 	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRegionalStrength:fbuffer];
-	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setContinentSelected:cbuffer];
+	
+	//	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	//	[object setContinentSelected:cbuffer];
 	
 	offset += 1;
 	
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setHasInfos:cbuffer];
+	
+	if ([object hasInfos]) {
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		tempArray = [[NSMutableArray alloc] init];
+		for (int i=0;i<ibuffer;i++) {
+			id info = [GeneralInfoLoader readFromData:data atOffset:&offset readInfo:NO];
+			if ([[info className] isEqualToString:@"GeneralInfo"]) {
+				[tempArray addObject:info];
+			}
+			else { return [NSString stringWithFormat:@"Info - %@",info]; }
+		}
+		[object setInfos:tempArray];
+		[tempArray release];
+	}
+		
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
