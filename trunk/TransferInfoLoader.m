@@ -134,8 +134,8 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setMaxNumberNonECPlayers:cbuffer];
 		
-		// ??? ID
-		offset += 4;
+		// players
+		offset += (cbuffer*4);
 	}
 	else if ([object type]==TI_STARTING_PLAYER_RECORD_INFO) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;

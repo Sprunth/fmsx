@@ -22,7 +22,7 @@
 	char cbuffer;
 	short sbuffer;
 	int ibuffer;
-	BOOL debug = FALSE;
+	BOOL debug = NO;
 	NSMutableArray *tempArray;
 	
 	unsigned int offset = *byteOffset;
@@ -152,7 +152,7 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setAttackingFormation:cbuffer];
 	
-//	if (debug) { NSLog(@"before TIs at %d",offset); }
+	if (debug) { NSLog(@"before TIs at %d",offset); }
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
