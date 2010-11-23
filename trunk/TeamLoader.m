@@ -54,9 +54,14 @@
 		[tempArray release];
 		
 		// ???
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 118)]]; 
-		offset += 118;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 114)]]; 
+		offset += 114;
+		
+		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+		offset += (sbuffer*2);
 	}
+	
+	if (debug) { NSLog(@"flags at %d",offset); }
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFlags:cbuffer];
