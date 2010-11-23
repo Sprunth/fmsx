@@ -128,12 +128,12 @@
 		offset += 30;
 	}
 	else if ([[object type] isEqualToString:@"lavp"]) {
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
-		offset += 31;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 30)]]; 
+		offset += 30;
 	}
 	else if ([[object type] isEqualToString:@"gawp"]) {
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
-		offset += 31;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 30)]]; 
+		offset += 30;
 		NSLog(@"NIT: gawp (unconfirmed new length)");
 	}
 	else if ([[object type] isEqualToString:@"tadp"]) {
@@ -141,8 +141,8 @@
 		offset += 40;
 	}
 	else if ([[object type] isEqualToString:@"ksap"]) {
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 31)]];
-		offset += 31;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 30)]];
+		offset += 30;
 	}
 	else if ([[object type] isEqualToString:@"rfnc"]) {
 		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 2)]];
