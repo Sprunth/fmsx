@@ -286,17 +286,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>408</integer>
-									<integer>407</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>409</integer>
-									<integer>407</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>440</integer>
+									<integer>438</integer>
 									<integer>426</integer>
 									<integer>0</integer>
 								</array>
@@ -334,14 +324,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ContentController.m</string>
+								<string>FM11SX-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -349,11 +337,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ContentController.m</string>
+										<string>FM11SX-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>FB800D86129B61F700A263D3</string>
+										<string>FB800D8F129BBC4800A263D3</string>
 										<key>history</key>
 										<array>
 											<string>FBC70EF91296F0210075539C</string>
@@ -362,7 +350,6 @@
 											<string>FBDAD0F212995FC50016415C</string>
 											<string>FBDAD10D129961850016415C</string>
 											<string>FBDAD16212997A940016415C</string>
-											<string>FBDAD16412997A940016415C</string>
 											<string>FBFC9E5A12998F54005089E8</string>
 											<string>FBFC9E5B12998F54005089E8</string>
 											<string>FBFC9E5C12998F54005089E8</string>
@@ -375,7 +362,8 @@
 											<string>FB1606631299B90600D70568</string>
 											<string>FB800D74129B60B500A263D3</string>
 											<string>FB800D84129B61F700A263D3</string>
-											<string>FB800D85129B61F700A263D3</string>
+											<string>FB800D8D129BBC4800A263D3</string>
+											<string>FB800D8E129BBC4800A263D3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

@@ -9,7 +9,7 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = FB9D33C410923BA1000883FF /* FM11SX */;
 		activeSDKPreference = macosx10.5;
 		activeTarget = 8D1107260486CEB800E47090 /* FM11SX */;
@@ -150,6 +150,9 @@
 			FB800D84129B61F700A263D3 /* PBXTextBookmark */ = FB800D84129B61F700A263D3 /* PBXTextBookmark */;
 			FB800D85129B61F700A263D3 /* PBXTextBookmark */ = FB800D85129B61F700A263D3 /* PBXTextBookmark */;
 			FB800D86129B61F700A263D3 /* PBXTextBookmark */ = FB800D86129B61F700A263D3 /* PBXTextBookmark */;
+			FB800D8D129BBC4800A263D3 /* PBXTextBookmark */ = FB800D8D129BBC4800A263D3 /* PBXTextBookmark */;
+			FB800D8E129BBC4800A263D3 /* PlistBookmark */ = FB800D8E129BBC4800A263D3 /* PlistBookmark */;
+			FB800D8F129BBC4800A263D3 /* PlistBookmark */ = FB800D8F129BBC4800A263D3 /* PlistBookmark */;
 			FB816BF6129992600009CED0 = FB816BF6129992600009CED0 /* PBXTextBookmark */;
 			FBC70EF91296F0210075539C = FBC70EF91296F0210075539C /* PBXTextBookmark */;
 			FBC70F1E129835490075539C = FBC70F1E129835490075539C /* PBXTextBookmark */;
@@ -1726,6 +1729,40 @@
 		rType = 0;
 		vrLen = 1051;
 		vrLoc = 10397;
+	};
+	FB800D8D129BBC4800A263D3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FB1D74EC1098840B00EC8BBB /* ContentController.m */;
+		name = "ContentController.m: 258";
+		rLen = 0;
+		rLoc = 11166;
+		rType = 0;
+		vrLen = 1051;
+		vrLoc = 10397;
+	};
+	FB800D8E129BBC4800A263D3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* FM11SX-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSMinimumSystemVersion,
+		);
+		name = "/Users/littleblue/ソフト/FM11SX/FM11SX-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	FB800D8F129BBC4800A263D3 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* FM11SX-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LSMinimumSystemVersion,
+		);
+		name = "/Users/littleblue/ソフト/FM11SX/FM11SX-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	FB816BF6129992600009CED0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
