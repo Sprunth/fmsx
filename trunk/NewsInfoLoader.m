@@ -124,8 +124,8 @@
 		[object setUnknownChar1:cbuffer]; 
 	}
 	else if ([[object type] isEqualToString:@"rtfp"]) {
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
-		offset += 31;
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 30)]]; 
+		offset += 30;
 	}
 	else if ([[object type] isEqualToString:@"lavp"]) {
 		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 31)]]; 
