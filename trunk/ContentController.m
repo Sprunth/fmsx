@@ -245,12 +245,16 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	
 	[playerScoutPersonalAttributeEditor addRow:self];
 	[playerScoutPersonalAttributeEditor removeRowAtIndex:1];
+	[playerScoutPersonalAttributeEditor setCanRemoveAllRows:YES];
 	[playerScoutTechnicalAttributeEditor addRow:self];
 	[playerScoutTechnicalAttributeEditor removeRowAtIndex:1];
+	[playerScoutTechnicalAttributeEditor setCanRemoveAllRows:YES];
 	[playerScoutPhysicalAttributeEditor addRow:self];
 	[playerScoutPhysicalAttributeEditor removeRowAtIndex:1];
+	[playerScoutPhysicalAttributeEditor setCanRemoveAllRows:YES];
 	[playerScoutMentalAttributeEditor addRow:self];
 	[playerScoutMentalAttributeEditor removeRowAtIndex:1];
+	[playerScoutMentalAttributeEditor setCanRemoveAllRows:YES];
 	
 	SXOutlineViewCell *oCell = [[SXOutlineViewCell alloc] init];
 	
