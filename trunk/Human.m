@@ -15,6 +15,7 @@ fogOfWarIndex, holidayReturnDate, newsFilterLists, topLevelBookmarkItems, pressC
 unknownChar1, unknownChar2, unknownInt1, unknownShort1, unknownShort2, unknownShort3, unknownShort4,
 unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownData6,
 unknownData7, unknownData8, unknownData9, unknownData10, unknownData11, unknownData12, 
-unknownData13, unknownData14, unknownData15, unknownData16, unknownData17, infos;
+unknownData13, unknownData14, unknownData15, unknownData16, unknownData17, infos,
+twitterLogin, twitterPassword, youtubeLogin, youtubePassword, twitterUpdateType;
 
 @end

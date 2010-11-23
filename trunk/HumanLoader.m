@@ -171,8 +171,17 @@
 	offset += (ibuffer*18);
 	
 	// ???
-	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 38)]]; 
-	offset += 38;
+	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 21)]]; 
+	offset += 21;
+	
+	// encrypted strings
+	[object setTwitterLogin:[FMString readFromData:data atOffset:&offset]];
+	[object setTwitterPassword:[FMString readFromData:data atOffset:&offset]];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setTwitterUpdateType:cbuffer];
+	
+	[object setYoutubeLogin:[FMString readFromData:data atOffset:&offset]];
+	[object setYoutubePassword:[FMString readFromData:data atOffset:&offset]];
 	
 
 	NSLog(@"at bookmarks at %d",offset);
