@@ -127,6 +127,7 @@
 	IBOutlet NSComboBox *playerScoutContractExpiryBox, *playerScoutTransferStatusBox;
 	IBOutlet NSPopUpButton *playerScoutPositionBox;
 	IBOutlet NSTableView *playerScoutResultsTable;
+	IBOutlet NSPanel *playerScoutPreviewPanel;
 	IBOutlet NSButton *playerScoutRegenButton, *playerScoutNonRegenButton, *playerScoutFemaleButton, 
 	*playerScoutMaleButton, *playerScoutShowECPlayersOnlyBox, *playerScoutShowInjuredBox, *playerScoutShowBannedBox;
 	
@@ -193,6 +194,8 @@
 - (void)exportPlayersToCSV:(NSMutableArray *)array;
 
 - (void)addRelationship:(id)sender;
+
+- (void)performSpaceKeyPress:(id)sender;
 
 @property(readonly,assign) NSArrayController *awardController, *cityController, *clubController, *nationController, 
 *competitionController, *continentController, *injuryController, *currencyController, 

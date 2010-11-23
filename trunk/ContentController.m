@@ -1045,6 +1045,15 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[mainContainer setContentView:gameInfoView];
 }
 
+- (void)performSpaceKeyPress:(id)sender
+{
+	if ([sender selectedRow]==-1) { return; }
+	
+	if (sender==playerScoutResultsTable) {
+		[playerScoutPreviewPanel makeKeyAndOrderFront:self];
+	}
+}
+
 #pragma mark MGScopeBarDelegate methods
 
 - (int)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar

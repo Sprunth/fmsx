@@ -74,6 +74,7 @@
 		FB303FD2109CAB7C000C9B58 /* LanguageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB303FD1109CAB7C000C9B58 /* LanguageLoader.m */; };
 		FB35642210B4AE5C004E3FB7 /* MGRecessedPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB35641E10B4AE5C004E3FB7 /* MGRecessedPopUpButtonCell.m */; };
 		FB35642310B4AE5C004E3FB7 /* MGScopeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB35642010B4AE5C004E3FB7 /* MGScopeBar.m */; };
+		FB37D246129C423200FCD89A /* SXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB37D245129C423200FCD89A /* SXTableView.m */; };
 		FB3CB449109AFFA900CA7897 /* View.png in Resources */ = {isa = PBXBuildFile; fileRef = FB3CB448109AFFA900CA7897 /* View.png */; };
 		FB42CFD310A370F200D928B0 /* FM11SX.icns in Resources */ = {isa = PBXBuildFile; fileRef = FB42CFD210A370F200D928B0 /* FM11SX.icns */; };
 		FB42CFD810A371E300D928B0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB42CFD710A371E300D928B0 /* logo.png */; };
@@ -694,6 +695,8 @@
 		FB35641F10B4AE5C004E3FB7 /* MGScopeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGScopeBar.h; sourceTree = "<group>"; };
 		FB35642010B4AE5C004E3FB7 /* MGScopeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGScopeBar.m; sourceTree = "<group>"; };
 		FB35642110B4AE5C004E3FB7 /* MGScopeBarDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGScopeBarDelegateProtocol.h; sourceTree = "<group>"; };
+		FB37D244129C423200FCD89A /* SXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXTableView.h; sourceTree = "<group>"; };
+		FB37D245129C423200FCD89A /* SXTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXTableView.m; sourceTree = "<group>"; };
 		FB3CB448109AFFA900CA7897 /* View.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View.png; sourceTree = "<group>"; };
 		FB42CFD210A370F200D928B0 /* FM11SX.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FM11SX.icns; sourceTree = "<group>"; };
 		FB42CFD710A371E300D928B0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
@@ -2269,6 +2272,8 @@
 				FBC3F04A109B8F7A00E7DED6 /* SXImageXMLParser.m */,
 				FBA2B79310925AEF00C1A669 /* SXzlib.h */,
 				FBA2B79410925AEF00C1A669 /* SXzlib.m */,
+				FB37D244129C423200FCD89A /* SXTableView.h */,
+				FB37D245129C423200FCD89A /* SXTableView.m */,
 			);
 			name = "Support Classes";
 			sourceTree = "<group>";
@@ -3144,6 +3149,7 @@
 				FBF4C9ED1292D1C5002E5632 /* ContractBonus.m in Sources */,
 				FB0C400012954F560086D410 /* TreatedNationsLoader.m in Sources */,
 				FB0C4003129550290086D410 /* TreatedNations.m in Sources */,
+				FB37D246129C423200FCD89A /* SXTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
