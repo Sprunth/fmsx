@@ -360,6 +360,24 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 - (NSImage *)playerGrowthPotential
 {
 	if (playerStats && personStats) {
+		if ([self playerGrowthPotentialVal]<0.5) { return [NSImage imageNamed:@"0star.png"]; }
+		else if ([self playerGrowthPotentialVal]<1) { return [NSImage imageNamed:@"1star.png"]; }
+		else if ([self playerGrowthPotentialVal]<1.5) { return [NSImage imageNamed:@"2star.png"]; }
+		else if ([self playerGrowthPotentialVal]<2) { return [NSImage imageNamed:@"3star.png"]; }
+		else if ([self playerGrowthPotentialVal]<2.5) { return [NSImage imageNamed:@"4star.png"]; }
+		else if ([self playerGrowthPotentialVal]<3) { return [NSImage imageNamed:@"5star.png"]; }
+		else if ([self playerGrowthPotentialVal]<3.5) { return [NSImage imageNamed:@"6star.png"]; }
+		else if ([self playerGrowthPotentialVal]<4) { return [NSImage imageNamed:@"7star.png"]; }
+		else if ([self playerGrowthPotentialVal]<4.5) { return [NSImage imageNamed:@"8star.png"]; }
+		else if ([self playerGrowthPotentialVal]<5) { return [NSImage imageNamed:@"9star.png"]; }
+		else { return [NSImage imageNamed:@"10star.png"]; }
+	}
+	return [NSImage imageNamed:@"0star.png"];
+}
+
+- (float)playerGrowthPotentialVal
+{
+	if (playerStats && personStats) {
 		float DAP = (([playerStats determination] / 5) * 0.05) + ([personStats ambition] * 0.09) + ([personStats professionalism] * 0.115);
 		if ([self age]<24) {
 			if ([playerData potentialAbility] <= ([playerData currentAbility]+10)) { DAP = DAP - 0.5; }
@@ -388,19 +406,9 @@ unknownData1, unknownChar1, newFirstName, newSurname, newCommonName, transferID,
 		
 		NSLog(@"DAP:%f  R:%f",DAP,rating);
 		
-		if (rating<0.5) { return [NSImage imageNamed:@"0star.png"]; }
-		else if (rating<1) { return [NSImage imageNamed:@"1star.png"]; }
-		else if (rating<1.5) { return [NSImage imageNamed:@"2star.png"]; }
-		else if (rating<2) { return [NSImage imageNamed:@"3star.png"]; }
-		else if (rating<2.5) { return [NSImage imageNamed:@"4star.png"]; }
-		else if (rating<3) { return [NSImage imageNamed:@"5star.png"]; }
-		else if (rating<3.5) { return [NSImage imageNamed:@"6star.png"]; }
-		else if (rating<4) { return [NSImage imageNamed:@"7star.png"]; }
-		else if (rating<4.5) { return [NSImage imageNamed:@"8star.png"]; }
-		else if (rating<5) { return [NSImage imageNamed:@"9star.png"]; }
-		else { return [NSImage imageNamed:@"10star.png"]; }
+		return rating;
 	}
-	return [NSImage imageNamed:@"0star.png"];
+	return 0.0;
 }
 
 - (void)changeName

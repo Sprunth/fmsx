@@ -82,6 +82,7 @@
 - (NSString *)dobPreviewString;
 - (int)age;
 - (NSImage *)playerGrowthPotential;
+- (float)playerGrowthPotentialVal;
 
 - (BOOL)contractIsExpired;
 - (BOOL)contractIsExpiring;
