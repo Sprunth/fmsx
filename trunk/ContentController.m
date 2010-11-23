@@ -240,8 +240,10 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 {
 	[staffScoutPersonalAttributeEditor addRow:self];
 	[staffScoutPersonalAttributeEditor removeRowAtIndex:1];
+	[staffScoutPersonalAttributeEditor setCanRemoveAllRows:YES];
 	[staffScoutStatEditor addRow:self];
 	[staffScoutStatEditor removeRowAtIndex:1];
+	[staffScoutStatEditor setCanRemoveAllRows:YES];
 	
 	[playerScoutPersonalAttributeEditor addRow:self];
 	[playerScoutPersonalAttributeEditor removeRowAtIndex:1];
