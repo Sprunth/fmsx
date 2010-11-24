@@ -286,13 +286,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>2</integer>
+									<integer>286</integer>
+									<integer>283</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {232, 652}}</string>
+							<string>{{0, 4760}, {232, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -313,7 +313,7 @@
 							<real>210</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>441 167 997 711 0 0 1440 878 </string>
+						<string>322 167 997 711 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -329,7 +329,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ClubLoader.m</string>
+								<string>Controller.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,16 +337,13 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ClubLoader.m</string>
+										<string>Controller.h</string>
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>FBF22408129D3BFF00935460</string>
+										<string>FBF2242B129D3E3C00935460</string>
 										<key>history</key>
 										<array>
-											<string>FB37D269129C485200FCD89A</string>
-											<string>FB37D26A129C485200FCD89A</string>
-											<string>FB37D290129C653800FCD89A</string>
 											<string>FB37D292129C653800FCD89A</string>
 											<string>FB37D293129C653800FCD89A</string>
 											<string>FB37D294129C653800FCD89A</string>
@@ -358,12 +355,15 @@
 											<string>FB37D2B9129C6E3C00FCD89A</string>
 											<string>FB37D2BA129C6E3C00FCD89A</string>
 											<string>FB37D2BF129C7AE100FCD89A</string>
-											<string>FB37D2C0129C7AE100FCD89A</string>
 											<string>FB37D2C1129C7AE100FCD89A</string>
 											<string>FB37D2C9129D2CB900FCD89A</string>
 											<string>FB722EDC129D31C7004D8095</string>
 											<string>FB722EDD129D31C7004D8095</string>
-											<string>FBF22407129D3BFF00935460</string>
+											<string>FBF22420129D3D1100935460</string>
+											<string>FBF22421129D3D1100935460</string>
+											<string>FBF22422129D3D1100935460</string>
+											<string>FBF22429129D3E3C00935460</string>
+											<string>FBF2242A129D3E3C00935460</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -377,7 +377,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {743, 545}}</string>
 								<key>RubberWindowFrame</key>
-								<string>441 167 997 711 0 0 1440 878 </string>
+								<string>322 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -397,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 550}, {743, 120}}</string>
 								<key>RubberWindowFrame</key>
-								<string>441 167 997 711 0 0 1440 878 </string>
+								<string>322 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -561,16 +561,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>FBF22413129D3BFF00935460</string>
 		<string>FBF22414129D3BFF00935460</string>
 		<string>FBF22415129D3BFF00935460</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FB9D33D310923BAA000883FF</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/littleblue/ソフト/FM11SX/FM11SX.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>441 167 997 711 0 0 1440 878 </string>
+	<string>322 167 997 711 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -902,6 +901,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -947,7 +948,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
