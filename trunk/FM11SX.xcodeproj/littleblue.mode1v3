@@ -292,7 +292,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 4760}, {232, 652}}</string>
+							<string>{{0, 1667}, {232, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -341,7 +341,7 @@
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>FBF2242B129D3E3C00935460</string>
+										<string>FBFC3E35129DC2E80060627F</string>
 										<key>history</key>
 										<array>
 											<string>FB37D292129C653800FCD89A</string>
@@ -363,7 +363,7 @@
 											<string>FBF22421129D3D1100935460</string>
 											<string>FBF22422129D3D1100935460</string>
 											<string>FBF22429129D3E3C00935460</string>
-											<string>FBF2242A129D3E3C00935460</string>
+											<string>FBFC3E34129DC2E80060627F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,14 +375,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {743, 545}}</string>
+								<string>{{0, 0}, {743, 541}}</string>
 								<key>RubberWindowFrame</key>
 								<string>322 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>545pt</string>
+							<string>541pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -395,14 +395,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 550}, {743, 120}}</string>
+								<string>{{0, 546}, {743, 124}}</string>
 								<key>RubberWindowFrame</key>
 								<string>322 167 997 711 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>120pt</string>
+							<string>124pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -421,9 +421,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FBF22409129D3BFF00935460</string>
+				<string>FBFC3E36129DC2E80060627F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FBF2240A129D3BFF00935460</string>
+				<string>FBFC3E37129DC2E80060627F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -561,11 +561,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>FBF22414129D3BFF00935460</string>
-		<string>FBF22415129D3BFF00935460</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FB9D33D310923BAA000883FF</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/littleblue/ソフト/FM11SX/FM11SX.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -646,7 +642,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>FB9D33D310923BAA000883FF</string>
-				<string>FBF2240B129D3BFF00935460</string>
+				<string>FBFC3E38129DC2E80060627F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

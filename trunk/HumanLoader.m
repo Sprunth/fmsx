@@ -156,8 +156,13 @@
 	offset += 2;
 	*/
 	
-	// not sure here
-	offset += 26;
+	// ???
+	offset += 18;
+	
+	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	offset += (sbuffer*16);
+	
+	offset += 6;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt1:ibuffer];
