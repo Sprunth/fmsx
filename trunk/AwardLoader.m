@@ -125,7 +125,7 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setPlacings:cbuffer];
 	if ([object placings]>ANP_MAX) { 
-		return [NSString stringWithFormat:@"Invalid placings value - %d",[object placings]]; 
+	//	return [NSString stringWithFormat:@"Invalid placings value - %d",[object placings]]; 
 	}
 	
 	// ???
