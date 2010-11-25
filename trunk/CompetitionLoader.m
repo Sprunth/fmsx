@@ -57,12 +57,12 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLevel:cbuffer];
 	
+	offset += 1;
+	
 	if ([object nameType]==CNT_NAME_ON_SERVER_ONLY) {
 		[object setShortName:[FMString readFromData:data atOffset:&offset]];
 		[object setName:[FMString readFromData:data atOffset:&offset]];
 	}
-	
-	offset += 1;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setContinentID:ibuffer];
