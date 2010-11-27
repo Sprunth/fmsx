@@ -40,6 +40,7 @@
 #define TI_UNKNOWN_4							26
 #define TI_UNKNOWN_8							27
 #define TI_UNKNOWN_14							28
+#define TI_UNKNOWN_16							29
 
 // next sale percentage fees to check 
 #define FTC_INITIAL_FEE					0x01

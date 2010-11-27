@@ -298,6 +298,8 @@
 		[tempArray release];
 	}
 	
+	if (debug) { NSLog(@"after sks at %d",offset); }
+	
 	// ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar3:cbuffer];

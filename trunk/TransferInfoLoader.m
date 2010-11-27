@@ -294,6 +294,12 @@
 		offset += (cbuffer*4);
 		offset += 1;
 	}
+	else if ([object type]==TI_UNKNOWN_16) {
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[object setUnknownInt1:ibuffer];
+		if (debug) { NSLog(@"UTI16:%d",ibuffer); }
+	}
+	
 	
 	else {
 		return [NSString stringWithFormat:@"Unknown Type - %d at offset %d",[object type],offset];
