@@ -51,9 +51,16 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstMatchTeam2Goals:cbuffer];
 	
-	offset += 4;
-	
 	// ???
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar2:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar3:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar4:cbuffer];
+	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setWorldReputation:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

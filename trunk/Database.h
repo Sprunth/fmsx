@@ -23,6 +23,8 @@
 	unsigned int saveEndOffset;
 	unsigned int databaseChanges;
 	
+	int unknownInt1, unknownInt2, unknownInt3, unknownInt4;
+	
 	NSMutableArray *badAlliterations, *competitions, *nations, *competitionHistories;
 	NSMutableArray *goodAlliterations, *personStats, *playerStats, *nonPlayerStats;
 	NSMutableArray *awards, *stageNames, *weather, *descriptions, *people;
@@ -30,7 +32,8 @@
 	NSMutableArray *clubs, *firstNames, *surnames, *commonNames, *sponsors;
 	NSMutableArray *media, *languages, *currencies, *continents, *injuries;
 	NSMutableArray *clubLinks, *unknowns1, *derbies, *agreements;
-	
+	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, 
+	*unknownData6, *unknownData7;
 	NSString *status;
 }
 
@@ -47,9 +50,12 @@
 @property(copy,readwrite) NSString *status;
 @property(assign,readwrite) Controller *controller;
 @property(assign,readwrite) unsigned int currentRecord, totalRecords, saveEndOffset, databaseChanges;
+@property(assign,readwrite) int unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 @property(assign,readwrite) BOOL langDBLoaded;
 @property(assign,readwrite) LangDB *langDB;
 @property(assign,readwrite) SXImageXMLParser *graphics;
+@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, 
+*unknownData6, *unknownData7;
 
 - (NSArray *)formationStrings;
 - (void)assignDescriptionNames:(NSString *)path;

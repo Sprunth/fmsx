@@ -7,6 +7,7 @@
 //
 
 #import "ContinentSaver.h"
+#import "GeneralInfoSaver.h"
 
 @implementation ContinentSaver
 
@@ -27,8 +28,19 @@
 	[data appendBytes:&cbuffer length:1];
 	fbuffer = [object regionalStrength];
 	[data appendBytes:&fbuffer length:4];
-	bbuffer = [object continentSelected];
+	cbuffer = [object unknownChar1];
 	[data appendBytes:&bbuffer length:1];
+	
+	bbuffer = [object hasInfos];
+	[data appendBytes:&bbuffer length:1];
+	if ([object hasInfos]) {
+		ibuffer = [[object infos] count];
+		[data appendBytes:&ibuffer length:4];
+		for (int i = 0; i<[[object infos] count]; i++) {
+			[GeneralInfoSaver saveInfo:[[object infos] objectAtIndex:i] toData:data saveInfo:NO];
+		}
+	}
+	
 	ibuffer = [object rowID];
 	[data appendBytes:&ibuffer length:4];
 	ibuffer = [object UID];

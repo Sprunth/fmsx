@@ -47,7 +47,6 @@
 	[object setUnknownChar3:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar4:cbuffer];
-
 	
 //	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 //	[object setNationalReputation:sbuffer];
@@ -57,8 +56,9 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setLevel:cbuffer];
 	
-	offset += 1;
-	
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar5:cbuffer];
+
 	if ([object nameType]==CNT_NAME_ON_SERVER_ONLY) {
 		[object setShortName:[FMString readFromData:data atOffset:&offset]];
 		[object setName:[FMString readFromData:data atOffset:&offset]];
@@ -74,8 +74,20 @@
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setReputation:sbuffer];
 	
-	offset += 5;
-	offset += 2; // same as reputation?
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar6:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar7:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar8:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar9:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar10:cbuffer];
+	
+	// same as reputation?
+	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort1:cbuffer];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setLastHistoryID:ibuffer];

@@ -58,7 +58,8 @@
 		offset += 114;
 		
 		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-		offset += (sbuffer*2);
+		[object setUnknownShort1:sbuffer];
+		[object setUnknownData4:[data subdataWithRange:NSMakeRange(offset, (sbuffer*2))]]; offset += (sbuffer*2);
 	}
 	
 	if (debug) { NSLog(@"flags at %d",offset); }
@@ -178,8 +179,8 @@
 	[object setUnknownChar2:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar3:cbuffer];
-	
-	offset += 1;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar4:cbuffer];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setTeamType:cbuffer];

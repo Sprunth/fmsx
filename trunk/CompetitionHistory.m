@@ -12,6 +12,7 @@
 @implementation CompetitionHistory
 
 @synthesize competitionID, firstPlaceTeamID, secondPlaceTeamID, thirdPlaceTeamID, 
-hostTeam1ID, hostTeam2ID, stadiumID, rowID, UID, databaseClass, year;
+hostTeam1ID, hostTeam2ID, stadiumID, rowID, UID, databaseClass, year,
+unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5;
 
 @end

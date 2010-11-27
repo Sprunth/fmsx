@@ -66,9 +66,9 @@
 	youthTeamAttackingWorkload, youthTeamShootingWorkload, youthTeamSetPiecesWorkload;
 	char UEFAPoints, UEFAMatches, unknownChar1, roughFinancialState, unknownChar2, unknownChar3, 
 	unknownChar4, unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9,
-	unknownChar10, unknownChar11, youthAcademy, youthRecruitment;
+	unknownChar10, unknownChar11, unknownChar12, youthAcademy, youthRecruitment;
 	unsigned char flags;
-	short yearFounded;
+	short yearFounded, unknownShort1, unknownShort2;
 	float UEFATempCoefficient;
 	int nationID, futureTransferManagerID, chairmanID, cityID;
 	int averageAttendance, minimumAttendance, maximumAttendance, seasonTicketHolders;
@@ -79,9 +79,10 @@
 	TeamContainer *teamContainer;
 	Controller *controller;
 	
+	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6;
 	FMDate *seasonStartDate, *seasonEndDate, *preSeasonStartDate, *unknownDate1, *unknownDate2;
 	NSMutableArray *directors, *scouts, *shortlist, *IDPCs, *sponsors, *regionalDivisions;
-	NSMutableArray *coefficients, *scoutingKnowledges, *transferOffers, *transferInfos;
+	NSMutableArray *coefficients, *scoutingKnowledges, *transferOffers;
 	NSString *nickname1, *nickname2, *logoPath;
 }
 
@@ -101,10 +102,10 @@ youthTeamTacticsWorkload, youthTeamBallControlWorkload, youthTeamDefendingWorklo
 youthTeamAttackingWorkload, youthTeamShootingWorkload, youthTeamSetPiecesWorkload,
 UEFAPoints, UEFAMatches, unknownChar1, unknownChar2, roughFinancialState, unknownChar3, 
 unknownChar4, unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9,
-unknownChar10, unknownChar11, youthAcademy, youthRecruitment;
+unknownChar10, unknownChar11, unknownChar12, youthAcademy, youthRecruitment;
 @property(assign,readwrite) float UEFATempCoefficient;
 @property(assign,readwrite) unsigned char flags;
-@property(assign,readwrite) short yearFounded;
+@property(assign,readwrite) short yearFounded, unknownShort1, unknownShort2;
 @property(assign,readwrite) BOOL hasYouthAcademy, hasUEFACoefficient, hasScoutingKnowledges,
 allowSponsorshipForTopPlayers, isPLC, paysHighWages, needsShortlistUpdate, isLeagueBodyClub;
 @property(assign,readwrite) int nationID, averageAttendance, minimumAttendance, 
@@ -115,10 +116,10 @@ maximumWeeklyWage, competitionID, UEFA5YearTotal, cityID;
 @property(assign,readwrite) Controller *controller;
 @property(copy,readwrite) NSString *nickname1, *nickname2, *logoPath;
 @property(copy,readwrite) NSMutableArray *directors, *scouts, *shortlist, *IDPCs,
-*sponsors, *regionalDivisions, *coefficients, *scoutingKnowledges, *transferOffers, 
-*transferInfos;
+*sponsors, *regionalDivisions, *coefficients, *scoutingKnowledges, *transferOffers;
 @property(assign,readwrite) FMDate *seasonStartDate, *seasonEndDate, *preSeasonStartDate, *unknownDate1,
 *unknownDate2;
+@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6;
 
 - (NSArray *)professionalStatusStrings;
 - (NSArray *)directorObjects;

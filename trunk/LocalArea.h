@@ -11,7 +11,7 @@
 
 @interface LocalArea : NSObject {
 	char databaseClass, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6,
-	unknownChar7, unknownChar8, unknownChar9, unknownChar10;
+	unknownChar7, unknownChar8, unknownChar9, unknownChar10, unknownChar11;
 	
 	int rowID, UID, nationID, languageID, population;
 	
@@ -19,7 +19,7 @@
 }
 
 @property(assign,readwrite) char databaseClass, unknownChar1, unknownChar2, unknownChar3, unknownChar4, 
-unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9, unknownChar10;
+unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9, unknownChar10, unknownChar11;
 @property(assign,readwrite) int rowID, UID, nationID, languageID, population;
 @property(copy,readwrite) NSString *name, *shortName;
 

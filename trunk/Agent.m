@@ -10,7 +10,8 @@
 
 @implementation Agent
 
-@synthesize scope, patience, agentFeeDemands, willingnessToToutPlayers, clients, basedNationID;
+@synthesize scope, patience, agentFeeDemands, willingnessToToutPlayers, clients, basedNationID,
+unknownChar1, unknownDate1;
 
 - (NSArray *)scopeStrings
 {

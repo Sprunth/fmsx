@@ -64,9 +64,10 @@
 
 @interface Competition : NSObject {
 	char databaseClass, level, nameGender, shortNameGender, nameType, unknownChar1, 
-	unknownChar2, unknownChar3, unknownChar4, type, flags;
+	unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7,
+	unknownChar8, unknownChar9, unknownChar10, type, flags;
 	short minPitchLength, minPitchWidth, maxPitchLength, maxPitchWidth, reputation, 
-		  nationalReputation, averageClubReputationAtStart;
+		  nationalReputation, averageClubReputationAtStart, unknownShort1;
 	BOOL hasInfos;
 	int rowID, UID, continentID, nationID;
 	int northBoundaryCityID, southBoundaryCityID, eastBoundaryCityID, westBoundaryCityID,
@@ -78,9 +79,10 @@
 }
 
 @property(assign,readwrite) char databaseClass, level, nameGender, shortNameGender, nameType, 
-unknownChar1, unknownChar2, unknownChar3, unknownChar4, type, flags;
+unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7,
+unknownChar8, unknownChar9, unknownChar10, type, flags;
 @property(assign,readwrite) short minPitchLength, minPitchWidth, maxPitchLength, maxPitchWidth,
-reputation, nationalReputation, averageClubReputationAtStart;
+reputation, nationalReputation, averageClubReputationAtStart, unknownShort1;
 @property(assign,readwrite) BOOL hasInfos;
 @property(assign,readwrite) int rowID, UID, continentID, nationID, northBoundaryCityID,
 southBoundaryCityID, eastBoundaryCityID, westBoundaryCityID, leagueBodyClubID, lastHistoryID, 

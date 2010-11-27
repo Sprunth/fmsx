@@ -13,7 +13,7 @@
 
 @synthesize rowID, UID, databaseClass, nationID, languageID, population, name,
 shortName, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, 
-unknownChar7, unknownChar8, unknownChar9, unknownChar10;
+unknownChar7, unknownChar8, unknownChar9, unknownChar10, unknownChar11;
 
 - (id)init
 {

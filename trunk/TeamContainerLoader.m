@@ -163,10 +163,10 @@
 		}
 		else { return [NSString stringWithFormat:@"Transfer Info - %@",ti]; }
 	}
-//	[object setTransferInfos:tempArray];
+	[object setTransferInfos:tempArray];
 	[tempArray release];
 	
-//	if (debug) { NSLog(@"after TIs at %d",offset); }
+	if (debug) { NSLog(@"after TIs at %d",offset); }
 	
 	[tempArray release];
 	

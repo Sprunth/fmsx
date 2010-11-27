@@ -14,6 +14,6 @@
 @synthesize databaseClass, firstMatchTeam1Goals, firstMatchTeam2Goals, worldReputation, nationalReputation,
 team1ID, team2ID, firstMatchCompetitionID, firstMatchStadiumID, firstMatchAttendance, firstMatchDate,
 team1TotalGamesWon, team1TotalGamesDrawn, team1TotalGamesLost, rowID, UID, name, shortName, alternativeName, 
-alternativeShortName;
+alternativeShortName, unknownChar1, unknownChar2, unknownChar3, unknownChar4;
 
 @end

@@ -13,6 +13,7 @@
 #import "AlternativeStadiumSaver.h"
 #import "RelationshipSaver.h"
 #import "Unknown1Saver.h"
+#import "TransferInfoSaver.h"
 
 @implementation TeamContainerSaver
 
@@ -103,6 +104,12 @@
 	[data appendBytes:&cbuffer length:1];
 	for (int i = 0; i<[[object alternateKits] count]; i++) {
 		[AlternativeKitSaver saveKit:[[object alternateKits] objectAtIndex:i] toData:data];
+	}
+	
+	sbuffer = [[object transferInfos] count];
+	[data appendBytes:&sbuffer length:2];
+	for (int i = 0; i<[[object transferInfos] count]; i++) {
+		[TransferInfoSaver saveInfo:[[object transferInfos] objectAtIndex:i] toData:data];
 	}
 }
 

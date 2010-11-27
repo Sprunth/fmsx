@@ -44,6 +44,8 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object unknownChar10];
 	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar11];
+	[data appendBytes:&cbuffer length:1];
 	
 	ibuffer = [object rowID];
 	[data appendBytes:&ibuffer length:4];

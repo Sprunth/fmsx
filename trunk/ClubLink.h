@@ -44,15 +44,15 @@
 #define CAB_MB_INTERNATIONAL_PLAYER_LOAN_PARTNERSHIP	0x00000400
 
 @interface ClubLink : NSObject {
-	char type;
+	char type, unknownChar1, unknownChar2;
 	int parentClubID, affiliateClubID, annualFee;
 	unsigned int flags, benefits;
-	FMDate *canCancelFromDate, *startDate;
+	FMDate *canCancelFromDate, *startDate, *renewedDate;
 }
 
-@property(assign,readwrite) char type;
+@property(assign,readwrite) char type, unknownChar1, unknownChar2;
 @property(assign,readwrite) int parentClubID, affiliateClubID, annualFee;
 @property(assign,readwrite) unsigned int flags, benefits;
-@property(assign,readwrite) FMDate *canCancelFromDate, *startDate;
+@property(assign,readwrite) FMDate *canCancelFromDate, *startDate, *renewedDate;
 
 @end

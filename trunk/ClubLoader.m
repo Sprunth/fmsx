@@ -128,10 +128,6 @@
 	if (debug) { NSLog(@"after finance at %d",offset); }
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	offset += (sbuffer*4);
-	
-	/*
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<sbuffer;i++) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -139,7 +135,7 @@
 	}
 	[object setTransferOffers:tempArray];
 	[tempArray release];
-	*/
+	
 	/*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstTeamStrengthRating:cbuffer];
@@ -216,14 +212,18 @@
 	*/
 	
 	// first team
-	offset += 112;
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 112)]]; offset += 112;
+	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	offset += (sbuffer * 2);
+	[object setUnknownShort1:sbuffer];
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 2))]]; offset += (sbuffer * 2);
 	
 	// youth team
-	offset += 112;
+	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 112)]]; offset += 112; 
+	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	offset += (sbuffer * 2);
+	[object setUnknownShort2:sbuffer];
+	[object setUnknownData4:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 2))]];  offset += (sbuffer * 2);
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
@@ -256,7 +256,9 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHasUEFACoefficient:cbuffer];
 	if ([object hasUEFACoefficient]) {
-		offset += 4;
+		
+		[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 4)]]; offset += 4; 
+	
 		/*
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUEFAPoints:cbuffer];
@@ -336,7 +338,8 @@
 	
 	// ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	offset += (cbuffer*13);
+	[object setUnknownChar12:cbuffer];
+	[object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (cbuffer*13))]]; offset += (cbuffer*13);
 	
 	if (debug) { NSLog(@"before TC at %d",offset); }
 	

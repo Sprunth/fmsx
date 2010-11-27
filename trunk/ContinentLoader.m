@@ -36,7 +36,8 @@
 	//	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	//	[object setContinentSelected:cbuffer];
 	
-	offset += 1;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setHasInfos:cbuffer];

@@ -7,6 +7,7 @@
 //
 
 #import "AgentLoader.h"
+#import "FMDateLoader.h"
 
 @implementation AgentLoader
 
@@ -32,8 +33,10 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setWillingnessToToutPlayers:cbuffer];
 	
-	// char, date
-	offset += 5;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
+	[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
+	
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setBasedNationID:ibuffer];

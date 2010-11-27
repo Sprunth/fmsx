@@ -49,6 +49,12 @@
 		}
 		
 		[data appendData:[object unknownData1]];
+		
+		sbuffer = [object unknownShort1];
+		[data appendBytes:&sbuffer length:2];
+		
+		[data appendData:[object unknownData4]];
+		
 	}
 	
 	ucbuffer = [object flags];
@@ -90,34 +96,11 @@
 	[data appendBytes:&ibuffer length:4];
 	[data appendData:[object unknownData2]];
 	
-	cbuffer = [[object physios] count];
-	[data appendBytes:&cbuffer length:1];
-	for (int i = 0; i<[[object physios] count]; i++) {
-		ibuffer = [[[object physios] objectAtIndex:i] intValue];
-		[data appendBytes:&ibuffer length:4];
-	}
-	
 	sbuffer = [[object players] count];
 	[data appendBytes:&sbuffer length:2];
 	for (int i = 0; i<[[object players] count]; i++) {
 		ibuffer = [[[object players] objectAtIndex:i] intValue];
 		[data appendBytes:&ibuffer length:4];
-	}
-	
-	cbuffer = [[object coaches] count];
-	[data appendBytes:&cbuffer length:1];
-	for (int i = 0; i<[[object coaches] count]; i++) {
-		ibuffer = [[[object coaches] objectAtIndex:i] intValue];
-		[data appendBytes:&ibuffer length:4];
-	}
-	
-	if (version < FM2010_10_2) {
-		cbuffer = [[object selectedTeam] count];
-		[data appendBytes:&cbuffer length:1];
-		for (int i = 0; i<[[object selectedTeam] count]; i++) {
-			ibuffer = [[[object selectedTeam] objectAtIndex:i] intValue];
-			[data appendBytes:&ibuffer length:4];
-		}
 	}
 	
 	sbuffer = [[object fixtureBlocks] count];
@@ -126,12 +109,10 @@
 		[FixtureBlockSaver saveFixtureBlock:[[object fixtureBlocks] objectAtIndex:i] toData:data];
 	}
 	
-	if (version >= FM2010_10_2) {
-		sbuffer = [[object unknown8s] count];
-		[data appendBytes:&sbuffer length:2];
-		for (int i = 0; i<[[object unknown8s] count]; i++) {
-			[Unknown8Saver saveUnknown:[[object unknown8s] objectAtIndex:i] toData:data];
-		}
+	sbuffer = [[object unknown8s] count];
+	[data appendBytes:&sbuffer length:2];
+	for (int i = 0; i<[[object unknown8s] count]; i++) {
+		[Unknown8Saver saveUnknown:[[object unknown8s] objectAtIndex:i] toData:data];
 	}
 	
 	[data appendData:[object unknownData3]];
@@ -146,6 +127,8 @@
 	cbuffer = [object unknownChar2];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object unknownChar3];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar4];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object teamType];
 	[data appendBytes:&cbuffer length:1];

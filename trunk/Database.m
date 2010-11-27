@@ -19,9 +19,11 @@
 #import "ClubLoader.h"
 #import "ClubSaver.h"
 #import "ClubLinkLoader.h"
+#import "ClubLinkSaver.h"
 #import "CompetitionLoader.h"
 #import "CompetitionSaver.h"
 #import "CompetitionHistoryLoader.h"
+#import "CompetitionHistorySaver.h"
 #import "ContinentLoader.h"
 #import "ContinentSaver.h"
 #import "CurrencyLoader.h"
@@ -74,7 +76,9 @@ totalRecords, status, clubs, graphics, media, languages, currencies, continents,
 injuries, firstNames, surnames, commonNames, sponsors, stadiums, stadiumChanges,
 teams, localAreas, stageNames, weather, descriptions, people, personStats, playerStats,
 nonPlayerStats, competitions, nations, controller, langDBLoaded, competitionHistories,
-clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
+clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges, unknownData1,
+unknownData2, unknownData3, unknownData4, unknownData5, unknownData6, unknownData7,
+unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 
 - (id)init
 {
@@ -1183,7 +1187,6 @@ clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
 	}
 	[self setNonPlayerStats:tempArray];
 	NSLog(@"End of %d non-player stats at %d",[nonPlayerStats count],*byteOffset);
-	saveEndOffset = *byteOffset;
 	
 	[tempArray removeAllObjects];
 	[pool drain];
@@ -1219,47 +1222,67 @@ clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
 	[self setCompetitionHistories:tempArray];
 	NSLog(@"End of %d competition histories at %d",[competitionHistories count],*byteOffset);
 	
+	saveEndOffset = *byteOffset;
+	
 	[tempArray removeAllObjects];
 	
 	// ???
+	[self setUnknownData1:[data subdataWithRange:NSMakeRange(*byteOffset, 76)]]; 
 	*byteOffset += 76;
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	[self setUnknownInt1:count];
+	[self setUnknownData2:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
+	*byteOffset += (count*8);
+	/*
 	for (i=0; i<count; i++) {
 		// int
 		// int (counting - 0,1,2,3,4, etc)
 		*byteOffset += 8;
 	}
-	
+	*/
 	NSLog(@"End of post-unknowns 1 at %d",*byteOffset);
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
+	[self setUnknownInt2:count];
+	[self setUnknownData3:[data subdataWithRange:NSMakeRange(*byteOffset, (count*8))]]; 
+	*byteOffset += (count*8);
+	/*
 	for (i=0; i<count; i++) {
 		// int
 		// int (counting - 0,1,2,3,4, etc)
 		*byteOffset += 8;
 	}
-	
+	*/
 	NSLog(@"End of post-unknowns 2 at %d",*byteOffset);
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	for (i=0; i<count; i++) {
+	[self setUnknownInt3:count];
+	[self setUnknownData4:[data subdataWithRange:NSMakeRange(*byteOffset, (count*9))]]; 
+	*byteOffset += (count*9);
+	/*
+	 for (i=0; i<count; i++) {
 		*byteOffset += 9;
 	}
-	
+	*/
 	NSLog(@"End of post-unknowns 3 at %d",*byteOffset);
 	
 	// ???
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
-	for (i=0; i<count; i++) {
+	[self setUnknownInt4:count];
+	[self setUnknownData5:[data subdataWithRange:NSMakeRange(*byteOffset, (count*10))]]; 
+	*byteOffset += (count*10);
+	/*
+	 for (i=0; i<count; i++) {
 		*byteOffset += 10;
 	}
-	
+	*/
 	NSLog(@"End of post-unknowns 4 at %d",*byteOffset);
 	
+	[self setUnknownData6:[data subdataWithRange:NSMakeRange(*byteOffset, 4)]]; 
 	*byteOffset += 4;
 	
 #pragma mark Club Links
@@ -1276,6 +1299,7 @@ clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
 	NSLog(@"End of %d club links at %d",[clubLinks count],*byteOffset);
 	
 	// 0x04	FF FF FF FF
+	[self setUnknownData7:[data subdataWithRange:NSMakeRange(*byteOffset, 4)]]; 
 	*byteOffset += 4;
 
 #pragma mark DB Changes
@@ -1851,7 +1875,19 @@ clubLinks, saveEndOffset, unknowns1, derbies, agreements, databaseChanges;
 		[NonPlayerStatsSaver saveStats:[nonPlayerStats objectAtIndex:i] toData:data];
 	}
 	[pool drain];
-		
+
+#pragma mark Competition Histories
+	pool = [[NSAutoreleasePool alloc] init];
+	[self setStatus:NSLocalizedString(@"saving competition histories...", @"editor status")];
+	ibuffer = [competitionHistories count];
+	[data appendBytes:&ibuffer length:4];
+	[self setTotalRecords:ibuffer];
+	for (int i=0; i<ibuffer; i++) {
+		[self setCurrentRecord:(i+1)];
+		[CompetitionHistorySaver saveCompetitionHistory:[competitionHistories objectAtIndex:i] toData:data];
+	}
+	[pool drain];
+	
 }
 
 - (void)readLangDB:(NSString *)path

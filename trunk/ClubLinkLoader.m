@@ -31,7 +31,7 @@
 	[object setStartDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	
 	// ???  (renewed date?)
-	[FMDateLoader readFromData:data atOffset:&offset];
+	[object setRenewedDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setBenefits:ibuffer];
@@ -39,7 +39,10 @@
 	[object setAnnualFee:ibuffer];
 	
 	// ???
-	offset += 2;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar2:cbuffer];
 	
 	[object setCanCancelFromDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	

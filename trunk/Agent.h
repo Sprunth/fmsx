@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FMDate.h"
 
 // scope
 #define AGS_NATIONAL	0
@@ -15,13 +16,16 @@
 #define AGS_WORLDWIDE	3
 
 @interface Agent : NSObject {
-	char scope, patience, agentFeeDemands, willingnessToToutPlayers;
+	char scope, patience, agentFeeDemands, willingnessToToutPlayers, unknownChar1;
 	int basedNationID;
 	NSMutableArray *clients;
+	FMDate *unknownDate1;
 }
 
-@property(assign,readwrite) char scope, patience, agentFeeDemands, willingnessToToutPlayers;
+@property(assign,readwrite) char scope, patience, agentFeeDemands, willingnessToToutPlayers,
+unknownChar1;
 @property(assign,readwrite) int basedNationID;
+@property(readwrite,assign) FMDate *unknownDate1;
 @property(copy,readwrite) NSMutableArray *clients;
 
 - (NSArray *)scopeStrings;

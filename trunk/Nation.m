@@ -27,7 +27,7 @@ u19FwShortlist, transferInfos, bannedPlayers, futureRegenPlayers, futureRegenSta
 spokenLanguages, transferPreferences, rowID, UID, length, width, area, population, teamContainer,
 unknowns2, unknowns3, unknowns4, unknowns5, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5,
 unknownData1, unknownData2, unknownData3, unknownData4, unknownFloat1, agreements, agents, EUTreatedNations, 
-nonEUTreatedNations;
+nonEUTreatedNations, unknownShort1, unknownShort2, gainNationalityType, unknownData5, unknownData6;
 
 - (NSArray *)styleOfFootballStrings
 {

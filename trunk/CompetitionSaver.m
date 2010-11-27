@@ -36,13 +36,11 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object unknownChar4];
 	[data appendBytes:&cbuffer length:1];
-	sbuffer = [object reputation];
-	[data appendBytes:&sbuffer length:2];
-	sbuffer = [object nationalReputation];
-	[data appendBytes:&sbuffer length:2];
 	cbuffer = [object nameType];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object level];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar5];
 	[data appendBytes:&cbuffer length:1];
 	if ([object nameType]==CNT_NAME_ON_SERVER_ONLY) {
 		[FMString saveString:[object shortName] toData:data];
@@ -54,11 +52,29 @@
 	[data appendBytes:&ibuffer length:4];
 	ibuffer = [object leagueBodyClubID];
 	[data appendBytes:&ibuffer length:4];
+	sbuffer = [object reputation];
+	[data appendBytes:&sbuffer length:2];
+	cbuffer = [object unknownChar6];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar7];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar8];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar9];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar10];
+	[data appendBytes:&cbuffer length:1];
+	
+	sbuffer = [object unknownShort1];
+	[data appendBytes:&sbuffer length:2];
+	
 	ibuffer = [object lastHistoryID];
 	[data appendBytes:&ibuffer length:4];
 	ibuffer = [object historyIndexID];
 	[data appendBytes:&ibuffer length:4];
-	cbuffer = [object usesSquadNumbers];
+	cbuffer = [object flags];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object type];
 	[data appendBytes:&cbuffer length:1];
 	bbuffer = [object hasInfos];
 	[data appendBytes:&bbuffer length:1];

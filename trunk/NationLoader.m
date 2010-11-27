@@ -87,7 +87,10 @@
 	
 	if (debug) { NSLog (@" after blips at %d",offset); }
 	
+	// ???
+	[object setUnknownData5:[data subdataWithRange:NSMakeRange(offset, 6)]]; 
 	offset += 6;
+	
 	
 	// ???
 	[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -390,7 +393,8 @@
 	 */
 	
 	// ???
-	offset += 2;
+	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort1:sbuffer];
 	 
 	// ???
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
@@ -403,7 +407,8 @@
 	[tempArray release];
 	 
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	offset += (sbuffer * 8);
+	[object setUnknownShort2:sbuffer];
+	[object setUnknownData6:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 8))]]; offset += (sbuffer * 8);
 	
 	// ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -434,7 +439,7 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setYearsToGainNationality:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-//	[object setGainNationalityType:cbuffer];
+	[object setGainNationalityType:cbuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setContinentID:ibuffer];
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;

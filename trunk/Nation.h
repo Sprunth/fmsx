@@ -69,20 +69,20 @@
 @interface Nation : NSObject {
 	char databaseClass, wageBudget, styleOfFootball, stateOfDevelopment, gameImportance, leagueStandard,
 		economicFactor, yearsToGainNationality, EECNation, unknownChar1, unknownChar2, unknownChar3, unknownChar4, 
-		unknownChar5;
+		unknownChar5, gainNationalityType;
 	short numberOfClubs, FIFARanking, FIFARankingPoints, currentGameIndex, updateDays, flags,
 		mainSquadGkShortlistMinimumReputation, mainSquadDefShortlistMinimumReputation, mainSquadMidShortlistMinimumReputation,
 		mainSquadFwShortlistMinimumReputation, u21GkShortlistMinimumReputation, u21DefShortlistMinimumReputation,
 		u21MidShortlistMinimumReputation, u21FwShortlistMinimumReputation, u19GkShortlistMinimumReputation, 
 		u19DefShortlistMinimumReputation, u19MidShortlistMinimumReputation, u19FwShortlistMinimumReputation,
-		reputation;
+		reputation, unknownShort1, unknownShort2;
 	int numberOfStaff, numberOfPlayers, numberOfCities, nationalStadiumID, firstNameStartIndex,
 		surnameStartIndex, commonNameStartIndex, firstNameCount, surnameCount, commonNameCount,
 		continentID, regionID, capitalID, rowID, UID, length, width, area, population;
 	float wageFactor, unknownFloat1;
 	BOOL leagueSelected, ruleGroupLoaded, FIFAFullMember;
 	TeamContainer *teamContainer;
-	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
+	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6;
 	NSMutableArray *rankingPoints, *rankingMatches, *coefficients, *humanPlayerPool, *mainSquadGkShortlist,
 		*mainSquadDefShortlist, *mainSquadMidShortlist, *mainSquadFwShortlist, *u21GkShortlist,
 		*u21DefShortlist, *u21MidShortlist, *u21FwShortlist, *u19GkShortlist, *u19DefShortlist, *u19MidShortlist, 
@@ -92,20 +92,21 @@
 }
 
 @property(readwrite,assign) char databaseClass, wageBudget, styleOfFootball, stateOfDevelopment, gameImportance, leagueStandard,
-economicFactor, yearsToGainNationality, EECNation, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5;
+economicFactor, yearsToGainNationality, EECNation, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, 
+gainNationalityType;
 @property(readwrite,assign) short numberOfClubs, FIFARanking, FIFARankingPoints, currentGameIndex, updateDays, flags,
 mainSquadGkShortlistMinimumReputation, mainSquadDefShortlistMinimumReputation, mainSquadMidShortlistMinimumReputation,
 mainSquadFwShortlistMinimumReputation, u21GkShortlistMinimumReputation, u21DefShortlistMinimumReputation,
 u21MidShortlistMinimumReputation, u21FwShortlistMinimumReputation, u19GkShortlistMinimumReputation, 
 u19DefShortlistMinimumReputation, u19MidShortlistMinimumReputation, u19FwShortlistMinimumReputation,
-reputation;
+reputation, unknownShort1, unknownShort2;
 @property(readwrite,assign) int numberOfStaff, numberOfPlayers, numberOfCities, nationalStadiumID, firstNameStartIndex,
 surnameStartIndex, commonNameStartIndex, firstNameCount, surnameCount, commonNameCount,
 continentID, regionID, capitalID, rowID, UID, length, width, area, population;
 @property(readwrite,assign) float wageFactor, unknownFloat1;
 @property(readwrite,assign) BOOL leagueSelected, ruleGroupLoaded, FIFAFullMember;
 @property(readwrite,assign) TeamContainer *teamContainer;
-@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
+@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6;
 @property(readwrite,copy) NSMutableArray *rankingPoints, *rankingMatches, *coefficients, *humanPlayerPool, *mainSquadGkShortlist,
 *mainSquadDefShortlist, *mainSquadMidShortlist, *mainSquadFwShortlist, *u21GkShortlist, *agreements, *agents, *EUTreatedNations,
 *u21DefShortlist, *u21MidShortlist, *u21FwShortlist, *u19GkShortlist, *u19DefShortlist, *u19MidShortlist, *nonEUTreatedNations,

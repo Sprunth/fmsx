@@ -11,6 +11,6 @@
 @implementation ClubLink
 
 @synthesize parentClubID, affiliateClubID, annualFee, type, startDate, canCancelFromDate,
-flags, benefits;
+flags, benefits, unknownChar1, unknownChar2, renewedDate;
 
 @end

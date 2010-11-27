@@ -50,8 +50,8 @@
 	[object setUnknownChar9:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setUnknownChar10:cbuffer];
-	
-	offset += 1;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar11:cbuffer];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setRowID:ibuffer];

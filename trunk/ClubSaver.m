@@ -9,7 +9,6 @@
 #import "GameVersions.h"
 #import "ClubSaver.h"
 #import "ClubFinanceSaver.h"
-#import "TransferInfoSaver.h"
 #import "FMString.h"
 #import "FMDateSaver.h"
 #import "TeamContainerSaver.h"
@@ -104,12 +103,8 @@
 		ibuffer = [[[object transferOffers] objectAtIndex:i] intValue];
 		[data appendBytes:&ibuffer length:4];
 	}
-	sbuffer = [[object transferInfos] count];
-	[data appendBytes:&sbuffer length:2];
-	for (int i = 0; i<[[object transferInfos] count]; i++) {
-		[TransferInfoSaver saveInfo:[[object transferInfos] objectAtIndex:i] toData:data];
-	}
 	
+	/*
 	cbuffer = [object firstTeamStrengthRating];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object firstTeamQuicknessRating];
@@ -182,14 +177,17 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object youthTeamSetPiecesWorkload];
 	[data appendBytes:&cbuffer length:1];
+	*/
 	
-	if (version < FM2010_10_2) {
-		sbuffer = [[object shortlist] count];
-		[data appendBytes:&sbuffer length:2];
-		for (int i = 0; i<[[object shortlist] count]; i++) {
-			[ShortlistedPersonSaver savePerson:[[object shortlist] objectAtIndex:i] toData:data];
-		}
-	}
+	[data appendData:[object unknownData1]];
+	sbuffer = [object unknownShort1];
+	[data appendBytes:&sbuffer length:2];
+	[data appendData:[object unknownData2]];
+	
+	[data appendData:[object unknownData3]];
+	sbuffer = [object unknownShort2];
+	[data appendBytes:&sbuffer length:2];
+	[data appendData:[object unknownData4]];
 	
 	cbuffer = [[object IDPCs] count];
 	[data appendBytes:&cbuffer length:1];
@@ -211,10 +209,13 @@
 	[data appendBytes:&bbuffer length:1];
 	
 	if ([object hasUEFACoefficient]) {
-		cbuffer = [object UEFAPoints];
-		[data appendBytes:&cbuffer length:1];
-		cbuffer = [object UEFAMatches];
-		[data appendBytes:&cbuffer length:1];
+//		cbuffer = [object UEFAPoints];
+//		[data appendBytes:&cbuffer length:1];
+//		cbuffer = [object UEFAMatches];
+//		[data appendBytes:&cbuffer length:1];
+		
+		[data appendData:[object unknownData5]];
+		
 		fbuffer = [object UEFATempCoefficient];
 		[data appendBytes:&fbuffer length:4];
 		ibuffer = [object UEFA5YearTotal];

@@ -74,7 +74,7 @@
 	[object setPitchRelayRequiredDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	
 	// ???
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
 	offset += 7;
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

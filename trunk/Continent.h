@@ -10,7 +10,7 @@
 
 
 @interface Continent : NSObject {
-	char databaseClass, nameGender, federationNameGender, shortFederationNameGender;
+	char databaseClass, nameGender, federationNameGender, shortFederationNameGender, unknownChar1;
 	float regionalStrength;
 	BOOL continentSelected, hasInfos;
 	int rowID, UID;
@@ -20,7 +20,7 @@
 	NSMutableArray *infos;
 }
 
-@property(assign,readwrite) char databaseClass, nameGender, federationNameGender, shortFederationNameGender;
+@property(assign,readwrite) char databaseClass, nameGender, federationNameGender, shortFederationNameGender, unknownChar1;
 @property(assign,readwrite) float regionalStrength;
 @property(assign,readwrite) BOOL continentSelected, hasInfos;
 @property(assign,readwrite) int rowID, UID;

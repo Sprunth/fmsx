@@ -17,7 +17,8 @@ northBoundaryCityID, southBoundaryCityID, eastBoundaryCityID, westBoundaryCityID
 name, shortName, threeLetterName, nationalReputation, averageClubReputationAtStart,
 leagueBodyClubID, lastHistoryID, historyIndexID, averageClubCashAtStart, colour, rules,
 nameGender, shortNameGender, nameType, hasInfos, unknownChar1, unknownChar2, unknownChar3, 
-unknownChar4, unknowns, type, flags;
+unknownChar4, unknowns, type, flags, unknownChar5, unknownChar6, unknownChar7,
+unknownChar8, unknownChar9, unknownChar10, unknownShort1;
 
 - (BOOL)usesSquadNumbers { 
 	if (flags & CF_USES_SQUAD_NUMBERS) { return TRUE; } 

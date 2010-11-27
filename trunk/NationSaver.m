@@ -10,7 +10,7 @@
 #import "GeneralInfoSaver.h"
 #import "FutureRegenSaver.h"
 #import "TransferPreferenceSaver.h"
-#import "TransferInfoSaver.h"
+#import "TreatedNationsSaver.h"
 #import "FifaRankingMatchSaver.h"
 #import "TeamContainerSaver.h"
 #import "SpokenLanguageSaver.h"
@@ -73,6 +73,9 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object flags];
 	[data appendBytes:&cbuffer length:1];
+	
+	[data appendData:[object unknownData5]];
+	
 	fbuffer = [object unknownFloat1];
 	[data appendBytes:&fbuffer length:4];
 	
@@ -215,17 +218,19 @@
 		[data appendBytes:&ibuffer length:4];
 	}
 	
-	sbuffer = [[object transferInfos] count];
-	[data appendBytes:&sbuffer length:2];
-	for (int i = 0; i<[[object transferInfos] count]; i++) {
-		[TransferInfoSaver saveInfo:[[object transferInfos] objectAtIndex:i] toData:data];
-	}
 	sbuffer = [[object bannedPlayers] count];
 	[data appendBytes:&sbuffer length:2];
 	for (int i = 0; i<[[object bannedPlayers] count]; i++) {
 		ibuffer = [[[object bannedPlayers] objectAtIndex:i] intValue];
 		[data appendBytes:&ibuffer length:4];
 	}
+	ibuffer = [[object agents] count];
+	[data appendBytes:&ibuffer length:4];
+	for (int i = 0; i<[[object agents] count]; i++) {
+		ibuffer = [[[object agents] objectAtIndex:i] intValue];
+		[data appendBytes:&ibuffer length:4];
+	}
+	
 	sbuffer = [[object futureRegenPlayers] count];
 	[data appendBytes:&sbuffer length:2];
 	for (int i = 0; i<[[object futureRegenPlayers] count]; i++) {
@@ -236,6 +241,8 @@
 	for (int i = 0; i<[[object futureRegenStaff] count]; i++) {
 		[FutureRegenSaver saveRegen:[[object futureRegenStaff] objectAtIndex:i] toData:data];
 	}
+	
+	/*
 	sbuffer = [[object unknowns3] count];
 	[data appendBytes:&sbuffer length:2];
 	for (int i = 0; i<[[object unknowns3] count]; i++) {
@@ -246,11 +253,21 @@
 	for (int i = 0; i<[[object famousPlayers] count]; i++) {
 		[FamousPlayerSaver savePlayer:[[object famousPlayers] objectAtIndex:i] toData:data];
 	}
+	 
+	*/
+	
+	sbuffer = [object unknownShort1];
+	[data appendBytes:&sbuffer length:2];
+	
 	sbuffer = [[object unknowns4] count];
 	[data appendBytes:&sbuffer length:2];
 	for (int i = 0; i<[[object unknowns4] count]; i++) {
 		[Unknown5Saver saveUnknown:[[object unknowns4] objectAtIndex:i] toData:data];
 	}
+	
+	sbuffer = [object unknownShort2];
+	[data appendBytes:&sbuffer length:2];
+	[data appendData:[object unknownData6]];
 	
 	// ???
 	cbuffer = [object unknownChar1];
@@ -270,8 +287,6 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object stateOfDevelopment];
 	[data appendBytes:&cbuffer length:1];
-	cbuffer = [object EECNation];
-	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object gameImportance];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object leagueStandard];
@@ -281,6 +296,8 @@
 	cbuffer = [object economicFactor];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object yearsToGainNationality];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object gainNationalityType];
 	[data appendBytes:&cbuffer length:1];
 	ibuffer = [object continentID];
 	[data appendBytes:&ibuffer length:4];
@@ -299,6 +316,24 @@
 	[data appendBytes:&cbuffer length:1];
 	for (int i = 0; i<[[object transferPreferences] count]; i++) {
 		[TransferPreferenceSaver savePreference:[[object transferPreferences] objectAtIndex:i] toData:data];
+	}
+	
+	ibuffer = [[object EUTreatedNations] count];
+	[data appendBytes:&ibuffer length:4];
+	for (int i = 0; i<[[object EUTreatedNations] count]; i++) {
+		[TreatedNationsSaver saveNations:[[object EUTreatedNations] objectAtIndex:i] toData:data];
+	}
+	ibuffer = [[object nonEUTreatedNations] count];
+	[data appendBytes:&ibuffer length:4];
+	for (int i = 0; i<[[object nonEUTreatedNations] count]; i++) {
+		[TreatedNationsSaver saveNations:[[object nonEUTreatedNations] objectAtIndex:i] toData:data];
+	}
+	
+	ibuffer = [[object agreements] count];
+	[data appendBytes:&ibuffer length:4];
+	for (int i = 0; i<[[object agreements] count]; i++) {
+		ibuffer = [[[object agreements] objectAtIndex:i] intValue];
+		[data appendBytes:&ibuffer length:4];
 	}
 	
 	[data appendData:[object unknownData3]];

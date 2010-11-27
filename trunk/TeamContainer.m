@@ -8,14 +8,13 @@
 
 #import "TeamContainer.h"
 
-
 @implementation TeamContainer
 
 @synthesize name, shortName, colours, teams, relationships, alternativeStadiums, 
 alternateKits, teamContainerType, nameGender, shortNameGender, attacking, depth, directness, 
 flamboyancy, flexibility, freeRoles, marking, offside, pressing, sittingBack, tempo, 
 useOfPlaymaker, width, preferredFormation, preferredFormation2, defensiveFormation, 
-attackingFormation, controller, unknowns1, unknowns2;
+attackingFormation, controller, unknowns1, unknowns2, transferInfos;
 
 - (NSArray *)teamObjects
 {

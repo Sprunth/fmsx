@@ -31,10 +31,11 @@ UEFAMatches, hasUEFACoefficient, scouts, UEFATempCoefficient, UEFA5YearTotal,
 coefficients, hasScoutingKnowledges, scoutingKnowledges, seasonTicketHolders,
 seasonStartDate, seasonEndDate, preSeasonStartDate, rowID, UID, finance, cityID, 
 maximumWeeklyWage, competitionID, allowSponsorshipForTopPlayers, transferOffers, 
-transferInfos, teamContainer, isLeagueBodyClub, controller, unknownChar1, roughFinancialState, 
+teamContainer, isLeagueBodyClub, controller, unknownChar1, roughFinancialState, 
 unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7, 
 unknownChar8, unknownChar9, unknownChar10, unknownChar11, unknownDate1, unknownDate2, logoPath, 
-youthAcademy, youthRecruitment;
+youthAcademy, youthRecruitment, unknownChar12, unknownShort1, unknownShort2,
+unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownData6;
 
 - (NSArray *)professionalStatusStrings
 {

@@ -19,6 +19,7 @@
 #import "HumanSaver.h"
 #import "VirtualPlayerSaver.h"
 #import "PlayerAndNonPlayerSaver.h"
+#import "AgentSaver.h"
 
 @implementation PersonSaver
 
@@ -75,6 +76,13 @@
 		cbuffer = [object unknownChar1];
 		[data appendBytes:&cbuffer length:1];
 		[data appendData:[object unknownData1]];
+	}
+	else if ([object databaseClass]==DBC_UNKNOWN_PERSON_TYPE_2) {
+		[data appendData:[object unknownData1]];
+	}
+	else if ([object databaseClass]==DBC_AGENT) {
+		[AgentSaver saveAgent:[object agentData] toData:data];
+		[ActualPersonSaver saveActualPerson:[object personData] toData:data];
 	}
 	
 	ucbuffer = [object flags];

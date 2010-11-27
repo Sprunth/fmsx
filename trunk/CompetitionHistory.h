@@ -10,12 +10,12 @@
 
 
 @interface CompetitionHistory : NSObject {
-	char databaseClass;
+	char databaseClass, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5;
 	short year;
 	int competitionID, firstPlaceTeamID, secondPlaceTeamID, thirdPlaceTeamID, hostTeam1ID, hostTeam2ID, stadiumID, rowID, UID;
 }
 
-@property(assign,readwrite) char databaseClass;
+@property(assign,readwrite) char databaseClass, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5;
 @property(assign,readwrite) short year;
 @property(assign,readwrite) int competitionID, firstPlaceTeamID, secondPlaceTeamID, thirdPlaceTeamID, hostTeam1ID, hostTeam2ID, stadiumID, rowID, UID;
 

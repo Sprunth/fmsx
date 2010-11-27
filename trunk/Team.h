@@ -37,16 +37,16 @@
 @interface Team : NSObject {
 	char maximumSquadSize, minimumSquadSize, availablePlayers, lastPosition, continentalCupSeeding, databaseClass,
 	homeMatchday, futureContinentalCupInfo, teamType, teamContainerType, nameGender, shortNameGender, maximumAge,
-	unknownChar1, unknownChar2, unknownChar3;
+	unknownChar1, unknownChar2, unknownChar3, unknownChar4;
 	unsigned char flags;
-	short reputation, nationalReputation, firstFixtureYear, lastFixtureYear;
+	short reputation, nationalReputation, firstFixtureYear, lastFixtureYear, unknownShort1;
 	BOOL locked, clubsHaveSetFriendlyInstructions, newTeam;
 	int divisionID, lastDivisionID, nextDivisionID, otherDivisionID, stadiumID, managerID,
 	continentalCupID, futureContinentalCupID, teamContainerID, rowID, UID;
 	
 	Controller *controller;
 	FMDate *lastSelectionDate, *unlockDate, *lastMatchDate;
-	NSData *unknownData1, *unknownData2, *unknownData3;
+	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
 	NSString *name, *shortName;
 	NSMutableArray *playerReplacements, *physios, *players, *coaches, *selectedTeam, *fixtureBlocks, *unknown8s,
 	*unknowns1;
@@ -55,16 +55,16 @@
 
 @property(assign,readwrite) char maximumSquadSize, minimumSquadSize, availablePlayers, lastPosition, continentalCupSeeding,
 homeMatchday, futureContinentalCupInfo, teamType, teamContainerType, nameGender, shortNameGender, databaseClass,
-maximumAge, unknownChar1, unknownChar2, unknownChar3;
+maximumAge, unknownChar1, unknownChar2, unknownChar3, unknownChar4;
 @property(assign,readwrite) unsigned char flags;
-@property(assign,readwrite) short reputation, nationalReputation, firstFixtureYear, lastFixtureYear;
+@property(assign,readwrite) short reputation, nationalReputation, firstFixtureYear, lastFixtureYear, unknownShort1;
 @property(assign,readwrite) BOOL locked, clubsHaveSetFriendlyInstructions, newTeam;
 @property(assign,readwrite) int divisionID, lastDivisionID, nextDivisionID, otherDivisionID, stadiumID, managerID,
 continentalCupID, futureContinentalCupID, teamContainerID, rowID, UID;
 @property(assign,readwrite) Controller *controller;
 @property(assign,readwrite) FMDate *lastSelectionDate, *unlockDate, *lastMatchDate;
 @property(copy,readwrite) NSString *name, *shortName;
-@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3;
+@property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
 @property(copy,readwrite) NSMutableArray *playerReplacements, *physios, *players, *coaches, *selectedTeam, *fixtureBlocks,
 *unknown8s, *unknowns1;
 

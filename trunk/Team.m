@@ -21,7 +21,7 @@ newTeam, divisionID, lastDivisionID, nextDivisionID, otherDivisionID, stadiumID,
 futureContinentalCupID, teamContainerID, rowID, UID, lastSelectionDate, unlockDate, lastMatchDate, name,
 playerReplacements, physios, players, coaches, selectedTeam, fixtureBlocks, shortName, databaseClass,
 maximumAge, controller, unknownData1, unknownData2, unknownData3, unknownChar1, unknownChar2, unknownChar3, 
-unknown8s, unknowns1;
+unknown8s, unknowns1, unknownShort1, unknownData4, unknownChar4;
 
 - (id)init
 {

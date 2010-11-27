@@ -12,7 +12,7 @@
 
 @synthesize databaseClass, nameGender, federationNameGender, shortFederationNameGender,
 regionalStrength, continentSelected, rowID, UID, name, threeLetterName, continentialityName, 
-federationName, federationShortName, infos, hasInfos;
+federationName, federationShortName, infos, hasInfos, unknownChar1;
 
 - (id)init
 {

@@ -267,39 +267,6 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 		[mainOutlineView expandItem:[mainOutlineView itemAtRow:0]];
 	}
 	
-	// setup custom table cells
-	id item;
-	NSEnumerator *oEnum;
-//	oEnum = [[awardTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[cityTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[clubTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[competitionTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[continentTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[currencyTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[injuryTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[languageTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[localAreaTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[mediaTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[nationTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[sponsorTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[stadiumTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[stadiumChangeTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
-//	oEnum = [[weatherTable tableColumns] objectEnumerator];
-//	while (item = [oEnum nextObject]) { [item setDataCell:oCell]; }
 }
 
 - (void)setFavourites
