@@ -10,13 +10,15 @@
 #import "FMDate.h"
 
 // debt source
-#define CDS_BANK				1
-#define CDS_CHAIRMAN			2
-#define CDS_CVA					3
-#define CDS_PFA					4
-#define CDS_STATE				5
-#define CDS_SUPPORTERS_TRUST	6
-#define CDS_GIFT				7
+#define CDS_BANK							1
+#define CDS_CHAIRMAN						2
+#define CDS_CVA								3
+#define CDS_PFA								4
+#define CDS_STATE							5
+#define CDS_SUPPORTERS_TRUST				6
+#define CDS_GIFT_REPAYABLE_WHEN_PROFITABLE	7
+#define CDS_GIFT_REPAYABLE_ON_DEPARTURE		8
+#define CDS_GIFT_NON_REPAYABLE				9
 
 @interface ClubDebt : NSObject {
 	char source;
