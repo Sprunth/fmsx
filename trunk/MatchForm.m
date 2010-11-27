@@ -14,7 +14,7 @@
 offsides, yellowCards, redCards, minuteOnAsASub, minuteSubstituted, minuteInjured, minuteSentOff,
 rating, passesAttempted, passesCompleted, keyPasses, tacklesAttempted, tacklesWon, keyTackles,
 headersAttempted, headersWon, keyHeaders, interceptions, condition, hasStats, positionMask, date,
-oppositionID, unknownData1;
+oppositionID, unknownData1, unknownChar1, unknownChar2, unknownChar3, unknownChar4;
 
 - (NSString *)info {
 	if (minuteInjured>0) { return [NSString stringWithFormat:@"inj %d",minuteInjured]; }

@@ -130,41 +130,22 @@
 	offset += (sbuffer*215);
 	
 	NSLog(@"after 215-2 at %d",offset);
-	/*
-	// ???
-	[object setUnknownData10:[data subdataWithRange:NSMakeRange(offset, 19)]]; 
-	offset += 19;
-	
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort3:sbuffer];
-	[object setUnknownData11:[data subdataWithRange:NSMakeRange(offset, (sbuffer*14))]]; 
-	offset += (sbuffer*14);
 	
 	// ???
-	[object setUnknownData12:[data subdataWithRange:NSMakeRange(offset, 6)]]; 
-	offset += 6;
-	
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort4:sbuffer];
-	[object setUnknownData13:[data subdataWithRange:NSMakeRange(offset, (sbuffer*13))]]; 
-	offset += (sbuffer*13);
-	
-	NSLog(@"after 13s at %d",offset);
-	
-	// ???
-	[object setUnknownData14:[data subdataWithRange:NSMakeRange(offset, 2)]]; 
-	offset += 2;
-	*/
-	
-	// ???
+	[object setUnknownData10:[data subdataWithRange:NSMakeRange(offset, 18)]]; 
 	offset += 18;
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort3:sbuffer];
+	[object setUnknownData11:[data subdataWithRange:NSMakeRange(offset, (sbuffer*16))]]; 
 	offset += (sbuffer*16);
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort4:sbuffer];
+	[object setUnknownData13:[data subdataWithRange:NSMakeRange(offset, (sbuffer*8))]]; 
 	offset += (sbuffer*8);
 	
+	[object setUnknownData12:[data subdataWithRange:NSMakeRange(offset, 4)]]; 
 	offset += 4;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -173,9 +154,12 @@
 	offset += (ibuffer*18);
 	
 	// ???
+	[object setUnknownData14:[data subdataWithRange:NSMakeRange(offset, 4)]]; 
 	offset += 4;
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setUnknownInt2:ibuffer];
+	[object setUnknownData18:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
 	offset += (ibuffer*18);
 	
 	// ???

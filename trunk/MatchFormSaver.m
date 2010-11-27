@@ -26,8 +26,17 @@
 	[data appendBytes:&bbuffer length:1];
 	
 	if ([object hasStats]) {
-		sbuffer = [object positionMask];
-		[data appendBytes:&sbuffer length:2];
+	//	sbuffer = [object positionMask];
+	//	[data appendBytes:&sbuffer length:2];
+		cbuffer = [object unknownChar1];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar2];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar3];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar4];
+		[data appendBytes:&cbuffer length:1];
+		
 		cbuffer = [object goals];
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object conceded];

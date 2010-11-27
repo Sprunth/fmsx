@@ -11,6 +11,7 @@
 #import "FMDateSaver.h"
 #import "RelationshipSaver.h"
 #import "PersonNicknameSaver.h"
+#import "LocationDaysSaver.h"
 
 @implementation ActualPersonSaver
 
@@ -58,6 +59,12 @@
 		}
 		
 		[data appendData:[object unknownData1]];
+		
+		cbuffer = [[object locationDays] count];
+		[data appendBytes:&cbuffer length:1];
+		for (int i = 0; i<[[object locationDays] count]; i++) {
+			[LocationDaysSaver saveDays:[[object locationDays] objectAtIndex:i] toData:data];
+		}
 	}
 	
 	cbuffer = [[object nicknames] count];

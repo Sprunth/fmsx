@@ -118,18 +118,9 @@
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setUnknownShort1:sbuffer];
 	
-	if (version < FM2010_10_2) {
-		tempArray = [[NSMutableArray alloc] init];
-		for (int i=0;i<sbuffer;i++) {
-			[tempArray addObject:[InterestedClubLoader readFromData:data atOffset:&offset]];
-		}
-		[object setInterestedClubs:tempArray];
-		[tempArray release];
-	}
-	else {
-		[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (sbuffer*4))]]; 
-		offset += (sbuffer*4);
-	}
+	// interested clubs?
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (sbuffer*4))]]; 
+	offset += (sbuffer*4);
 		
 	// ???
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

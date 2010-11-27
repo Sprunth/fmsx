@@ -42,18 +42,13 @@
 	cbuffer = [object morale];
 	[data appendBytes:&cbuffer length:1];
 	[FMDateSaver saveDate:[object unknownDate1] toData:data];
-	[FMDateSaver saveDate:[object unknownDate2] toData:data];
+	
 	sbuffer = [object fitness];
 	[data appendBytes:&sbuffer length:2];
 	sbuffer = [object jadedness];
 	[data appendBytes:&sbuffer length:2];
 	sbuffer = [object condition];
 	[data appendBytes:&sbuffer length:2];
-	
-	if (version < FM2010_10_2) {
-		cbuffer = [object numberOfClubsShortlistedBy];
-		[data appendBytes:&cbuffer length:1];
-	}
 	
 	[data appendData:[object unknownData1]];
 	bbuffer = [object declaredForNation];
@@ -134,37 +129,9 @@
 			[PlayerBanSaver saveBan:[[object bans] objectAtIndex:i] toData:data];
 		}
 		
-		if (version < FM2010_10_2) {
-			bbuffer = [object hasInjuryStatus];
-			[data appendBytes:&bbuffer length:1];
-			
-			if ([object hasInjuryStatus]) {
-				[FMDateSaver saveDate:[object lastUpdateDate] toData:data];
-				[FMDateSaver saveDate:[object nextFitnessDropDate] toData:data];
-				ibuffer = [object recurringInjuryID];
-				[data appendBytes:&ibuffer length:4];
-				cbuffer = [object recurringInjuryOccuranceCount];
-				[data appendBytes:&cbuffer length:1];
-				ibuffer = [object fileListID];
-				[data appendBytes:&ibuffer length:4];
-				cbuffer = [object sentLightTrainingNews];
-				[data appendBytes:&cbuffer length:1];
-				ibuffer = [object lastInjuryTypeID];
-				[data appendBytes:&ibuffer length:4];
-				cbuffer = [object trainingLevel];
-				[data appendBytes:&cbuffer length:1];
-				sbuffer = [object daysSinceLastMatch];
-				[data appendBytes:&sbuffer length:2];
-				cbuffer = [object minutesPlayedLastMatch];
-				[data appendBytes:&cbuffer length:1];
-				cbuffer = [object unknownChar4];
-				[data appendBytes:&cbuffer length:1];
-			}
-		}
-		
-		cbuffer = [object unknownChar5];
-		[data appendBytes:&cbuffer length:1];
-		[data appendData:[object unknownData7]];
+//		cbuffer = [object unknownChar5];
+//		[data appendBytes:&cbuffer length:1];
+//		[data appendData:[object unknownData7]];
 		
 		cbuffer = [object unknownChar6];
 		[data appendBytes:&cbuffer length:1];
@@ -280,28 +247,26 @@
 	ibuffer = [object teamLastPlayedForID];
 	[data appendBytes:&ibuffer length:4];
 	
-	if (version >= FM2010_10_2) {
-		[FMDateSaver saveDate:[object lastUpdateDate] toData:data];
-		[FMDateSaver saveDate:[object nextFitnessDropDate] toData:data];
-		ibuffer = [object recurringInjuryID];
-		[data appendBytes:&ibuffer length:4];
-		cbuffer = [object recurringInjuryOccuranceCount];
-		[data appendBytes:&cbuffer length:1];
-		ibuffer = [object fileListID];
-		[data appendBytes:&ibuffer length:4];
-		cbuffer = [object sentLightTrainingNews];
-		[data appendBytes:&cbuffer length:1];
-		ibuffer = [object lastInjuryTypeID];
-		[data appendBytes:&ibuffer length:4];
-		cbuffer = [object trainingLevel];
-		[data appendBytes:&cbuffer length:1];
-		sbuffer = [object daysSinceLastMatch];
-		[data appendBytes:&sbuffer length:2];
-		cbuffer = [object minutesPlayedLastMatch];
-		[data appendBytes:&cbuffer length:1];
-		cbuffer = [object unknownChar4];
-		[data appendBytes:&cbuffer length:1];
-	}
+	[FMDateSaver saveDate:[object lastUpdateDate] toData:data];
+	[FMDateSaver saveDate:[object nextFitnessDropDate] toData:data];
+	ibuffer = [object recurringInjuryID];
+	[data appendBytes:&ibuffer length:4];
+	cbuffer = [object recurringInjuryOccuranceCount];
+	[data appendBytes:&cbuffer length:1];
+	ibuffer = [object fileListID];
+	[data appendBytes:&ibuffer length:4];
+	cbuffer = [object sentLightTrainingNews];
+	[data appendBytes:&cbuffer length:1];
+	ibuffer = [object lastInjuryTypeID];
+	[data appendBytes:&ibuffer length:4];
+	cbuffer = [object trainingLevel];
+	[data appendBytes:&cbuffer length:1];
+	sbuffer = [object daysSinceLastMatch];
+	[data appendBytes:&sbuffer length:2];
+	cbuffer = [object minutesPlayedLastMatch];
+	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar4];
+	[data appendBytes:&cbuffer length:1];
 }
 
 @end

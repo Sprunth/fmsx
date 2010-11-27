@@ -590,9 +590,9 @@
 	};
 	FB17EDD110B6B7F1006B17CE /* ActualPersonLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {682, 1326}}";
-			sepNavSelRange = "{2069, 0}";
-			sepNavVisRange = "{1620, 1239}";
+			sepNavIntBoundsRect = "{{0, 0}, {682, 1378}}";
+			sepNavSelRange = "{2855, 0}";
+			sepNavVisRange = "{2469, 966}";
 			sepNavWindowFrame = "{{77, 70}, {750, 558}}";
 		};
 	};
@@ -620,9 +620,9 @@
 	};
 	FB17EDD710B6BBB7006B17CE /* ContractLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {682, 1885}}";
-			sepNavSelRange = "{3346, 73}";
-			sepNavVisRange = "{2460, 1462}";
+			sepNavIntBoundsRect = "{{0, 0}, {682, 2028}}";
+			sepNavSelRange = "{4091, 0}";
+			sepNavVisRange = "{4288, 1137}";
 			sepNavWindowFrame = "{{319, 320}, {750, 558}}";
 		};
 	};
@@ -1747,7 +1747,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {682, 767}}";
 			sepNavSelRange = "{1433, 0}";
-			sepNavVisRange = "{463, 1393}";
+			sepNavVisRange = "{75, 1101}";
 			sepNavWindowFrame = "{{16, 232}, {543, 543}}";
 		};
 	};
@@ -2569,10 +2569,10 @@
 	};
 	FBA196D611FC9CA2003B3F74 /* ActualPersonSaver.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 1066}}";
-			sepNavSelRange = "{732, 58}";
-			sepNavVisRange = "{41, 988}";
-			sepNavWindowFrame = "{{199, 147}, {750, 558}}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1170}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{0, 889}";
+			sepNavWindowFrame = "{{50, 196}, {750, 558}}";
 		};
 	};
 	FBA196D811FC9CA8003B3F74 /* OfficialSaver.h */ = {
@@ -3312,16 +3312,16 @@
 	FBBC794A1099C3E500CADF06 /* Contract.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {873, 1235}}";
-			sepNavSelRange = "{370, 21}";
-			sepNavVisRange = "{1765, 1636}";
+			sepNavSelRange = "{2019, 0}";
+			sepNavVisRange = "{1355, 1823}";
 			sepNavWindowFrame = "{{141, 194}, {717, 584}}";
 		};
 	};
 	FBBC794B1099C3E500CADF06 /* Contract.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {756, 1391}}";
-			sepNavSelRange = "{4159, 6}";
-			sepNavVisRange = "{2871, 1348}";
+			sepNavIntBoundsRect = "{{0, 0}, {684, 1430}}";
+			sepNavSelRange = "{751, 0}";
+			sepNavVisRange = "{0, 1413}";
 			sepNavWindowFrame = "{{270, 162}, {717, 584}}";
 		};
 	};
@@ -4045,6 +4045,20 @@
 		vrLen = 343;
 		vrLoc = 0;
 	};
+	FBC3F4C412A1CA570077BC24 /* LocationDaysSaver.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {682, 453}}";
+			sepNavSelRange = "{188, 0}";
+			sepNavVisRange = "{0, 312}";
+		};
+	};
+	FBC3F4C512A1CA570077BC24 /* LocationDaysSaver.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {682, 453}}";
+			sepNavSelRange = "{207, 68}";
+			sepNavVisRange = "{0, 544}";
+		};
+	};
 	FBC4B8A3109B28A300AA7331 /* ShortlistedPerson.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {703, 419}}";
@@ -4604,9 +4618,9 @@
 	};
 	FBE75998126B759700A01209 /* ClubDebt.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {814, 442}}";
-			sepNavSelRange = "{646, 0}";
-			sepNavVisRange = "{0, 681}";
+			sepNavIntBoundsRect = "{{0, 0}, {682, 468}}";
+			sepNavSelRange = "{476, 0}";
+			sepNavVisRange = "{0, 801}";
 		};
 	};
 	FBE75999126B759700A01209 /* ClubDebt.m */ = {
@@ -4744,7 +4758,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1090, 1196}}";
 			sepNavSelRange = "{526, 35}";
-			sepNavVisRange = "{181, 1173}";
+			sepNavVisRange = "{2057, 1361}";
 			sepNavWindowFrame = "{{684, 181}, {750, 558}}";
 		};
 	};
@@ -5144,9 +5158,9 @@
 	};
 	FBE9721310B970CE001F3139 /* BookmarkFolderLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {754, 793}}";
+			sepNavIntBoundsRect = "{{0, 0}, {733, 845}}";
 			sepNavSelRange = "{1063, 0}";
-			sepNavVisRange = "{830, 886}";
+			sepNavVisRange = "{651, 1108}";
 			sepNavWindowFrame = "{{7, 77}, {750, 558}}";
 		};
 	};
@@ -5333,9 +5347,10 @@
 	};
 	FBF4C9B11292CF93002E5632 /* LocationDaysLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {682, 468}}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 468}}";
 			sepNavSelRange = "{515, 17}";
-			sepNavVisRange = "{39, 749}";
+			sepNavVisRange = "{28, 760}";
+			sepNavWindowFrame = "{{187, 86}, {750, 558}}";
 		};
 	};
 	FBF5786A10E773180029EEB1 /* Unknown2.h */ = {

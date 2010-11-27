@@ -13,7 +13,8 @@
 	char goals, conceded, shots, shotsOnTarget, assists, runsPastOpponent, foulsMade, foulsAgainst,
 	offsides, yellowCards, redCards, minuteOnAsASub, minuteSubstituted, minuteInjured, minuteSentOff,
 	rating, passesAttempted, passesCompleted, keyPasses, tacklesAttempted, tacklesWon, keyTackles,
-	headersAttempted, headersWon, keyHeaders, interceptions, condition;
+	headersAttempted, headersWon, keyHeaders, interceptions, condition, unknownChar1, unknownChar2, 
+	unknownChar3, unknownChar4;
 	BOOL hasStats;
 	short positionMask;
 	int oppositionID;
@@ -24,7 +25,8 @@
 @property(assign,readwrite) char goals, conceded, shots, shotsOnTarget, assists, runsPastOpponent, foulsMade, foulsAgainst,
 offsides, yellowCards, redCards, minuteOnAsASub, minuteSubstituted, minuteInjured, minuteSentOff,
 rating, passesAttempted, passesCompleted, keyPasses, tacklesAttempted, tacklesWon, keyTackles,
-headersAttempted, headersWon, keyHeaders, interceptions, condition;
+headersAttempted, headersWon, keyHeaders, interceptions, condition, unknownChar1, unknownChar2, 
+unknownChar3, unknownChar4;
 @property(assign,readwrite) BOOL hasStats;
 @property(assign,readwrite) short positionMask;
 @property(assign,readwrite) int oppositionID;

@@ -342,6 +342,8 @@
 		FBC3F45F12A1ACDF0077BC24 /* AgentSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3F45E12A1ACDF0077BC24 /* AgentSaver.m */; };
 		FBC3F46A12A1BA6C0077BC24 /* AgreementSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3F46912A1BA6C0077BC24 /* AgreementSaver.m */; };
 		FBC3F49D12A1C3350077BC24 /* ClubLinkSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3F49C12A1C3350077BC24 /* ClubLinkSaver.m */; };
+		FBC3F4C612A1CA570077BC24 /* LocationDaysSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3F4C512A1CA570077BC24 /* LocationDaysSaver.m */; };
+		FBC3F4CB12A1CC320077BC24 /* ContractBonusSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3F4CA12A1CC320077BC24 /* ContractBonusSaver.m */; };
 		FBC4B8A5109B28A300AA7331 /* ShortlistedPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4B8A4109B28A300AA7331 /* ShortlistedPerson.m */; };
 		FBC4B8F5109B2FB600AA7331 /* RegionalDivision.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4B8F4109B2FB600AA7331 /* RegionalDivision.m */; };
 		FBC4B939109B34CD00AA7331 /* ScoutingKnowledge.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC4B938109B34CD00AA7331 /* ScoutingKnowledge.m */; };
@@ -1130,6 +1132,10 @@
 		FBC3F46912A1BA6C0077BC24 /* AgreementSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementSaver.m; sourceTree = "<group>"; };
 		FBC3F49B12A1C3350077BC24 /* ClubLinkSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClubLinkSaver.h; sourceTree = "<group>"; };
 		FBC3F49C12A1C3350077BC24 /* ClubLinkSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClubLinkSaver.m; sourceTree = "<group>"; };
+		FBC3F4C412A1CA570077BC24 /* LocationDaysSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDaysSaver.h; sourceTree = "<group>"; };
+		FBC3F4C512A1CA570077BC24 /* LocationDaysSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDaysSaver.m; sourceTree = "<group>"; };
+		FBC3F4C912A1CC320077BC24 /* ContractBonusSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractBonusSaver.h; sourceTree = "<group>"; };
+		FBC3F4CA12A1CC320077BC24 /* ContractBonusSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractBonusSaver.m; sourceTree = "<group>"; };
 		FBC4B8A3109B28A300AA7331 /* ShortlistedPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortlistedPerson.h; sourceTree = "<group>"; };
 		FBC4B8A4109B28A300AA7331 /* ShortlistedPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortlistedPerson.m; sourceTree = "<group>"; };
 		FBC4B8F3109B2FB600AA7331 /* RegionalDivision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionalDivision.h; sourceTree = "<group>"; };
@@ -2292,6 +2298,10 @@
 				FBA199C311FDBCA8003B3F74 /* NewsInfoSaver.m */,
 				FBC3F45D12A1ACDF0077BC24 /* AgentSaver.h */,
 				FBC3F45E12A1ACDF0077BC24 /* AgentSaver.m */,
+				FBC3F4C412A1CA570077BC24 /* LocationDaysSaver.h */,
+				FBC3F4C512A1CA570077BC24 /* LocationDaysSaver.m */,
+				FBC3F4C912A1CC320077BC24 /* ContractBonusSaver.h */,
+				FBC3F4CA12A1CC320077BC24 /* ContractBonusSaver.m */,
 			);
 			name = "Person Sub-Entities";
 			sourceTree = "<group>";
@@ -3192,6 +3202,8 @@
 				FBC3F45F12A1ACDF0077BC24 /* AgentSaver.m in Sources */,
 				FBC3F46A12A1BA6C0077BC24 /* AgreementSaver.m in Sources */,
 				FBC3F49D12A1C3350077BC24 /* ClubLinkSaver.m in Sources */,
+				FBC3F4C612A1CA570077BC24 /* LocationDaysSaver.m in Sources */,
+				FBC3F4CB12A1CC320077BC24 /* ContractBonusSaver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

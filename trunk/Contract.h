@@ -57,14 +57,15 @@
 	char type, status, job, teamContainerType, currentSquadStatus, perceivedSquadStatus,
 	happinessLevel, squadNumber, gamesMissedInARow, gamesPlayedInARow,
 	clubChoiceFactor, transferOfferOptions, unknownChar1, unknownChar2, unknownChar3, 
-	unknownChar4, unknownChar5;
+	unknownChar4, unknownChar5, unknownChar6, unknownChar7, unknownChar8;
 	unsigned char transferStatus;
 	BOOL leavingOnBosman;
 	short leagueGamesPlayedSinceJoined;
-	int appearanceBonus, goalBonus, cleanSheetBonus, personID, clubID, weeklyWage, agreedPrice;
+	int appearanceBonus, goalBonus, cleanSheetBonus, personID, clubID, weeklyWage, agreedPrice,
+	unknownInt1;
 	long long happiness;
 	FMDate *expiryDate, *startDate, *endDate, *unknownDate1;
-	NSData *unknownData1, *unknownData2;
+	NSData *unknownData1, *unknownData2, *unknownData3;
 	NSMutableArray *clauses, *bonuses;
 	
 	BOOL transferListedByClub, listedForLoan, autoAskingPrice, unavailableForLoan,
@@ -73,16 +74,17 @@
 
 @property(assign,readwrite) char type, status, job, teamContainerType, currentSquadStatus, perceivedSquadStatus,
 happinessLevel, squadNumber, gamesMissedInARow, gamesPlayedInARow, clubChoiceFactor,
-transferOfferOptions, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5;
+transferOfferOptions, unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, unknownChar7, 
+unknownChar8;
 @property(assign,readwrite) unsigned char transferStatus;
 @property(assign,readwrite) BOOL leavingOnBosman, transferListedByClub, listedForLoan, autoAskingPrice, unavailableForLoan,
 transferListedByRequest, unavailable, youthPlayerBeingReleased;
 @property(assign,readwrite) short leagueGamesPlayedSinceJoined;
 @property(assign,readwrite) int appearanceBonus, goalBonus, cleanSheetBonus, personID, clubID, weeklyWage,
-agreedPrice;
+agreedPrice, unknownInt1;
 @property(assign,readwrite) long long happiness;
 @property(assign,readwrite) FMDate *expiryDate, *startDate, *endDate, *unknownDate1;
-@property(copy,readwrite) NSData *unknownData1, *unknownData2;
+@property(copy,readwrite) NSData *unknownData1, *unknownData2, *unknownData3;
 @property(copy,readwrite) NSMutableArray *clauses, *bonuses;
 
 - (NSArray *)squadStatusStrings;

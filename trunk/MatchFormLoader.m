@@ -36,7 +36,14 @@
 	if ([object hasStats]) {
 //		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 //		[object setPositionMask:sbuffer];
-		offset += 4;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar1:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar2:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar3:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar4:cbuffer];
 		
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setGoals:cbuffer];

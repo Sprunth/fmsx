@@ -60,8 +60,6 @@
 		[object setUnknownChar2:cbuffer];
 		
 		// ???
-//		[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (cbuffer*147))]]; 
-//		offset += (cbuffer*147);
 		[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (cbuffer*235))]]; 
 		offset += (cbuffer*235);
 	}

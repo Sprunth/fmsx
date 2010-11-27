@@ -100,14 +100,7 @@
 	sbuffer = [object unknownShort1];
 	[data appendBytes:&sbuffer length:2];
 	
-	if (version < FM2010_10_2) {
-		for (int i = 0; i<[[object interestedClubs] count]; i++) {
-			[InterestedClubSaver saveInterestedClub:[[object interestedClubs] objectAtIndex:i] toData:data];
-		}
-	}
-	else {
-		[data appendData:[object unknownData2]];
-	}
+	[data appendData:[object unknownData2]];
 	
 	cbuffer = [object unknownChar4];
 	[data appendBytes:&cbuffer length:1];

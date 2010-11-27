@@ -8,6 +8,7 @@
 
 #import "ContractSaver.h"
 #import "ContractClauseSaver.h"
+#import "ContractBonusSaver.h"
 #import "FMDateSaver.h"
 
 @implementation ContractSaver
@@ -29,6 +30,8 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object leavingOnBosman];
 		[data appendBytes:&cbuffer length:1];
+		
+		/*
 		sbuffer = [object leagueGamesPlayedSinceJoined];
 		[data appendBytes:&sbuffer length:2];
 		ibuffer = [object appearanceBonus];
@@ -37,6 +40,8 @@
 		[data appendBytes:&ibuffer length:4];
 		ibuffer = [object cleanSheetBonus];
 		[data appendBytes:&ibuffer length:4];
+		*/
+		
 		[data appendData:[object unknownData1]];
 		cbuffer = [object job];
 		[data appendBytes:&cbuffer length:1];
@@ -47,6 +52,12 @@
 		[data appendBytes:&cbuffer length:1];
 		for (int i = 0; i<[[object clauses] count]; i++) {
 			[ContractClauseSaver saveClause:[[object clauses] objectAtIndex:i] toData:data];
+		}
+		
+		cbuffer = [[object bonuses] count];
+		[data appendBytes:&cbuffer length:1];
+		for (int i = 0; i<[[object bonuses] count]; i++) {
+			[ContractBonusSaver saveBonus:[[object bonuses] objectAtIndex:i] toData:data];
 		}
 		
 		cbuffer = [object unknownChar2];
@@ -79,8 +90,18 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object transferStatus];
 		[data appendBytes:&cbuffer length:1];
+		
+		/*
 		llbuffer = [object happiness];
 		[data appendBytes:&llbuffer length:8];
+		*/
+		
+		ibuffer = [object unknownInt1];
+		[data appendBytes:&ibuffer length:4];
+		[data appendData:[object unknownData3]];
+		cbuffer = [object unknownChar6];
+		[data appendBytes:&cbuffer length:1];
+		
 		[FMDateSaver saveDate:[object startDate] toData:data];
 		cbuffer = [object happinessLevel];
 		[data appendBytes:&cbuffer length:1];
@@ -95,6 +116,10 @@
 		cbuffer = [object gamesMissedInARow];
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object gamesPlayedInARow];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar7];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar8];
 		[data appendBytes:&cbuffer length:1];
 	}
 }

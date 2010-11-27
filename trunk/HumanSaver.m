@@ -81,15 +81,29 @@
 	sbuffer = [object unknownShort3];
 	[data appendBytes:&sbuffer length:2];
 	[data appendData:[object unknownData11]];
-	[data appendData:[object unknownData12]];
 	sbuffer = [object unknownShort4];
 	[data appendBytes:&sbuffer length:2];
 	[data appendData:[object unknownData13]];
-	[data appendData:[object unknownData14]];
+	
+	[data appendData:[object unknownData12]];
 	ibuffer = [object unknownInt1];
 	[data appendBytes:&ibuffer length:4];
 	[data appendData:[object unknownData15]];
+	
+	[data appendData:[object unknownData14]];
+	
+	ibuffer = [object unknownInt2];
+	[data appendBytes:&ibuffer length:4];
+	[data appendData:[object unknownData18]];
+	
 	[data appendData:[object unknownData16]];
+	
+	[FMString saveString:[object twitterLogin] toData:data];
+	[FMString saveString:[object twitterPassword] toData:data];
+	cbuffer = [object twitterUpdateType];
+	[data appendBytes:&cbuffer length:1];
+	[FMString saveString:[object youtubeLogin] toData:data];
+	[FMString saveString:[object youtubePassword] toData:data];
 	
 	sbuffer = [object topLevelBookmarkItems];
 	[data appendBytes:&sbuffer length:2];

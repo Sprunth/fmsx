@@ -79,7 +79,6 @@
 		}
 		[object setLocationDays:tempArray];
 		[tempArray release];
-		
 	}
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

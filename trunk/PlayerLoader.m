@@ -333,33 +333,32 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setTeamLastPlayedForID:ibuffer];
 	
-	// ??? int
-	offset += 4;
+	// ???
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setUnknownInt2:ibuffer];
 	
-	if (version >= FM2010_10_2) {
-		[object setLastUpdateDate:[FMDateLoader readFromData:data atOffset:&offset]];
-		[object setNextFitnessDropDate:[FMDateLoader readFromData:data atOffset:&offset]];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setRecurringInjuryID:ibuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setRecurringInjuryOccuranceCount:cbuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setFileListID:ibuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setSentLightTrainingNews:cbuffer];
-		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
-		[object setLastInjuryTypeID:ibuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setTrainingLevel:cbuffer];
-		[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-		[object setDaysSinceLastMatch:sbuffer];
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setMinutesPlayedLastMatch:cbuffer];
+	// injury status
+	[object setLastUpdateDate:[FMDateLoader readFromData:data atOffset:&offset]];
+	[object setNextFitnessDropDate:[FMDateLoader readFromData:data atOffset:&offset]];
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setRecurringInjuryID:ibuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setRecurringInjuryOccuranceCount:cbuffer];
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setFileListID:ibuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setSentLightTrainingNews:cbuffer];
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setLastInjuryTypeID:ibuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setTrainingLevel:cbuffer];
+	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setDaysSinceLastMatch:sbuffer];
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setMinutesPlayedLastMatch:cbuffer];
 	
-		// ??? - same as previous injury status
-		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-		[object setUnknownChar4:cbuffer];
-	}
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar4:cbuffer];
 	
 	*byteOffset = offset;
 	

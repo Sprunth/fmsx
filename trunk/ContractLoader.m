@@ -114,9 +114,12 @@
 	//	[object setHappiness:llbuffer];
 		
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[object setUnknownInt1:ibuffer];
+		[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
 		offset += (ibuffer*18);
 		
-		offset += 1;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar6:cbuffer];
 		
 		[object setStartDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -137,7 +140,12 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setGamesPlayedInARow:cbuffer];
 		
-		offset += 2;
+		// ??
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar7:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar8:cbuffer];
+		
 	}
 	
 	*byteOffset = offset;

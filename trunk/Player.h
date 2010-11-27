@@ -99,7 +99,7 @@
 	short homeReputation, currentReputation, worldReputation, currentAbility, potentialAbility, unknownShort1,
 	fitness, jadedness, condition, weight, height, clubLeagueGoals, clubGoals, clubAppearances, MLSLastDraftYear,
 	leagueGoals, goals, appearances, clubLeagueAppearances, leagueAppearances, daysSinceLastMatch;
-	int playerStatsID, value, askingPrice, firstClubID, recurringInjuryID, lastInjuryTypeID, fileListID,
+	int playerStatsID, value, askingPrice, firstClubID, recurringInjuryID, lastInjuryTypeID, fileListID, unknownInt2,
 	unknownInt1, teamLastPlayedForID, internationalDebutOpposition, MLSRightsClubID, MLSLastDraftClubID;
 	float unknownFloat1;
 	unsigned long long preferredMoves;
@@ -131,7 +131,8 @@ runsWithBallOften, runsWithBallRarely;
 fitness, jadedness, condition, weight, height, clubLeagueGoals, clubGoals, clubAppearances, unknownShort1,
 leagueGoals, goals, appearances, clubLeagueAppearances, leagueAppearances, daysSinceLastMatch, MLSLastDraftYear;
 @property(assign,readwrite) int playerStatsID, value, askingPrice, firstClubID, recurringInjuryID, lastInjuryTypeID,
-fileListID, unknownInt1, teamLastPlayedForID, internationalDebutOpposition, MLSRightsClubID, MLSLastDraftClubID;
+fileListID, unknownInt1, teamLastPlayedForID, internationalDebutOpposition, MLSRightsClubID, MLSLastDraftClubID,
+unknownInt2;
 @property(assign,readwrite) unsigned long long preferredMoves;
 @property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6, *unknownData7, *unknownData8, 
 *unknownData9, *unknownData10, *unknownData11, *unknownData13, *unknownData14, *unknownData15, *unknownData16, 

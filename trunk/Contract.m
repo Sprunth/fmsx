@@ -15,7 +15,8 @@ transferStatus, happinessLevel, squadNumber, leavingOnBosman, leagueGamesPlayedS
 appearanceBonus, goalBonus, cleanSheetBonus, personID, clubID, weeklyWage, happiness,
 expiryDate, startDate, clauses, endDate, agreedPrice, gamesMissedInARow, gamesPlayedInARow,
 clubChoiceFactor, transferOfferOptions, unknownChar1, unknownChar2, unknownChar3, unknownChar4, 
-unknownChar5, unknownData1, unknownData2, unknownDate1, bonuses;
+unknownChar5, unknownData1, unknownData2, unknownDate1, bonuses, unknownChar6, unknownChar7, 
+unknownChar8, unknownInt1, unknownData3;
 
 - (NSArray *)squadStatusStrings
 {

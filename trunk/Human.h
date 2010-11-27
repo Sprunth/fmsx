@@ -20,7 +20,7 @@
 	BOOL homePageSet;
 	char unknownChar1, unknownChar2, twitterUpdateType;
 	short unreadNewsItems, topLevelBookmarkItems, unknownShort1, unknownShort2, unknownShort3, unknownShort4;
-	int fogOfWarIndex, unknownInt1;
+	int fogOfWarIndex, unknownInt1, unknownInt2;
 	BookmarkFolder *bookmarks;
 	FMDate *holidayReturnDate;
 	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6,
@@ -34,7 +34,7 @@
 @property(assign,readwrite) char unknownChar1, unknownChar2, twitterUpdateType;
 @property(assign,readwrite) short unreadNewsItems, topLevelBookmarkItems, unknownShort1, unknownShort2, 
 unknownShort3, unknownShort4;
-@property(assign,readwrite) int fogOfWarIndex, unknownInt1;
+@property(assign,readwrite) int fogOfWarIndex, unknownInt1, unknownInt2;
 @property(assign,readwrite) BookmarkFolder *bookmarks;
 @property(assign,readwrite) FMDate *holidayReturnDate;
 @property(copy,readwrite) NSString *password, *twitterLogin, *twitterPassword, *youtubeLogin, *youtubePassword;
@@ -42,6 +42,6 @@ unknownShort3, unknownShort4;
 *pressConferences, *infos;
 @property(copy,readwrite) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6,
 *unknownData7, *unknownData8, *unknownData9, *unknownData10, *unknownData11, *unknownData12, 
-*unknownData13, *unknownData14, *unknownData15, *unknownData16, *unknownData17;
+*unknownData13, *unknownData14, *unknownData15, *unknownData16, *unknownData17, *unknownData18;
 
 @end
