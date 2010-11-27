@@ -24,6 +24,7 @@
 #define DBC_NATIONAL_TEAM			11
 #define DBC_LEAGUE_BODY_CLUB		12
 #define DBC_UNKNOWN_PERSON_TYPE_1	16
+#define DBC_UNKNOWN_PERSON_TYPE_2	17
 #define DBC_AGENT					18
 
 // person job definitions

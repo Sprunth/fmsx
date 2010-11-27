@@ -86,17 +86,21 @@
 			offset += 12;
 		}
 		else if ([object unknownChar1]==1) { 
-			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
+			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 8)]]; 
 			offset += 8;
 		}
 		else if ([object unknownChar1]==2) { 
-			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
+			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 8)]]; 
 			offset += 8;
 		}
 		else if ([object unknownChar1]==3) { 
-			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 7)]]; 
+			[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 8)]]; 
 			offset += 8;
 		}
+	}
+	else if ([object databaseClass]==DBC_UNKNOWN_PERSON_TYPE_2) {
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 36)]]; 
+		offset += 36;
 	}
 	else if ([object databaseClass]==DBC_AGENT) {
 		[object setAgentData:[AgentLoader readFromData:data atOffset:&offset]];
