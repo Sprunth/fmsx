@@ -596,6 +596,8 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 
 - (void)selectItem:(id)object
 {
+	NSLog(@"selecting item...");
+	
 	NSString *lowerClass;
 	
 	if ([[object className] isEqualToString:@"StadiumChange"]) {
@@ -613,17 +615,22 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[[self mutableArrayValueForKey:@"recentlyViewed"] removeObject:object];
 	[[self mutableArrayValueForKey:@"recentlyViewed"] insertObject:object atIndex:0];
 	
+	NSLog(@"before controller content reset");
+	
 	// reset the controllers contents
 	SEL controllerSelector = NSSelectorFromString([NSString stringWithFormat:@"%@Controller",lowerClass]);
-	NSSortDescriptor *rowIDDescriptor = [[NSSortDescriptor alloc] initWithKey:@"rowID" ascending:YES];
+//	NSSortDescriptor *rowIDDescriptor = [[NSSortDescriptor alloc] initWithKey:@"rowID" ascending:YES];
 	
-	[[self performSelector:controllerSelector] setFilterPredicate:nil];
-	[[self performSelector:controllerSelector] setSortDescriptors:[NSArray arrayWithObject:rowIDDescriptor]];
-	[[self performSelector:controllerSelector] setSelectionIndex:[object rowID]];
+	NSLog(@"resetting predicate");
+	[[self performSelector:controllerSelector] setFilterPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"rowID==%d",[object rowID]]]];
+	[[self performSelector:controllerSelector] setSelectionIndex:0];
 	
+	NSLog(@"before setview");
 	// set the view
 	SEL viewSelector = NSSelectorFromString([NSString stringWithFormat:@"%@GeneralView",lowerClass]);
 	[mainContainer setContentView:[self performSelector:viewSelector]];
+	
+	NSLog(@"after setview");
 	
 	// set up scope bars
 	if ([[object className] isEqualToString:@"Person"]) {
@@ -873,6 +880,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	
 	// deselect outline view rows
 	[mainOutlineView deselectAll:self];
+	NSLog(@"done select");
 }
 
 - (void)addToFavourites:(id)sender

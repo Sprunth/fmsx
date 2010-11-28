@@ -147,5 +147,8 @@ number, numberTrim;
 - (NSArray *)typeStrings;
 
 - (void)redrawImages;
+- (NSBitmapImageRep *)transformImage:(NSBitmapImageRep *)bitmapImageRep type:(int)colourType;
+- (NSImage *)bgImageWithDefault:(BOOL)isDefault customStyle:(int)customStyle;
+- (NSImage *)logoImageWithDefault:(BOOL)isDefault customStyle:(int)customStyle;
 
 @end

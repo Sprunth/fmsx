@@ -33,4 +33,7 @@ preferredFormation2, defensiveFormation, attackingFormation;
 
 - (NSArray *)teamObjects;
 
+- (NSImage *)defaultTitleBG;
+- (NSColor *)bgColour;
+
 @end

@@ -157,31 +157,8 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 	
 	NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithData:[[NSImage imageNamed:[NSString stringWithFormat:@"kit_%@_%d.png",imgType,styleImage]] TIFFRepresentation]];
 	
-	float foreRed = [[self foregroundColour] redComponent];
-	float foreGreen = [[self foregroundColour] greenComponent];
-	float foreBlue = [[self foregroundColour] blueComponent];
-	float backRed = [[self backgroundColour] redComponent];
-	float backGreen = [[self backgroundColour] greenComponent];
-	float backBlue = [[self backgroundColour] blueComponent];
-	float trimRed = [[self trimColour] redComponent];
-	float trimGreen = [[self trimColour] greenComponent];
-	float trimBlue = [[self trimColour] blueComponent];
-	
-	for (int x=0; x<=[bitmapImageRep pixelsWide]; x++) {
-		for (int y=0; y<=[bitmapImageRep pixelsHigh]; y++) {
-			float oRed = [[bitmapImageRep colorAtX:x y:y] redComponent];
-			float oGreen = [[bitmapImageRep colorAtX:x y:y] greenComponent];
-			float oBlue = [[bitmapImageRep colorAtX:x y:y] blueComponent];
-				
-			float rcalc = (foreRed * oGreen) + (backRed * oRed) + (trimRed * oBlue);
-			float gcalc = (foreGreen * oGreen) + (backGreen * oRed) + (trimGreen * oBlue);
-			float bcalc = (foreBlue *oGreen) + (backBlue * oRed) + (trimBlue * oBlue);
-			[bitmapImageRep setColor:[NSColor colorWithCalibratedRed:rcalc green:gcalc blue:bcalc alpha:[[bitmapImageRep colorAtX:x y:y] alphaComponent]] atX:x y:y];
-		}
-	}
-		
 	NSImage *colouredImage = [[NSImage alloc] init];
-	[colouredImage addRepresentation:bitmapImageRep];
+	[colouredImage addRepresentation:[self transformImage:bitmapImageRep type:0]];
 	[bitmapImageRep release];
 	
 	if (type==AKT_SHIRT) {
@@ -227,4 +204,79 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 
 - (void)redrawImages { [self setImage1:[self image1]]; }
 
+- (NSBitmapImageRep *)transformImage:(NSBitmapImageRep *)bitmapImageRep type:(int)colourType
+{
+	float foreRed = [[self foregroundColour] redComponent];
+	float foreGreen = [[self foregroundColour] greenComponent];
+	float foreBlue = [[self foregroundColour] blueComponent];
+	float backRed = [[self backgroundColour] redComponent];
+	float backGreen = [[self backgroundColour] greenComponent];
+	float backBlue = [[self backgroundColour] blueComponent];
+	float trimRed = [[self trimColour] redComponent];
+	float trimGreen = [[self trimColour] greenComponent];
+	float trimBlue = [[self trimColour] blueComponent];
+	
+	for (int x=0; x<=[bitmapImageRep pixelsWide]; x++) {
+		for (int y=0; y<=[bitmapImageRep pixelsHigh]; y++) {
+			float oRed = [[bitmapImageRep colorAtX:x y:y] redComponent];
+			float oGreen = [[bitmapImageRep colorAtX:x y:y] greenComponent];
+			float oBlue = [[bitmapImageRep colorAtX:x y:y] blueComponent];
+			
+			float rcalc = (foreRed * oGreen) + (backRed * oRed) + (trimRed * oBlue);
+			float gcalc = (foreGreen * oGreen) + (backGreen * oRed) + (trimGreen * oBlue);
+			float bcalc = (foreBlue *oGreen) + (backBlue * oRed) + (trimBlue * oBlue);
+			float acalc = [[bitmapImageRep colorAtX:x y:y] alphaComponent];
+			
+			[bitmapImageRep setColor:[NSColor colorWithCalibratedRed:rcalc green:gcalc blue:bcalc alpha:acalc] atX:x y:y];
+		}
+	}
+	
+	return bitmapImageRep;
+}
+
+- (NSImage *)bgImageWithDefault:(BOOL)isDefault customStyle:(int)customStyle
+{
+	char styleImage;
+	if (isDefault) { 
+		styleImage = 0;
+		[self setBackgroundColour:[NSColor blackColor]];
+		[self setForegroundColour:[NSColor whiteColor]];
+		[self setTrimColour:[NSColor whiteColor]];
+	}
+	else if (kitStyle>53 || kitStyle<1) { styleImage = 0; }
+	else { styleImage = kitStyle; }
+	
+	if (customStyle>-1) { styleImage = customStyle; }
+	
+	NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithData:[[NSImage imageNamed:[NSString stringWithFormat:@"club_titlebg_%d.png",styleImage]] TIFFRepresentation]];
+	
+	NSImage *colouredImage = [[NSImage alloc] init];
+	[colouredImage addRepresentation:[self transformImage:bitmapImageRep type:1]];
+	[bitmapImageRep release];
+	
+	return colouredImage;
+}
+
+- (NSImage *)logoImageWithDefault:(BOOL)isDefault customStyle:(int)customStyle
+{
+	char styleImage;
+	if (isDefault) { 
+		styleImage = 0;
+		[self setBackgroundColour:[NSColor blackColor]];
+		[self setForegroundColour:[NSColor whiteColor]];
+		[self setTrimColour:[NSColor whiteColor]];
+	}
+	else if (kitStyle>53 || kitStyle<1) { styleImage = 0; }
+	else { styleImage = kitStyle; }
+	
+	if (customStyle>-1) { styleImage = customStyle; }
+
+	NSBitmapImageRep *bitmapImageRep = [[NSBitmapImageRep alloc] initWithData:[[NSImage imageNamed:[NSString stringWithFormat:@"default_logo_%d.png",styleImage]] TIFFRepresentation]];
+	
+	NSImage *colouredImage = [[NSImage alloc] init];
+	[colouredImage addRepresentation:[self transformImage:bitmapImageRep type:1]];
+	[bitmapImageRep release];
+	
+	return colouredImage;
+}
 @end
