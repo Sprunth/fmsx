@@ -67,7 +67,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	subsections = [[NSMutableArray alloc] init];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Awards" forKey:@"title"];
-	[subsection setObject:@"Award-s" forKey:@"image"];
+	[subsection setObject:@"award" forKey:@"image"];
 	[subsection setObject:@"awards" forKey:@"array"];
 	[subsection setObject:@"1" forKey:@"subsection"];
 	[subsection setObject:@"awardSearchView" forKey:@"view"];
@@ -75,7 +75,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Cities" forKey:@"title"];
-	[subsection setObject:@"City-s" forKey:@"image"];
+	[subsection setObject:@"city" forKey:@"image"];
 	[subsection setObject:@"cities" forKey:@"array"];
 	[subsection setObject:@"1" forKey:@"subsection"];
 	[subsection setObject:@"citySearchView" forKey:@"view"];
@@ -83,7 +83,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Clubs" forKey:@"title"];
-	[subsection setObject:@"Club-s" forKey:@"image"];
+	[subsection setObject:@"club" forKey:@"image"];
 	[subsection setObject:@"clubs" forKey:@"array"];
 	[subsection setObject:@"clubSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -91,7 +91,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Competitions" forKey:@"title"];
-	[subsection setObject:@"Competition-s" forKey:@"image"];
+	[subsection setObject:@"competition" forKey:@"image"];
 	[subsection setObject:@"competitions" forKey:@"array"];
 	[subsection setObject:@"competitionSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -99,7 +99,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Continents" forKey:@"title"];
-	[subsection setObject:@"Continent-s" forKey:@"image"];
+	[subsection setObject:@"continent" forKey:@"image"];
 	[subsection setObject:@"continents" forKey:@"array"];
 	[subsection setObject:@"continentSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -107,7 +107,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Currencies" forKey:@"title"];
-	[subsection setObject:@"Currency-s" forKey:@"image"];
+	[subsection setObject:@"currency" forKey:@"image"];
 	[subsection setObject:@"currencies" forKey:@"array"];
 	[subsection setObject:@"currencySearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -115,7 +115,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Derbies" forKey:@"title"];
-	[subsection setObject:@"Derby-s" forKey:@"image"];
+	[subsection setObject:@"derby" forKey:@"image"];
 	[subsection setObject:@"derbies" forKey:@"array"];
 	[subsection setObject:@"derbySearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -123,7 +123,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Injuries" forKey:@"title"];
-	[subsection setObject:@"Injury-s" forKey:@"image"];
+	[subsection setObject:@"injury" forKey:@"image"];
 	[subsection setObject:@"injuries" forKey:@"array"];
 	[subsection setObject:@"injurySearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -131,7 +131,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Languages" forKey:@"title"];
-	[subsection setObject:@"Language-s" forKey:@"image"];
+	[subsection setObject:@"language" forKey:@"image"];
 	[subsection setObject:@"languages" forKey:@"array"];
 	[subsection setObject:@"languageSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -139,7 +139,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Local Areas" forKey:@"title"];
-	[subsection setObject:@"LocalArea-s" forKey:@"image"];
+	[subsection setObject:@"localarea" forKey:@"image"];
 	[subsection setObject:@"localAreas" forKey:@"array"];
 	[subsection setObject:@"localAreaSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -147,7 +147,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Media" forKey:@"title"];
-	[subsection setObject:@"Media-s" forKey:@"image"];
+	[subsection setObject:@"media" forKey:@"image"];
 	[subsection setObject:@"media" forKey:@"array"];
 	[subsection setObject:@"mediaSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -155,7 +155,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Nations" forKey:@"title"];
-	[subsection setObject:@"Nation-s" forKey:@"image"];
+	[subsection setObject:@"nation" forKey:@"image"];
 	[subsection setObject:@"nations" forKey:@"array"];
 	[subsection setObject:@"nationSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -163,7 +163,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"People" forKey:@"title"];
-	[subsection setObject:@"Person-s" forKey:@"image"];
+	[subsection setObject:@"person" forKey:@"image"];
 	[subsection setObject:@"people" forKey:@"array"];
 	[subsection setObject:@"peopleSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -171,7 +171,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Sponsors" forKey:@"title"];
-	[subsection setObject:@"Sponsor-s" forKey:@"image"];
+	[subsection setObject:@"sponsor" forKey:@"image"];
 	[subsection setObject:@"sponsors" forKey:@"array"];
 	[subsection setObject:@"sponsorSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -179,7 +179,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Stadiums" forKey:@"title"];
-	[subsection setObject:@"Stadium-s" forKey:@"image"];
+	[subsection setObject:@"stadium" forKey:@"image"];
 	[subsection setObject:@"stadiums" forKey:@"array"];
 	[subsection setObject:@"stadiumSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -187,7 +187,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Stadium Changes" forKey:@"title"];
-	[subsection setObject:@"StadiumChange-s" forKey:@"image"];
+	[subsection setObject:@"stadiumchange" forKey:@"image"];
 	[subsection setObject:@"stadiumChanges" forKey:@"array"];
 	[subsection setObject:@"stadiumChangeSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
@@ -195,7 +195,7 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 	[subsection release];
 	subsection = [[NSMutableDictionary alloc] init];
 	[subsection setObject:@"Weather" forKey:@"title"];
-	[subsection setObject:@"Weather-s" forKey:@"image"];
+	[subsection setObject:@"weather" forKey:@"image"];
 	[subsection setObject:@"weather" forKey:@"array"];
 	[subsection setObject:@"weatherSearchView" forKey:@"view"];
 	[subsection setObject:@"1" forKey:@"subsection"];
