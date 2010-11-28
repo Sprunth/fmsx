@@ -38,11 +38,6 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 	green = g/31.875f;
 	blue = b/31.875f;
 	
-	NSLog(@"%f %f %f",red,green,blue);
-	NSLog(@"%d %d %d",r,g,b);
-	NSLog(@"%d",val);
-	NSLog(@"---------------");
-	
 	NSColor *colour = [NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0];
 	
 	return colour;
