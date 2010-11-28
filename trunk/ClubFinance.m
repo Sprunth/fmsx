@@ -30,7 +30,8 @@ unknownChar13, unknownChar14, unknownChar15, unknownChar16, unknownChar17, unkno
 unknownChar19, unknownChar20, unknownChar21, unknownChar22, unknownChar23, unknownChar24, 
 unknownChar25, unknownChar26, unknownChar27, unknownChar28, unknownChar29, unknownChar30,
 unknownDate1, transferEmbargoStartDate, transferEmbargoEndDate, transferEmbargoAppealDate, unknownDate5, unknownFloat1,
-unknownFloat2, unknownFloat3;
+unknownFloat2, unknownFloat3, unknownChar32, unknownChar33, unknownChar34, unknownChar35, unknownChar36,
+unknownChar37, unknownChar38, unknownChar39, unknownDate2;
 
 - (BOOL)isFullFinance 
 {

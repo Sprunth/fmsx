@@ -33,7 +33,8 @@
 	unknownChar13, unknownChar14, unknownChar15, unknownChar16, unknownChar17, unknownChar18, 
 	unknownChar19, unknownChar20, unknownChar21, unknownChar22, unknownChar23, unknownChar24, 
 	unknownChar25, unknownChar26, unknownChar27, unknownChar28, unknownChar29, unknownChar30,
-	unknownChar31;
+	unknownChar31, unknownChar32, unknownChar33, unknownChar34, unknownChar35, unknownChar36,
+	unknownChar37, unknownChar38, unknownChar39;
 	BOOL sugarDaddyIncreasesStartingFinances, isValidFinance;
 	BOOL isFullFinance;
 	int seasonTransferBudget, remainingTransferBudget, balance, annualStadiumRental;
@@ -52,7 +53,7 @@
 	ClubFinanceRecord *thisMonth, *lastMonth, *lastYear, *thisYear;
 	
 	FMDate *lastBudgetIncreaseDate, *lastSeasonUpdateDate, *unknownDate1, *transferEmbargoStartDate, 
-	*transferEmbargoEndDate, *transferEmbargoAppealDate, *unknownDate5;
+	*transferEmbargoEndDate, *transferEmbargoAppealDate, *unknownDate5, *unknownDate2;
 	NSMutableArray *pastRecords, *pastRevenueRecords;
 }
 
@@ -62,7 +63,8 @@ unknownChar7, unknownChar8, unknownChar9, unknownChar10, unknownChar11, unknownC
 unknownChar13, unknownChar14, unknownChar15, unknownChar16, unknownChar17, unknownChar18, 
 unknownChar19, unknownChar20, unknownChar21, unknownChar22, unknownChar23, unknownChar24, 
 unknownChar25, unknownChar26, unknownChar27, unknownChar28, unknownChar29, unknownChar30,
-unknownChar31;
+unknownChar31, unknownChar32, unknownChar33, unknownChar34, unknownChar35, unknownChar36,
+unknownChar37, unknownChar38, unknownChar39;
 @property(assign,readwrite) int seasonTransferBudget, remainingTransferBudget,
 balance, annualStadiumRental, transferIncomePercentage,
 otherOut, loanRepayments, leagueFines, groundMaintenance, playerWages, staffWages,
@@ -76,7 +78,7 @@ unknownInt13, unknownInt14, unknownInt15, unknownInt16;
 @property(assign,readwrite) BOOL sugarDaddyIncreasesStartingFinances, isFullFinance, isValidFinance;
 @property(assign,readwrite) float averageMatchTicketPrice, averageSeasonTicketPrice,
 unknownFloat1, unknownFloat2, unknownFloat3;
-@property(assign,readwrite) FMDate *lastBudgetIncreaseDate, *lastSeasonUpdateDate,
+@property(assign,readwrite) FMDate *lastBudgetIncreaseDate, *lastSeasonUpdateDate, *unknownDate2,
 *unknownDate1, *transferEmbargoStartDate, *transferEmbargoEndDate, *transferEmbargoAppealDate, *unknownDate5;
 @property(copy,readwrite) NSMutableArray *pastRecords, *pastRevenueRecords;
 @property(assign,readwrite) ClubFinanceRecord *thisMonth, *lastMonth, *lastYear, *thisYear;

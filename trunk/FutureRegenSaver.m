@@ -30,6 +30,8 @@
 	[data appendBytes:&ibuffer length:4];
 	cbuffer = [object age];
 	[data appendBytes:&cbuffer length:1];
+	
+	[data appendData:[object unknownData1]];
 }
 
 @end

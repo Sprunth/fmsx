@@ -186,7 +186,8 @@
 		[object setUnknownChar38:cbuffer];
 	}
 	if ([object nameFlags] & FIXTURE_NAME_ANOTHER_NAME) {
-		offset += 1;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar59:cbuffer];
 	}
 	
 	// 4 chars - first is usually 0x0A

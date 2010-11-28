@@ -56,6 +56,10 @@
 		[data appendBytes:&cbuffer length:1];
 		[FMDateSaver saveDate:[object lastUpdateDate] toData:data];
 		 */
+		
+		ibuffer = [object unknownInt1];
+		[data appendBytes:&ibuffer length:4];
+		[FMDateSaver saveDate:[object unknownDate1] toData:data];
 	}
 	else if ([object type]==TI_PLAYER_FIRST_OPTION_INFO) {
 		ibuffer = [object playerID];
@@ -93,6 +97,8 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object unknownChar9];
 		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar10];
+		[data appendBytes:&cbuffer length:1];
 	}
 	else if ([object type]==TI_APPEARANCE_MONEY_INFO) {
 		ibuffer = [object playerID];
@@ -121,6 +127,13 @@
 	else if ([object type]==TI_MAX_NON_EEC_PLAYERS_INFO) {
 		cbuffer = [object maxNumberNonECPlayers];
 		[data appendBytes:&cbuffer length:1];
+		
+		cbuffer = [[object players] count];
+		[data appendBytes:&cbuffer length:1];
+		for (int i = 0; i<[[object players] count]; i++) {
+			ibuffer = [[[object players] objectAtIndex:i] intValue];
+			[data appendBytes:&ibuffer length:4];
+		}
 	}
 	else if ([object type]==TI_STARTING_PLAYER_RECORD_INFO) {
 		ibuffer = [object mostAppsPersonID];
@@ -209,6 +222,10 @@
 		cbuffer = [object unknownChar1];
 		[data appendBytes:&cbuffer length:1];
 		[data appendData:[object unknownData1]];
+		cbuffer = [object unknownChar2];
+		[data appendBytes:&cbuffer length:1];
+		[data appendData:[object unknownData2]];
+		[data appendData:[object unknownData3]];
 	}
 	else if ([object type]==TI_UNKNOWN_8) {
 		cbuffer = [object unknownChar1];
@@ -249,6 +266,17 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object unknownChar6];
 		[data appendBytes:&cbuffer length:1];
+	}
+	else if ([object type]==TI_UNKNOWN_14) {
+		cbuffer = [object unknownChar1];
+		[data appendBytes:&cbuffer length:1];
+		[data appendData:[object unknownData1]];
+		cbuffer = [object unknownChar2];
+		[data appendBytes:&cbuffer length:1];
+	}
+	else if ([object type]==TI_UNKNOWN_16) {
+		ibuffer = [object unknownInt1];
+		[data appendBytes:&ibuffer length:4];
 	}
 }
 

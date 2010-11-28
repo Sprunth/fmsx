@@ -49,6 +49,18 @@
 		ibuffer = [[[object unknowns1] objectAtIndex:i] intValue];
 		[data appendBytes:&ibuffer length:4];
 	}
+	cbuffer = [[object unknowns3] count];
+	[data appendBytes:&cbuffer length:1];
+	for (int i = 0; i<[[object unknowns3] count]; i++) {
+		ibuffer = [[[object unknowns3] objectAtIndex:i] intValue];
+		[data appendBytes:&ibuffer length:4];
+	}
+	cbuffer = [[object unknowns4] count];
+	[data appendBytes:&cbuffer length:1];
+	for (int i = 0; i<[[object unknowns4] count]; i++) {
+		ibuffer = [[[object unknowns4] objectAtIndex:i] intValue];
+		[data appendBytes:&ibuffer length:4];
+	}
 	cbuffer = [[object relationships] count];
 	[data appendBytes:&cbuffer length:1];
 	for (int i = 0; i<[[object relationships] count]; i++) {
@@ -99,12 +111,6 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object attackingFormation];
 	[data appendBytes:&cbuffer length:1];
-	
-	cbuffer = [[object alternateKits] count];
-	[data appendBytes:&cbuffer length:1];
-	for (int i = 0; i<[[object alternateKits] count]; i++) {
-		[AlternativeKitSaver saveKit:[[object alternateKits] objectAtIndex:i] toData:data];
-	}
 	
 	sbuffer = [[object transferInfos] count];
 	[data appendBytes:&sbuffer length:2];

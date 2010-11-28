@@ -12,8 +12,10 @@
 
 + (void)saveColour:(Colour *)object toData:(NSMutableData *)data extended:(BOOL)extended
 {
+	BOOL bbuffer;
 	char cbuffer;
 	short sbuffer;
+	int ibuffer;
 	
 	sbuffer = [object foreground];
 	[data appendBytes:&sbuffer length:2];
@@ -30,6 +32,21 @@
 	}
 	cbuffer = [object kitStyle];
 	[data appendBytes:&cbuffer length:1];
+	
+	if (extended) {
+		cbuffer = [object kitNumber];
+		[data appendBytes:&cbuffer length:1];
+		bbuffer = [object outfieldKit];
+		[data appendBytes:&bbuffer length:1];
+		sbuffer = [object year];
+		[data appendBytes:&sbuffer length:2];
+		cbuffer = [object type];
+		[data appendBytes:&cbuffer length:1];
+		ibuffer = [object competitionUID];
+		[data appendBytes:&cbuffer length:4];
+		cbuffer = [object alternativeKitNumber];
+		[data appendBytes:&cbuffer length:1];
+	}
 }
 
 @end

@@ -10,11 +10,13 @@
 #import "FMDate.h"
 
 @interface IDPC : NSObject {
+	char unknownChar1;
 	unsigned char playerCount;
 	FMDate *date;
 }
 
 @property(assign,readwrite) FMDate *date;
 @property(assign,readwrite) unsigned char playerCount;
+@property(assign,readwrite) char unknownChar1;
 
 @end

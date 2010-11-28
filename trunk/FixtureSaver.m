@@ -184,6 +184,8 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object unknownChar38];
 		[data appendBytes:&cbuffer length:1];
+	}
+	if ([object nameFlags] & FIXTURE_NAME_ANOTHER_NAME) {
 		
 	}
 	

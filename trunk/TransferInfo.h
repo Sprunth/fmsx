@@ -66,7 +66,7 @@
 	char type, playersBeenOnLoan, discoveryPlayersSigned, paymentsRemaining,
 		 maxNumberNonECPlayers, playersSigned, percentage;
 	char unknownChar1, unknownChar2, unknownChar3, unknownChar4,
-	unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9;
+	unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9, unknownChar10;
 	unsigned char feesToCheck;
 	BOOL totalValuesExist, teamHasBeenInvited;
 	short mostApps, mostGoals;
@@ -76,20 +76,20 @@
 	FMDate *lastUpdateDate, *deadline, *firstOptionEndDate, *unknownDate1;
 	NSData *unknownData1;
 	NSString *mostAppsFirstName, *mostAppsSurname, *mostGoalsFirstName, *mostGoalsSurname;
-	NSMutableArray *totalValues, *unknownDates;
+	NSMutableArray *totalValues, *unknownDates, *players;
 }
 
 @property(assign, readwrite) char type, playersBeenOnLoan, discoveryPlayersSigned, paymentsRemaining,
 maxNumberNonECPlayers, playersSigned, percentage, unknownChar1, unknownChar2, unknownChar3, unknownChar4,
-unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9;
+unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9, unknownChar10;
 @property(assign, readwrite) unsigned char feesToCheck;
 @property(assign, readwrite) BOOL totalValuesExist, teamHasBeenInvited;
 @property(assign, readwrite) short mostApps, mostGoals;
 @property(assign, readwrite) int info, cash, buyingClubID, sellingClubID, playerID, futureCash, appearances,
 appearancesSoFar, appearanceInfoType, mostAppsPersonID, mostGoalsPersonID, unknownInt1;
 @property(assign, readwrite) FMDate *lastUpdateDate, *deadline, *firstOptionEndDate, *unknownDate1;
-@property(copy, readwrite) NSData *unknownData1;
+@property(copy, readwrite) NSData *unknownData1, *unknownData2, *unknownData3;
 @property(copy, readwrite) NSString *mostAppsFirstName, *mostAppsSurname, *mostGoalsFirstName, *mostGoalsSurname;
-@property(copy, readwrite) NSMutableArray *totalValues, *unknownDates;
+@property(copy, readwrite) NSMutableArray *totalValues, *unknownDates, *players;
 
 @end

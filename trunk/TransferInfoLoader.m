@@ -63,8 +63,11 @@
 		[object setUnknownChar1:cbuffer];
 		[object setLastUpdateDate:[FMDateLoader readFromData:data atOffset:&offset]];
 		 */
-		// int, date
-		offset +=8;
+		
+		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+		[object setUnknownInt1:ibuffer];
+		[object setUnknownDate1:[FMDateLoader readFromData:data atOffset:&offset]];
+		
 	}
 	else if ([object type]==TI_PLAYER_FIRST_OPTION_INFO) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -103,8 +106,8 @@
 		[object setUnknownChar8:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar9:cbuffer];
-		
-		offset += 1;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar10:cbuffer];
 	}
 	else if ([object type]==TI_APPEARANCE_MONEY_INFO) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -135,7 +138,13 @@
 		[object setMaxNumberNonECPlayers:cbuffer];
 		
 		// players
-		offset += (cbuffer*4);
+		tempArray = [[NSMutableArray alloc] init];
+		for (int i=0;i<cbuffer;i++) {
+			[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+			[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
+		}
+		[object setPlayers:tempArray];
+		[tempArray release];
 	}
 	else if ([object type]==TI_STARTING_PLAYER_RECORD_INFO) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
@@ -233,13 +242,16 @@
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar1:cbuffer];
 		
-		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, ((cbuffer*16)+14))]]; 
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, ((cbuffer*16)+6))]]; 
 		offset += ((cbuffer*16) + 6);
 		
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar2:cbuffer];
+		
+		[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (cbuffer*4))]]; 
 		offset += (cbuffer*4);
 		
-		offset += 12;
+		[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 12)]]; 
 		
 		NSLog(@"UTI7");
 	}
@@ -291,8 +303,13 @@
 	}
 	else if ([object type]==TI_UNKNOWN_14) {
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar1:cbuffer];
+		
+		[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, (cbuffer*4))]]; 
 		offset += (cbuffer*4);
-		offset += 1;
+	
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar2:cbuffer];
 	}
 	else if ([object type]==TI_UNKNOWN_16) {
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;

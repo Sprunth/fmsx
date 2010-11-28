@@ -18,6 +18,7 @@ mostAppsPersonID, mostGoalsPersonID, lastUpdateDate, deadline, firstOptionEndDat
 mostAppsFirstName, mostAppsSurname, mostGoalsFirstName, mostGoalsSurname,
 totalValues, percentage, unknownChar1, unknownChar2, unknownChar3, unknownChar4,
 unknownChar5, unknownChar6, unknownChar7, unknownChar8, unknownChar9, unknownInt1,
-unknownDate1, unknownDates, unknownData1;
+unknownDate1, unknownDates, unknownData1, unknownData2, unknownData3, players, 
+unknownChar10;
 
 @end

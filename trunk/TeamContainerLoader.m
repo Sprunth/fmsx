@@ -78,7 +78,7 @@
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
 	}
-//	[object setUnknowns3:tempArray];
+	[object setUnknowns3:tempArray];
 	[tempArray release];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -89,7 +89,7 @@
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[tempArray addObject:[NSNumber numberWithInt:ibuffer]];
 	}
-//	[object setUnknowns4:tempArray];
+	[object setUnknowns4:tempArray];
 	[tempArray release];
 	
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;

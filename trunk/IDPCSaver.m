@@ -18,6 +18,8 @@
 	[FMDateSaver saveDate:[object date] toData:data];
 	cbuffer = [object playerCount];
 	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar1];
+	[data appendBytes:&cbuffer length:1];
 }
 
 @end

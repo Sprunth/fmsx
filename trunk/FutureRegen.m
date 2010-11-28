@@ -11,6 +11,7 @@
 
 @implementation FutureRegen
 
-@synthesize birthDay, birthMonth, age, firstName, surname, commonName, favouriteClub, unknownChar;
+@synthesize birthDay, birthMonth, age, firstName, surname, commonName, favouriteClub, unknownChar,
+unknownData1;
 
 @end

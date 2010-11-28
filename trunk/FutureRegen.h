@@ -13,11 +13,13 @@
 	char birthDay, birthMonth, age, unknownChar;
 	int favouriteClub;
 	
+	NSData *unknownData1;
 	NSString *firstName, *surname, *commonName;
 }
 
 @property(readwrite,assign) char birthDay, birthMonth, age, unknownChar;
 @property(readwrite,assign) int favouriteClub;
+@property(readwrite,copy) NSData *unknownData1;
 @property(readwrite,copy) NSString *firstName, *surname, *commonName;
 
 @end

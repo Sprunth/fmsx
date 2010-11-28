@@ -96,7 +96,7 @@
 		[object setUnknownInt3:ibuffer];
 		
 		// ???
-		[FMDateLoader readFromData:data atOffset:&offset];
+		[object setUnknownDate2:[FMDateLoader readFromData:data atOffset:&offset]];
 		
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setPlayersSold:ibuffer];
@@ -151,9 +151,10 @@
 		[object setUnknownChar16:cbuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar17:cbuffer];
-		
-		// ???
-		offset += 2;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar32:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar33:cbuffer];
 		
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setTransferIncomePercentage:ibuffer];
@@ -210,9 +211,11 @@
 		[object setUnknownInt15:ibuffer];
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar19:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar34:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar35:cbuffer];
 		
-		// ???
-		offset += 2;
 	}
 	
 	if ([object type]!=FT_INVALID_TYPE) {
@@ -274,7 +277,15 @@
 		[data getBytes:&fbuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUnknownFloat3:fbuffer];
 	
-		offset += 4;
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar36:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar37:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar38:cbuffer];
+		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+		[object setUnknownChar39:cbuffer];
+		
 		
 	}
 	

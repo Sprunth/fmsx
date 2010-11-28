@@ -39,6 +39,7 @@
 	[object setAge:cbuffer];
 	
 	// ???
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 14)]]; 
 	offset += 14;
 	
 	*byteOffset = offset;

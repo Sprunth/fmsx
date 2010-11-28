@@ -22,9 +22,8 @@
 	[object setDate:[FMDateLoader readFromData:data atOffset:&offset]];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setPlayerCount:cbuffer];
-	
-	offset += 1;
-	
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
 	
 	*byteOffset = offset;
 	

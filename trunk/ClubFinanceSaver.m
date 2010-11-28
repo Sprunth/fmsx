@@ -90,6 +90,9 @@
 		[data appendBytes:&ibuffer length:4];
 		ibuffer = [object unknownInt3];
 		[data appendBytes:&ibuffer length:4];
+		
+		[FMDateSaver saveDate:[object unknownDate2] toData:data];
+		
 		ibuffer = [object playersSold];
 		[data appendBytes:&ibuffer length:4];
 		ibuffer = [object playersBought];
@@ -141,6 +144,11 @@
 		[data appendBytes:&cbuffer length:1];
 		cbuffer = [object unknownChar17];
 		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar32];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar33];
+		
+		[data appendBytes:&cbuffer length:1];
 		ibuffer = [object transferIncomePercentage];
 		[data appendBytes:&ibuffer length:4];
 		cbuffer = [object unknownChar1];
@@ -185,6 +193,10 @@
 		[data appendBytes:&ibuffer length:4];
 		cbuffer = [object unknownChar19];
 		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar34];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar35];
+		[data appendBytes:&cbuffer length:1];
 	}
 	
 	if ([object type]!=FT_INVALID_TYPE) {
@@ -200,10 +212,7 @@
 		[data appendBytes:&cbuffer length:1];
 		[FMDateSaver saveDate:[object transferEmbargoStartDate] toData:data];
 		[FMDateSaver saveDate:[object transferEmbargoEndDate] toData:data];
-		
-		if (version >= FM2010_10_2) {
-			[FMDateSaver saveDate:[object transferEmbargoAppealDate] toData:data];
-		}
+		[FMDateSaver saveDate:[object transferEmbargoAppealDate] toData:data];
 		
 		ibuffer = [object unknownInt16];
 		[data appendBytes:&ibuffer length:4];
@@ -240,6 +249,16 @@
 		[data appendBytes:&fbuffer length:4];
 		fbuffer = [object unknownFloat3];
 		[data appendBytes:&fbuffer length:4];
+		
+		cbuffer = [object unknownChar36];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar37];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar38];
+		[data appendBytes:&cbuffer length:1];
+		cbuffer = [object unknownChar39];
+		[data appendBytes:&cbuffer length:1];
+		
 	}
 }
 

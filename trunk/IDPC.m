@@ -8,9 +8,8 @@
 
 #import "IDPC.h"
 
-
 @implementation IDPC
 
-@synthesize playerCount,date;
+@synthesize playerCount, date, unknownChar1;
 
 @end
