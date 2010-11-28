@@ -25,7 +25,7 @@
 	FMDate *holidayReturnDate;
 	NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6,
 	*unknownData7, *unknownData8, *unknownData9, *unknownData10, *unknownData11, *unknownData12, 
-	*unknownData13, *unknownData14, *unknownData15, *unknownData16, *unknownData17;
+	*unknownData13, *unknownData14, *unknownData15, *unknownData16, *unknownData17, *unknownData18;
 	NSMutableArray *homePageInfos, *mediaDecisions, *newsFilterLists, *pressConferences, *infos;
 	NSString *password, *twitterLogin, *twitterPassword, *youtubeLogin, *youtubePassword;
 }

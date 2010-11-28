@@ -74,7 +74,7 @@
 		appearancesSoFar, appearanceInfoType, mostAppsPersonID, mostGoalsPersonID;
 	int unknownInt1;
 	FMDate *lastUpdateDate, *deadline, *firstOptionEndDate, *unknownDate1;
-	NSData *unknownData1;
+	NSData *unknownData1, *unknownData2, *unknownData3;
 	NSString *mostAppsFirstName, *mostAppsSurname, *mostGoalsFirstName, *mostGoalsSurname;
 	NSMutableArray *totalValues, *unknownDates, *players;
 }
