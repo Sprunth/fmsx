@@ -43,7 +43,7 @@
 		cbuffer = [object type];
 		[data appendBytes:&cbuffer length:1];
 		ibuffer = [object competitionUID];
-		[data appendBytes:&cbuffer length:4];
+		[data appendBytes:&ibuffer length:4];
 		cbuffer = [object alternativeKitNumber];
 		[data appendBytes:&cbuffer length:1];
 	}

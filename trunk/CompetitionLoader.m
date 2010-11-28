@@ -87,7 +87,7 @@
 	
 	// same as reputation?
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort1:cbuffer];
+	[object setUnknownShort1:sbuffer];
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setLastHistoryID:ibuffer];

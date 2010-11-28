@@ -25,7 +25,8 @@
 	[object setFee:ibuffer];
 	
 	// ???
-	offset += 1;
+	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
+	[object setUnknownChar1:cbuffer];
 	
 	*byteOffset = offset;
 	

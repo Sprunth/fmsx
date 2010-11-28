@@ -128,8 +128,6 @@
 		cbuffer = [object maxNumberNonECPlayers];
 		[data appendBytes:&cbuffer length:1];
 		
-		cbuffer = [[object players] count];
-		[data appendBytes:&cbuffer length:1];
 		for (int i = 0; i<[[object players] count]; i++) {
 			ibuffer = [[[object players] objectAtIndex:i] intValue];
 			[data appendBytes:&ibuffer length:4];

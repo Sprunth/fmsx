@@ -246,6 +246,8 @@
 	
 	ibuffer = [object teamLastPlayedForID];
 	[data appendBytes:&ibuffer length:4];
+	ibuffer = [object unknownInt2];
+	[data appendBytes:&ibuffer length:4];
 	
 	[FMDateSaver saveDate:[object lastUpdateDate] toData:data];
 	[FMDateSaver saveDate:[object nextFitnessDropDate] toData:data];

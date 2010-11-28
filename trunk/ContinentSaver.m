@@ -29,7 +29,7 @@
 	fbuffer = [object regionalStrength];
 	[data appendBytes:&fbuffer length:4];
 	cbuffer = [object unknownChar1];
-	[data appendBytes:&bbuffer length:1];
+	[data appendBytes:&cbuffer length:1];
 	
 	bbuffer = [object hasInfos];
 	[data appendBytes:&bbuffer length:1];

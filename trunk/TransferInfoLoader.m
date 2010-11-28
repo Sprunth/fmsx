@@ -252,6 +252,7 @@
 		offset += (cbuffer*4);
 		
 		[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 12)]]; 
+		offset += 12;
 		
 		NSLog(@"UTI7");
 	}

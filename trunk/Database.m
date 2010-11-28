@@ -12,6 +12,7 @@
 #import "AlliterationLoader.h"
 #import "AlliterationSaver.h"
 #import "AgreementLoader.h"
+#import "AgreementSaver.h"
 #import "AwardLoader.h"
 #import "AwardSaver.h"
 #import "CityLoader.h"
@@ -29,6 +30,7 @@
 #import "CurrencyLoader.h"
 #import "CurrencySaver.h"
 #import "DerbyLoader.h"
+#import "DerbySaver.h"
 #import "DescriptionLoader.h"
 #import "DescriptionSaver.h"
 #import "GeneralInfoLoader.h"
@@ -1222,8 +1224,6 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setCompetitionHistories:tempArray];
 	NSLog(@"End of %d competition histories at %d",[competitionHistories count],*byteOffset);
 	
-	saveEndOffset = *byteOffset;
-	
 	[tempArray removeAllObjects];
 	
 	// ???
@@ -1298,10 +1298,12 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	[self setClubLinks:tempArray];
 	NSLog(@"End of %d club links at %d",[clubLinks count],*byteOffset);
 	
+	saveEndOffset = *byteOffset;
+	
 	// 0x04	FF FF FF FF
 	[self setUnknownData7:[data subdataWithRange:NSMakeRange(*byteOffset, 4)]]; 
 	*byteOffset += 4;
-
+	
 #pragma mark DB Changes
 	[data getBytes:&count range:NSMakeRange(*byteOffset, 4)]; *byteOffset += 4;
 	[self setDatabaseChanges:count];
@@ -1828,6 +1830,30 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 	}
 	[pool drain];
 
+#pragma mark Derbies
+	pool = [[NSAutoreleasePool alloc] init];
+	[self setStatus:NSLocalizedString(@"saving derbies...", @"editor status")];
+	ibuffer = [derbies count];
+	[data appendBytes:&ibuffer length:4];
+	[self setTotalRecords:ibuffer];
+	for (int i=0; i<ibuffer; i++) {
+		[self setCurrentRecord:(i+1)];
+		[DerbySaver saveDerby:[derbies objectAtIndex:i] toData:data];
+	}
+	[pool drain];
+	
+#pragma mark Agreements
+	pool = [[NSAutoreleasePool alloc] init];
+	[self setStatus:NSLocalizedString(@"saving agreements...", @"editor status")];
+	ibuffer = [agreements count];
+	[data appendBytes:&ibuffer length:4];
+	[self setTotalRecords:ibuffer];
+	for (int i=0; i<ibuffer; i++) {
+		[self setCurrentRecord:(i+1)];
+		[AgreementSaver saveAgreement:[agreements objectAtIndex:i] toData:data];
+	}
+	[pool drain];
+	
 #pragma mark People
 	pool = [[NSAutoreleasePool alloc] init];
 	[self setStatus:NSLocalizedString(@"saving people...", @"editor status")];
@@ -1887,7 +1913,30 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 		[CompetitionHistorySaver saveCompetitionHistory:[competitionHistories objectAtIndex:i] toData:data];
 	}
 	[pool drain];
-	
+
+#pragma mark Unknowns
+	[data appendData:unknownData1];
+	[data appendBytes:&unknownInt1 length:4];
+	[data appendData:unknownData2];
+	[data appendBytes:&unknownInt2 length:4];
+	[data appendData:unknownData3];
+	[data appendBytes:&unknownInt3 length:4];
+	[data appendData:unknownData4];
+	[data appendBytes:&unknownInt4 length:4];
+	[data appendData:unknownData5];
+	[data appendData:unknownData6];
+
+#pragma mark Club Links
+	pool = [[NSAutoreleasePool alloc] init];
+	[self setStatus:NSLocalizedString(@"saving club links...", @"editor status")];
+	ibuffer = [clubLinks count];
+	[data appendBytes:&ibuffer length:4];
+	[self setTotalRecords:ibuffer];
+	for (int i=0; i<ibuffer; i++) {
+		[self setCurrentRecord:(i+1)];
+		[ClubLinkSaver saveClubLink:[clubLinks objectAtIndex:i] toData:data];
+	}
+	[pool drain];
 }
 
 - (void)readLangDB:(NSString *)path

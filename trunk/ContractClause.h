@@ -32,11 +32,11 @@
 */
 
 @interface ContractClause : NSObject {
-	char type;
+	char type, unknownChar1;
 	int fee;
 }
 
-@property(assign,readwrite) char type;
+@property(assign,readwrite) char type, unknownChar1;
 @property(assign,readwrite) int fee;
 
 @end

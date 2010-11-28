@@ -272,6 +272,9 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object unknownChar11];
 	[data appendBytes:&cbuffer length:1];
+	cbuffer = [object unknownChar12];
+	[data appendBytes:&cbuffer length:1];
+	[data appendData:[object unknownData6]];
 	
 	[TeamContainerSaver saveTeamContainer:[object teamContainer] toData:data];
 	
