@@ -66,7 +66,10 @@ static int BADGE_TEXT_SMALL = 20;
 	
 	
 	if (image) {
-		[image compositeToPoint:NSMakePoint(cellPoint.x+xIndent2,cellPoint.y+32) operation:NSCompositeSourceOver];
+		[image setSize:NSMakeSize(50, 50)];
+		[image lockFocus];
+		[image unlockFocus];
+		[image compositeToPoint:NSMakePoint(cellPoint.x,cellPoint.y+42) operation:NSCompositeSourceOver];
 	}
 	[text drawAtPoint:NSMakePoint(cellPoint.x+xIndent,
 														 cellPoint.y+8) withAttributes:textAttributes];
