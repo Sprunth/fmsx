@@ -27,18 +27,23 @@ kitNumber, type, alternativeKitNumber, year, competitionUID, outfieldKit;
 
 + (NSColor *)getColor:(unsigned short)val
 {
-	short r,g,b;
+	unsigned char r,g,b;
 	float red,green,blue;
 	
-	r = ((val & 0xF800) >> 10);
-	g = ((val & 0x07C0) >> 5);
-	b = ((val & 0x003E) >> 0);
+	r = ((val & 0x7C00) >> 10);
+	g = ((val & 0x03E0) >> 5);
+	b = ((val & 0x001F) >> 0);
 	
-	red = (float) r/31.875f;
-	green = (float) g/31.875f;
-	blue = (float) b/31.875f;
+	red = r/31.875f;
+	green = g/31.875f;
+	blue = b/31.875f;
 	
-	NSColor *colour = [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:1.0];
+	NSLog(@"%f %f %f",red,green,blue);
+	NSLog(@"%d %d %d",r,g,b);
+	NSLog(@"%d",val);
+	NSLog(@"---------------");
+	
+	NSColor *colour = [NSColor colorWithDeviceRed:red green:green blue:blue alpha:1.0];
 	
 	return colour;
 }
