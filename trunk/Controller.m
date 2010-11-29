@@ -465,7 +465,7 @@ teamsController, weatherController, currentDate, gameDBVersion, databaseChanges,
 
 - (IBAction)saveGame:(id)sender
 {
-	BOOL canSave = NO;
+	BOOL canSave = YES;
 	
 	if (!canSave) {
 		// If not loaded, inform user
