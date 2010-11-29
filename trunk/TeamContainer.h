@@ -35,5 +35,7 @@ preferredFormation2, defensiveFormation, attackingFormation;
 
 - (NSImage *)defaultTitleBG;
 - (NSColor *)bgColour;
+- (NSColor *)textColour;
+- (NSColor *)trimColour;
 
 @end

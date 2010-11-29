@@ -37,6 +37,7 @@
 	IBOutlet NSArrayController *cityController;
 	
 	IBOutlet NSBox *clubContainer;
+	IBOutlet BWGradientBox *clubHeaderBackground;
 	IBOutlet NSTableView *clubTable, *clubAlternateKitsTable, *clubKitTable;
 	IBOutlet NSView *clubSearchView, *clubGeneralView, *clubTacticsView, *clubMainView, *clubTrainingView,
 	*clubCoefficientView, *clubScoutingKnowledgeView, *clubRegionalDivisionsView, *clubSponsorView, *clubIDPCView,

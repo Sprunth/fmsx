@@ -93,4 +93,41 @@ attackingFormation, controller, unknowns1, unknowns2, transferInfos, unknowns3, 
 	return [NSColor whiteColor];
 }
 
+- (NSColor *)textColour 
+{
+	if ([colours count]>0) {
+		int text = -1;
+		int counter = 0;
+		for (Colour *item in colours) {
+			if ([item outfieldKit] && [item type]==AKT_TEXT && [item kitNumber]==AKN_HOME_KIT) {
+				text = counter;
+			}
+			counter++;
+		}
+		if (text>=0) {
+			return [[colours objectAtIndex:text] foregroundColour];
+		}
+	}
+	
+	return [NSColor blackColor];
+}
+- (NSColor *)trimColour 
+{
+	if ([colours count]>0) {
+		int text = -1;
+		int counter = 0;
+		for (Colour *item in colours) {
+			if ([item outfieldKit] && [item type]==AKT_TEXT && [item kitNumber]==AKN_HOME_KIT) {
+				text = counter;
+			}
+			counter++;
+		}
+		if (text>=0) {
+			return [[colours objectAtIndex:text] trimColour];
+		}
+	}
+	
+	return [NSColor whiteColor];
+}
+
 @end

@@ -834,6 +834,11 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 								 clubBarItems, MGSB_GROUP_ITEMS, 
 								 nil]];
 		[clubScopeBar reloadData];
+		
+		// set club header bg
+		[clubHeaderBackground setFillColor:[[object teamContainer] bgColour]];
+		[clubHeaderBackground setHasBottomBorder:YES];
+		[clubHeaderBackground setBottomBorderColor:[[object teamContainer] trimColour]];
 	}
 	else if ([[object className] isEqualToString:@"Nation"]) {
 		// setup scope bars

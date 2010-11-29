@@ -7,6 +7,7 @@
 //
 
 #import "Club.h"
+#import "Team.h"
 #import "Database.h"
 
 @implementation Club
@@ -92,4 +93,21 @@ unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownDat
 {
 	return [teamContainer name];
 }
+
+- (NSString *)nationString
+{
+	if (nationID>-1) { return [[[[[controller database] nations] objectAtIndex:nationID] teamContainer] name]; }
+	return @"---";
+}
+
+- (NSString *)competitionString
+{
+	if ([[teamContainer teams] count]>0) {
+		if ([[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] divisionID]>-1) {
+			return [[[[controller database] competitions] objectAtIndex:[[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] divisionID]] name];
+		}
+	}
+	return @"---";
+}
+
 @end
