@@ -534,6 +534,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 					nil]; 
 		}
 		else { 
+			[object setController:controller];
 			[[object teamContainer] setController:controller];
 			[tempArray addObject:object];
 		}

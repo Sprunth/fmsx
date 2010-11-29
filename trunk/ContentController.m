@@ -40,7 +40,8 @@ recentlyViewed, mainContainer, awardController, cityController, clubController, 
 competitionController, continentController, injuryController, currencyController, 
 languageController, localAreaController, mediaController, peopleController, clubKitView,
 sponsorController, stadiumController, stadiumChangeController, weatherController, awardRulesView, 
-awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, locationString;
+awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, locationString,
+clubLBCView, clubFacilitiesView;
 
 - (id)init
 {
@@ -782,6 +783,10 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 								 @"CoefficientsItem", MGSB_ITEM_IDENTIFIER, 
 								 @"Coefficients", MGSB_ITEM_NAME, 
 								 nil]];
+		[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+								 @"FacilitiesItem", MGSB_ITEM_IDENTIFIER, 
+								 @"Facilities", MGSB_ITEM_NAME, 
+								 nil]];
 		if ([[object finance] isValidFinance]) {
 			[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 									 @"FinanceItem", MGSB_ITEM_IDENTIFIER, 
@@ -792,6 +797,12 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 								 @"IDPCItem", MGSB_ITEM_IDENTIFIER, 
 								 @"IDPCs", MGSB_ITEM_NAME, 
 								 nil]];
+		if ([object databaseClass]==DBC_LEAGUE_BODY_CLUB) {
+			[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+									 @"LBC", MGSB_ITEM_IDENTIFIER, 
+									 @"League Body Club Details", MGSB_ITEM_NAME, 
+									 nil]];
+		}
 		[clubBarItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"RegionalDivisionItem", MGSB_ITEM_IDENTIFIER, 
 								 @"Regional Divisions", MGSB_ITEM_NAME, 
@@ -860,6 +871,11 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 								   nationBarItems, MGSB_GROUP_ITEMS, 
 								   nil]];
 		[nationScopeBar reloadData];
+	
+		// set nation header bg
+		[nationHeaderBackground setFillColor:[[object teamContainer] bgColour]];
+		[nationHeaderBackground setHasBottomBorder:YES];
+		[nationHeaderBackground setBottomBorderColor:[[object teamContainer] trimColour]];
 	}
 	else if ([[object className] isEqualToString:@"Award"]) {
 		// setup scope bars
@@ -1198,6 +1214,8 @@ awardMainView, derbyGeneralView, derbySearchView, derbyController, agentView, lo
 		else if ([section isEqualToString:@"Staff"]) { [clubContainer setContentView:clubStaffView]; }
 		else if ([section isEqualToString:@"Kits & Colours"]) { [clubContainer setContentView:clubKitView]; }
 		else if ([section isEqualToString:@"Finances"]) { [clubContainer setContentView:clubFinanceView]; }
+		else if ([section isEqualToString:@"League Body Club Details"]) { [clubContainer setContentView:clubLBCView]; }
+		else if ([section isEqualToString:@"Facilities"]) { [clubContainer setContentView:clubFacilitiesView]; }
 		else if ([section isEqualToString:@"Shortlisted People"]) { [clubContainer setContentView:clubShortlistedPeopleView]; }
 		else if ([section isEqualToString:@"Scouting Knowledges"]) { [clubContainer setContentView:clubScoutingKnowledgeView]; }
 		else if ([section isEqualToString:@"Regional Divisions"]) { [clubContainer setContentView:clubRegionalDivisionsView]; }

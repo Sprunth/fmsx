@@ -7,7 +7,8 @@
 //
 
 #import "Nation.h"
-
+#import "Team.h"
+#import "Database.h"
 
 @implementation Nation
 
@@ -20,7 +21,7 @@ reputation, databaseClass, wageBudget, styleOfFootball, stateOfDevelopment, game
 economicFactor, yearsToGainNationality, numberOfStaff, numberOfPlayers, numberOfCities, nationalStadiumID, 
 firstNameStartIndex, surnameStartIndex, commonNameStartIndex, firstNameCount, surnameCount, commonNameCount,
 continentID, regionID, capitalID, leagueSelected, ruleGroupLoaded, EECNation, FIFAFullMember, wageFactor,
-rankingPoints, rankingMatches, coefficients, humanPlayerPool, mainSquadGkShortlist, infos,
+rankingPoints, rankingMatches, coefficients, humanPlayerPool, mainSquadGkShortlist, infos, controller,
 mainSquadDefShortlist, mainSquadMidShortlist, mainSquadFwShortlist, u21GkShortlist, unknowns1,
 u21DefShortlist, u21MidShortlist, u21FwShortlist, u19GkShortlist, u19DefShortlist, u19MidShortlist, 
 u19FwShortlist, transferInfos, bannedPlayers, futureRegenPlayers, futureRegenStaff, famousPlayers,
@@ -97,6 +98,31 @@ nonEUTreatedNations, unknownShort1, unknownShort2, gainNationalityType, unknownD
 - (NSString *)name
 {
 	return [teamContainer name];
+}
+
+- (NSString *)continentString
+{
+	if (continentID>-1) { return [[[[controller database] continents] objectAtIndex:continentID] name]; }
+	return @"---";
+}
+
+
+- (NSString *)competitionString
+{
+	if ([[teamContainer teams] count]>0) {
+		if ([[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] continentalCupID]>-1) {
+			return [[[[controller database] competitions] objectAtIndex:[[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] continentalCupID]] name];
+		}
+	}
+	return @"---";
+}
+
+- (short)reputation
+{
+	if ([[teamContainer teams] count]>0) {
+		return [[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] reputation];
+	}
+	return 0;
 }
 
 @end

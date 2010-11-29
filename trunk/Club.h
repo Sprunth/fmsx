@@ -127,5 +127,6 @@ maximumWeeklyWage, competitionID, UEFA5YearTotal, cityID;
 - (NSString *)name;
 - (NSString *)nationString;
 - (NSString *)competitionString;
+- (short)reputation;
 
 @end

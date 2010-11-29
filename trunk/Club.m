@@ -110,4 +110,12 @@ unknownData1, unknownData2, unknownData3, unknownData4, unknownData5, unknownDat
 	return @"---";
 }
 
+- (short)reputation
+{
+	if ([[teamContainer teams] count]>0) {
+		return [[[[controller database] teams] objectAtIndex:[[[teamContainer teams] objectAtIndex:0] intValue]] reputation];
+	}
+	return 0;
+}
+
 @end

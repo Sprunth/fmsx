@@ -136,7 +136,6 @@
 	[object setTransferOffers:tempArray];
 	[tempArray release];
 	
-	/*
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstTeamStrengthRating:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -173,6 +172,14 @@
 	[object setFirstTeamShootingWorkload:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setFirstTeamSetPiecesWorkload:cbuffer];
+	
+	// first team
+	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 94)]]; offset += 94;
+	
+	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
+	[object setUnknownShort1:sbuffer];
+	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 2))]]; offset += (sbuffer * 2);
+	 
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setYouthTeamStrengthRating:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
@@ -209,17 +216,9 @@
 	[object setYouthTeamShootingWorkload:cbuffer];
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	[object setYouthTeamSetPiecesWorkload:cbuffer];
-	*/
-	
-	// first team
-	[object setUnknownData1:[data subdataWithRange:NSMakeRange(offset, 112)]]; offset += 112;
-	
-	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
-	[object setUnknownShort1:sbuffer];
-	[object setUnknownData2:[data subdataWithRange:NSMakeRange(offset, (sbuffer * 2))]]; offset += (sbuffer * 2);
 	
 	// youth team
-	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 112)]]; offset += 112; 
+	[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, 94)]]; offset += 94; 
 	
 	[data getBytes:&sbuffer range:NSMakeRange(offset, 2)]; offset += 2;
 	[object setUnknownShort2:sbuffer];
