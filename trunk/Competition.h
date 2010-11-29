@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Colour.h"
+#import "Controller.h"
 
 // comp name types
 #define CT_DOMESTIC_TOP_DIVISION						0
@@ -73,6 +74,7 @@
 	int northBoundaryCityID, southBoundaryCityID, eastBoundaryCityID, westBoundaryCityID,
 		leagueBodyClubID, lastHistoryID, historyIndexID, averageClubCashAtStart;
 	Colour *colour;
+	Controller *controller;
 	
 	NSString *name, *shortName, *threeLetterName;
 	NSMutableArray *rules, *unknowns;
@@ -87,6 +89,7 @@ reputation, nationalReputation, averageClubReputationAtStart, unknownShort1;
 @property(assign,readwrite) int rowID, UID, continentID, nationID, northBoundaryCityID,
 southBoundaryCityID, eastBoundaryCityID, westBoundaryCityID, leagueBodyClubID, lastHistoryID, 
 historyIndexID, averageClubCashAtStart;
+@property(assign,readwrite) Controller *controller;
 @property(assign,readwrite) Colour *colour;
 @property(copy,readwrite) NSString *name, *shortName, *threeLetterName;
 @property(copy,readwrite) NSMutableArray *rules, *unknowns;
@@ -95,5 +98,7 @@ historyIndexID, averageClubCashAtStart;
 - (BOOL)isExtinct;
 
 - (NSArray *)typeStrings;
+- (NSString *)nationString;
+- (NSString *)continentString;
 
 @end

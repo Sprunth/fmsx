@@ -154,6 +154,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "Colour.h"
+#import "Controller.h"
 #import "FMDate.h"
 
 @interface Award : NSObject {
@@ -171,6 +172,7 @@
 	unsigned int rowID, UID;
 	
 	Colour *colour;
+	Controller *controller;
 	
 	FMDate *awardDate, *announcementDate;
 	NSString *name, *shortName;
@@ -187,6 +189,7 @@ winnerHomeReputation, winnerWorldReputation;
 @property(assign,readwrite) unsigned short position; 
 @property(assign,readwrite) int continentID, nationID, competitionID;
 @property(assign,readwrite) unsigned int rowID, UID;
+@property(assign,readwrite) Controller *controller;
 @property(assign,readwrite) Colour *colour;
 @property(assign,readwrite) FMDate *awardDate, *announcementDate;;
 @property(copy,readwrite) NSString *name, *shortName;
@@ -201,5 +204,9 @@ winnerHomeReputation, winnerWorldReputation;
 - (NSArray *)votingFormatStrings;
 - (NSArray *)recipientTypeStrings;
 - (NSArray *)votingStrings;
+
+- (NSString *)nationString;
+- (NSString *)continentString;
+- (NSString *)competitionString;
 
 @end

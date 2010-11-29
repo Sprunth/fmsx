@@ -188,7 +188,10 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 					@"Invalid ID",										// entity error
 					nil]; 
 		}
-		else { [tempArray addObject:object]; }
+		else { 
+			[object setController:controller];
+			[tempArray addObject:object]; 
+		}
 //		NSLog(@"Award %d (%d) done at %d",i,[object UID],*byteOffset);
 	}
 	[self setAwards:tempArray];
@@ -229,7 +232,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"]==TRUE) {
 				id item = [[langDB cityLang] objectForKey:[NSNumber numberWithInt:[object UID]]];
 				if (item!=nil) {
-					[object setName:[item objectForKey:@"name"]];
+					[(City *)object setName:[item objectForKey:@"name"]];
 				}
 			}
 			[tempArray addObject:object];
@@ -313,7 +316,8 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"]==TRUE) {
 				id item = [[langDB compLang] objectForKey:[NSNumber numberWithInt:[object UID]]];
 				if (item!=nil) {
-					[object setName:[item objectForKey:@"name"]];
+					[object setController:controller];
+					[(Competition *)object setName:[item objectForKey:@"name"]];
 					[object setShortName:[item objectForKey:@"shortName"]];
 					[object setThreeLetterName:[item objectForKey:@"threeLetterName"]];
 				}
@@ -706,7 +710,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"]==TRUE) {
 				id item = [[langDB localAreaLang] objectForKey:[NSNumber numberWithInt:[object UID]]];
 				if (item!=nil) {
-					[object setName:[item objectForKey:@"name"]];
+					[(LocalArea *)object setName:[item objectForKey:@"name"]];
 					[object setShortName:[item objectForKey:@"shortName"]];
 				}
 			}
@@ -783,7 +787,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"]==TRUE) {
 				id item = [[langDB stadiumLang] objectForKey:[NSNumber numberWithInt:[object UID]]];
 				if (item!=nil) {
-					[object setName:[item objectForKey:@"name"]];
+					[(Stadium *)object setName:[item objectForKey:@"name"]];
 				}
 			}
 			[tempArray addObject:object];
@@ -1035,7 +1039,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"loadLangDB"]==TRUE) {
 				id item = [[langDB agreementLang] objectForKey:[NSNumber numberWithInt:[object UID]]];
 				if (item!=nil) {
-					[object setName:[item objectForKey:@"name"]];
+					[(Agreement *)object setName:[item objectForKey:@"name"]];
 					[object setShortName:[item objectForKey:@"shortName"]];
 					[object setAlternativeName:[item objectForKey:@"alternativeName"]];
 					[object setAlternativeShortName:[item objectForKey:@"alternativeShortName"]];

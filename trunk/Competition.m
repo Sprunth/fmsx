@@ -8,6 +8,9 @@
 
 #import "Competition.h"
 #import "GeneralInfo.h"
+#import "Continent.h"
+#import "Nation.h"
+#import "Database.h"
 
 @implementation Competition
 
@@ -18,7 +21,7 @@ name, shortName, threeLetterName, nationalReputation, averageClubReputationAtSta
 leagueBodyClubID, lastHistoryID, historyIndexID, averageClubCashAtStart, colour, rules,
 nameGender, shortNameGender, nameType, hasInfos, unknownChar1, unknownChar2, unknownChar3, 
 unknownChar4, unknowns, type, flags, unknownChar5, unknownChar6, unknownChar7,
-unknownChar8, unknownChar9, unknownChar10, unknownShort1;
+unknownChar8, unknownChar9, unknownChar10, unknownShort1, controller;
 
 - (BOOL)usesSquadNumbers { 
 	if (flags & CF_USES_SQUAD_NUMBERS) { return TRUE; } 
@@ -76,6 +79,17 @@ unknownChar8, unknownChar9, unknownChar10, unknownShort1;
 						NSLocalizedString(@"Inactive Other Division", @"competition type"),
 						nil];
 	return strings;
+}
+
+- (NSString *)nationString
+{
+	if (nationID>-1) { return [[[[[controller database] nations] objectAtIndex:nationID] teamContainer] name]; }
+	return @"---";
+}
+- (NSString *)continentString
+{
+	if (continentID>-1) { return [[[[controller database] continents] objectAtIndex:continentID] name]; }
+	return @"---";
 }
 
 @end

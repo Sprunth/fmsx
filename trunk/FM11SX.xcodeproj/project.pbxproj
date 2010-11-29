@@ -55,6 +55,11 @@
 		FB1C909110A220C500F3259A /* PlayerStatsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1C909010A220C500F3259A /* PlayerStatsLoader.m */; };
 		FB1C909410A220CC00F3259A /* NonPlayerStatsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1C909310A220CC00F3259A /* NonPlayerStatsLoader.m */; };
 		FB1D74ED1098840B00EC8BBB /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1D74EC1098840B00EC8BBB /* ContentController.m */; };
+		FB20D1A712A3EAC90031A9C3 /* scout_clubs.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20D1A412A3EAC90031A9C3 /* scout_clubs.png */; };
+		FB20D1A812A3EAC90031A9C3 /* scout_players.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20D1A512A3EAC90031A9C3 /* scout_players.png */; };
+		FB20D1A912A3EAC90031A9C3 /* scout_staff.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20D1A612A3EAC90031A9C3 /* scout_staff.png */; };
+		FB20D1AD12A3EAEF0031A9C3 /* history_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */; };
+		FB20D1AE12A3EAEF0031A9C3 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = FB20D1AC12A3EAEF0031A9C3 /* history.png */; };
 		FB24DFE912A2A15000C5EB8F /* award.png in Resources */ = {isa = PBXBuildFile; fileRef = FB24DFE212A2A15000C5EB8F /* award.png */; };
 		FB24DFEA12A2A15000C5EB8F /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = FB24DFE312A2A15000C5EB8F /* city.png */; };
 		FB24DFEB12A2A15000C5EB8F /* club.png in Resources */ = {isa = PBXBuildFile; fileRef = FB24DFE412A2A15000C5EB8F /* club.png */; };
@@ -468,8 +473,6 @@
 		FBD2D98B10B20C9500C68794 /* TransferPreferenceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD2D98A10B20C9500C68794 /* TransferPreferenceLoader.m */; };
 		FBD2D99C10B2BC8B00C68794 /* SpokenLanguageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD2D99B10B2BC8B00C68794 /* SpokenLanguageLoader.m */; };
 		FBD2D99F10B2BCBC00C68794 /* SpokenLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD2D99E10B2BCBC00C68794 /* SpokenLanguage.m */; };
-		FBD63D4A12528B3D001F6872 /* history_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD63D4812528B3D001F6872 /* history_delete.png */; };
-		FBD63D4B12528B3D001F6872 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = FBD63D4912528B3D001F6872 /* history.png */; };
 		FBDAD0741299591F0016415C /* kit_socks_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDAD0651299591F0016415C /* kit_socks_1.png */; };
 		FBDAD0751299591F0016415C /* kit_socks_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDAD0661299591F0016415C /* kit_socks_2.png */; };
 		FBDAD0761299591F0016415C /* kit_socks_3.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDAD0671299591F0016415C /* kit_socks_3.png */; };
@@ -763,6 +766,11 @@
 		FB1C909310A220CC00F3259A /* NonPlayerStatsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NonPlayerStatsLoader.m; sourceTree = "<group>"; };
 		FB1D74EB1098840B00EC8BBB /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController.h; sourceTree = "<group>"; };
 		FB1D74EC1098840B00EC8BBB /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
+		FB20D1A412A3EAC90031A9C3 /* scout_clubs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout_clubs.png; sourceTree = "<group>"; };
+		FB20D1A512A3EAC90031A9C3 /* scout_players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout_players.png; sourceTree = "<group>"; };
+		FB20D1A612A3EAC90031A9C3 /* scout_staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scout_staff.png; sourceTree = "<group>"; };
+		FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_delete.png; sourceTree = "<group>"; };
+		FB20D1AC12A3EAEF0031A9C3 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		FB24DFE212A2A15000C5EB8F /* award.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = award.png; sourceTree = "<group>"; };
 		FB24DFE312A2A15000C5EB8F /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city.png; sourceTree = "<group>"; };
 		FB24DFE412A2A15000C5EB8F /* club.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = club.png; sourceTree = "<group>"; };
@@ -1378,8 +1386,6 @@
 		FBD2D99B10B2BC8B00C68794 /* SpokenLanguageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpokenLanguageLoader.m; sourceTree = "<group>"; };
 		FBD2D99D10B2BCBC00C68794 /* SpokenLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpokenLanguage.h; sourceTree = "<group>"; };
 		FBD2D99E10B2BCBC00C68794 /* SpokenLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpokenLanguage.m; sourceTree = "<group>"; };
-		FBD63D4812528B3D001F6872 /* history_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history_delete.png; sourceTree = "<group>"; };
-		FBD63D4912528B3D001F6872 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		FBDAD0651299591F0016415C /* kit_socks_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kit_socks_1.png; sourceTree = "<group>"; };
 		FBDAD0661299591F0016415C /* kit_socks_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kit_socks_2.png; sourceTree = "<group>"; };
 		FBDAD0671299591F0016415C /* kit_socks_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kit_socks_3.png; sourceTree = "<group>"; };
@@ -1764,6 +1770,11 @@
 		FB24DFCF12A2A0F300C5EB8F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */,
+				FB20D1AC12A3EAEF0031A9C3 /* history.png */,
+				FB20D1A412A3EAC90031A9C3 /* scout_clubs.png */,
+				FB20D1A512A3EAC90031A9C3 /* scout_players.png */,
+				FB20D1A612A3EAC90031A9C3 /* scout_staff.png */,
 				FB24E01212A2A1C200C5EB8F /* injury.png */,
 				FB24E01312A2A1C200C5EB8F /* language.png */,
 				FB24E00A12A2A1AF00C5EB8F /* sponsor.png */,
@@ -2507,8 +2518,6 @@
 			isa = PBXGroup;
 			children = (
 				FB24DFCF12A2A0F300C5EB8F /* Icons */,
-				FBD63D4812528B3D001F6872 /* history_delete.png */,
-				FBD63D4912528B3D001F6872 /* history.png */,
 				FB53BAC6120780C500DE91FB /* 0star.png */,
 				FB92F56712072B83005F6E57 /* playerscreenblanked.png */,
 				FBDEA42C120720EB00F052DE /* gkscreenblanked.png */,
@@ -3012,8 +3021,6 @@
 				FBDEA42D120720EB00F052DE /* gkscreenblanked.png in Resources */,
 				FB92F56812072B83005F6E57 /* playerscreenblanked.png in Resources */,
 				FB53BAC7120780C500DE91FB /* 0star.png in Resources */,
-				FBD63D4A12528B3D001F6872 /* history_delete.png in Resources */,
-				FBD63D4B12528B3D001F6872 /* history.png in Resources */,
 				FB4B6AD1129948FB007C50C1 /* kit_number.png in Resources */,
 				FB4B6B0712994A33007C50C1 /* kit_front_1.png in Resources */,
 				FB4B6B0812994A33007C50C1 /* kit_front_2.png in Resources */,
@@ -3275,6 +3282,11 @@
 				FB24E12712A2B1A300C5EB8F /* default_logo_51.png in Resources */,
 				FB24E12812A2B1A300C5EB8F /* default_logo_52.png in Resources */,
 				FB24E12912A2B1A300C5EB8F /* default_logo_53.png in Resources */,
+				FB20D1A712A3EAC90031A9C3 /* scout_clubs.png in Resources */,
+				FB20D1A812A3EAC90031A9C3 /* scout_players.png in Resources */,
+				FB20D1A912A3EAC90031A9C3 /* scout_staff.png in Resources */,
+				FB20D1AD12A3EAEF0031A9C3 /* history_delete.png in Resources */,
+				FB20D1AE12A3EAEF0031A9C3 /* history.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

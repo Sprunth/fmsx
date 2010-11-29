@@ -28,6 +28,7 @@
 	IBOutlet NSBox *mainContainer;
 	
 	IBOutlet NSBox *awardContainer;
+	IBOutlet BWGradientBox *awardHeaderBackground;
 	IBOutlet NSTableView *awardTable;
 	IBOutlet NSView *awardSearchView, *awardGeneralView, *awardRulesView, *awardMainView;
 	IBOutlet NSArrayController *awardController;
@@ -52,6 +53,7 @@
 	IBOutlet NSArrayController *nationController;
 	
 	IBOutlet NSTableView *competitionTable;
+	IBOutlet BWGradientBox *competitionHeaderBackground;
 	IBOutlet NSView *competitionSearchView, *competitionGeneralView;
 	IBOutlet NSArrayController *competitionController;
 	

@@ -7,6 +7,10 @@
 //
 
 #import "Award.h"
+#import "Nation.h"
+#import "Competition.h"
+#import "Continent.h"
+#import "Database.h"
 
 @implementation Award
 
@@ -17,7 +21,7 @@ unknown1, unknown2, unknown3, unknown4, continentID, nationID, competitionID, ro
 UID, announcementDate, allowPreviousWinner, awardReputation, nationalReputation, 
 colour, name, shortName, position, placings, useSubsForTeamAward, voting,
 unknownChar1, unknownChar2, unknownChar3, unknownChar4, unknownChar5, unknownChar6, 
-unknownChar7;
+unknownChar7, controller;
 
 - (NSArray *)periodStrings
 {
@@ -152,5 +156,23 @@ unknownChar7;
 						nil];
 	return strings;
 }
+
+- (NSString *)nationString
+{
+	if (nationID>-1) { return [[[[[controller database] nations] objectAtIndex:nationID] teamContainer] name]; }
+	return @"---";
+}
+- (NSString *)continentString;
+{
+	if (continentID>-1) { return [[[[controller database] continents] objectAtIndex:continentID] name]; }
+	else if (continentID==-1 && nationID==-1 && competitionID==-1) { return @"World"; }
+	return @"---";
+}
+- (NSString *)competitionString;
+{
+	if (competitionID>-1) { return [[[[controller database] competitions] objectAtIndex:competitionID] name]; }
+	return @"---";
+}
+
 
 @end

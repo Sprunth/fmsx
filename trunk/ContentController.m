@@ -897,6 +897,17 @@ clubLBCView, clubFacilitiesView;
 								   awardBarItems, MGSB_GROUP_ITEMS, 
 								   nil]];
 		[awardScopeBar reloadData];
+	
+		// set header bg
+		[awardHeaderBackground setFillColor:[[object colour] backgroundColour]];
+		[awardHeaderBackground setHasBottomBorder:YES];
+		[awardHeaderBackground setBottomBorderColor:[[object colour] trimColour]];
+	}
+	else if ([[object className] isEqualToString:@"Competition"]) {
+		// set header bg
+		[competitionHeaderBackground setFillColor:[[object colour] backgroundColour]];
+		[competitionHeaderBackground setHasBottomBorder:YES];
+		[competitionHeaderBackground setBottomBorderColor:[[object colour] trimColour]];
 	}
 	
 	// deselect outline view rows
