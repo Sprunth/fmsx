@@ -104,7 +104,6 @@
 		[data appendBytes:&ibuffer length:4];
 	}
 	
-	/*
 	cbuffer = [object firstTeamStrengthRating];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object firstTeamQuicknessRating];
@@ -141,6 +140,12 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object firstTeamSetPiecesWorkload];
 	[data appendBytes:&cbuffer length:1];
+	
+	[data appendData:[object unknownData1]];
+	sbuffer = [object unknownShort1];
+	[data appendBytes:&sbuffer length:2];
+	[data appendData:[object unknownData2]];
+		
 	cbuffer = [object youthTeamStrengthRating];
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object youthTeamQuicknessRating];
@@ -177,12 +182,6 @@
 	[data appendBytes:&cbuffer length:1];
 	cbuffer = [object youthTeamSetPiecesWorkload];
 	[data appendBytes:&cbuffer length:1];
-	*/
-	
-	[data appendData:[object unknownData1]];
-	sbuffer = [object unknownShort1];
-	[data appendBytes:&sbuffer length:2];
-	[data appendData:[object unknownData2]];
 	
 	[data appendData:[object unknownData3]];
 	sbuffer = [object unknownShort2];
