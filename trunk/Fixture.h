@@ -25,7 +25,7 @@
 	unknownChar36, unknownChar37, unknownChar38, unknownChar39, unknownChar40, unknownChar41, unknownChar42, 
 	unknownChar43, unknownChar44, unknownChar45, unknownChar46, unknownChar47, unknownChar48, unknownChar49, 
 	unknownChar50, unknownChar51, unknownChar52, unknownChar53, unknownChar54, unknownChar55, unknownChar56, 
-	unknownChar57, unknownChar58, unknownChar59, teamType1, teamType2, teamType3;
+	unknownChar57, unknownChar58, unknownChar59, unknownChar60, teamType1, teamType2, teamType3;
 	unsigned char nameFlags;
 	int unknownInt1, unknownInt2, unknownInt3, unknownInt4, unknownInt5, unknownInt6, unknownInt7, unknownInt8, 
 	unknownInt9, unknownInt10;
@@ -40,7 +40,7 @@ unknownChar29, unknownChar30, unknownChar31, unknownChar32, unknownChar33, unkno
 unknownChar36, unknownChar37, unknownChar38, unknownChar39, unknownChar40, unknownChar41, unknownChar42, 
 unknownChar43, unknownChar44, unknownChar45, unknownChar46, unknownChar47, unknownChar48, unknownChar49, 
 unknownChar50, unknownChar51, unknownChar52, unknownChar53, unknownChar54, unknownChar55, unknownChar56, 
-unknownChar57, unknownChar58, unknownChar59, teamType1, teamType2, teamType3;
+unknownChar57, unknownChar58, unknownChar59, unknownChar60, teamType1, teamType2, teamType3;
 @property(assign,readwrite) unsigned char nameFlags;
 @property(assign,readwrite) int unknownInt1, unknownInt2, unknownInt3, unknownInt4, unknownInt5, unknownInt6, unknownInt7, unknownInt8, 
 unknownInt9, unknownInt10;

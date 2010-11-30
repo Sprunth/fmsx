@@ -20,6 +20,6 @@ unknownChar43, unknownChar44, unknownChar45, unknownChar46, unknownChar47, unkno
 unknownChar50, unknownChar51, unknownChar52, unknownChar53, unknownChar54, unknownChar55, unknownChar56, 
 unknownChar57, unknownChar58, teamType1, teamType2, teamType3, unknownDate1, nameFlags, unknownInt1, 
 unknownInt2, unknownInt3, unknownInt4, unknownInt5, unknownInt6, unknownInt7, unknownInt8, unknownInt9, 
-unknownInt10, unknownChar59;
+unknownInt10, unknownChar59, unknownChar60;
 
 @end

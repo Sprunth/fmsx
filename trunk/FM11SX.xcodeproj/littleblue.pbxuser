@@ -131,11 +131,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312743570;
-			PBXWorkspaceStateSaveDate = 312743570;
+			PBXPerProjectTemplateStateSaveDate = 312809495;
+			PBXWorkspaceStateSaveDate = 312809495;
 		};
 		perUserProjectItems = {
-			FB04F52112A4169400F7FCD0 /* PBXBookmark */ = FB04F52112A4169400F7FCD0 /* PBXBookmark */;
+			FB04F52D12A41B0600F7FCD0 = FB04F52D12A41B0600F7FCD0 /* PBXBookmark */;
+			FB04F53512A4203700F7FCD0 = FB04F53512A4203700F7FCD0 /* PlistBookmark */;
 			FB20D16512A3CA7C0031A9C3 = FB20D16512A3CA7C0031A9C3 /* PBXTextBookmark */;
 			FB20D16612A3CA7C0031A9C3 = FB20D16612A3CA7C0031A9C3 /* PBXTextBookmark */;
 			FB20D16912A3CA7C0031A9C3 = FB20D16912A3CA7C0031A9C3 /* PBXTextBookmark */;
@@ -155,8 +156,8 @@
 			FB20D1D312A3F5520031A9C3 = FB20D1D312A3F5520031A9C3 /* PBXTextBookmark */;
 			FB20D1DD12A3F7550031A9C3 = FB20D1DD12A3F7550031A9C3 /* PlistBookmark */;
 			FB8B7AA012A3FFCD00A921CC = FB8B7AA012A3FFCD00A921CC /* PBXTextBookmark */;
-			FB8B7AA112A3FFCD00A921CC = FB8B7AA112A3FFCD00A921CC /* PBXBookmark */;
-			FB8B7AA212A3FFCD00A921CC = FB8B7AA212A3FFCD00A921CC /* PBXBookmark */;
+			FB8F2FFC12A5182800D29110 /* PlistBookmark */ = FB8F2FFC12A5182800D29110 /* PlistBookmark */;
+			FB8F300C12A5185F00D29110 /* PlistBookmark */ = FB8F300C12A5185F00D29110 /* PlistBookmark */;
 		};
 		sourceControlManager = FB9D33D510923BAA000883FF /* Source Control */;
 		userBookmarkGroup = FB6B8E1510A1BE8F00993212 /* PBXBookmarkGroup */;
@@ -377,9 +378,21 @@
 			sepNavVisRange = "{188, 674}";
 		};
 	};
-	FB04F52112A4169400F7FCD0 /* PBXBookmark */ = {
+	FB04F52D12A41B0600F7FCD0 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */;
+	};
+	FB04F53512A4203700F7FCD0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* FM11SX-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleShortVersionString,
+		);
+		name = "/Users/littleblue/ソフト/FM11SX/FM11SX-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
 	};
 	FB0794C1109BF52B00C58A27 /* GeneralInfoLoader.h */ = {
 		uiCtxt = {
@@ -1930,13 +1943,29 @@
 		vrLen = 1842;
 		vrLoc = 75118;
 	};
-	FB8B7AA112A3FFCD00A921CC /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */;
+	FB8F2FFC12A5182800D29110 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* FM11SX-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleShortVersionString,
+		);
+		name = "/Users/littleblue/ソフト/FM11SX/FM11SX-Info.plist";
+		rLen = 0;
+		rLoc = 0;
 	};
-	FB8B7AA212A3FFCD00A921CC /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FB20D1AB12A3EAEF0031A9C3 /* history_delete.png */;
+	FB8F300C12A5185F00D29110 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* FM11SX-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleShortVersionString,
+		);
+		name = "/Users/littleblue/ソフト/FM11SX/FM11SX-Info.plist";
+		rLen = 0;
+		rLoc = 0;
 	};
 	FB91B97810989E9000EBAA12 /* SXOutlineViewCell.h */ = {
 		uiCtxt = {
@@ -2050,9 +2079,9 @@
 	};
 	FB93C8BD10E2B3C000576177 /* ClubSaver.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {775, 3809}}";
-			sepNavSelRange = "{9805, 0}";
-			sepNavVisRange = "{8978, 1038}";
+			sepNavIntBoundsRect = "{{0, 0}, {757, 3601}}";
+			sepNavSelRange = "{6607, 0}";
+			sepNavVisRange = "{6172, 1338}";
 			sepNavWindowFrame = "{{624, 321}, {816, 557}}";
 		};
 	};
@@ -4085,9 +4114,9 @@
 	};
 	FBE681E9109341F900CE4DB8 /* ClubLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 4628}}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 4446}}";
 			sepNavSelRange = "{9660, 0}";
-			sepNavVisRange = "{9222, 1570}";
+			sepNavVisRange = "{8582, 1664}";
 			sepNavWindowFrame = "{{75, 323}, {628, 555}}";
 		};
 	};
