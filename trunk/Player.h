@@ -137,7 +137,7 @@ unknownInt2;
 @property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4, *unknownData5, *unknownData6, *unknownData7, *unknownData8, 
 *unknownData9, *unknownData10, *unknownData11, *unknownData13, *unknownData14, *unknownData15, *unknownData16, 
 *unknownData17, *unknownData18, *unknownData19, *unknownData21, *unknownData22;
-@property(copy,readwrite) NSMutableArray *injuries, *bans, *forms, *bookingCounts;
+@property(retain, readwrite) NSMutableArray *injuries, *bans, *forms, *bookingCounts;
 @property(assign,readwrite) FMDate *nextFitnessDropDate, *lastUpdateDate, *unknownDate1, *unknownDate2, *unknownDate3, *unknownDate4, 
 *unknownDate5, *unknownDate6, *unknownDate7, *unknownDate8, *internationalRetirementDate, *lastInternationalMatch, *unknownDate10, *unknownDate11, *internationalDebutDate, 
 *unknownDate14, *MLSDiscoveryPlayerDate, *MLSRightsExpiryDate;

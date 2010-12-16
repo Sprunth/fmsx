@@ -185,4 +185,24 @@ unknown8s, unknowns1, unknownShort1, unknownData4, unknownChar4;
 	return total;
 }
 
+- (void)healTeam
+{
+	if ([players count]>0) {
+		for (id item in players) {
+			NSLog(@"removing injuries for %@",[[[[controller database] people] objectAtIndex:[item intValue]] name]);
+			
+			// remove injuries
+			[[[[[[controller database] people] objectAtIndex:[item intValue]] playerData] injuries] removeAllObjects];
+			
+			NSLog(@"fixing stats for %@",[[[[controller database] people] objectAtIndex:[item intValue]] name]);
+			
+			// fix condition,jadedness,fitness, morale
+			[[[[[controller database] people] objectAtIndex:[item intValue]] playerData] setCondition:10000];
+			[[[[[controller database] people] objectAtIndex:[item intValue]] playerData] setFitness:10000];
+			[[[[[controller database] people] objectAtIndex:[item intValue]] playerData] setJadedness:0];
+			[[[[[controller database] people] objectAtIndex:[item intValue]] playerData] setMorale:10];
+		}
+	}
+}
+
 @end

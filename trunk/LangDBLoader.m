@@ -406,7 +406,14 @@
 		[lang setObject:[FMString readFromData:data atOffset:&fileOffset] forKey:@"shortName"];
 		[lang setObject:[FMString readFromData:data atOffset:&fileOffset] forKey:@"alternativeName"];
 		[lang setObject:[FMString readFromData:data atOffset:&fileOffset] forKey:@"alternativeShortName"];
-		[FMString readFromData:data atOffset:&fileOffset];
+		[data getBytes:&cbuffer range:NSMakeRange(fileOffset, 1)]; fileOffset += 1;
+		[lang setObject:[NSNumber numberWithChar:cbuffer] forKey:@"nameGender"];
+		[data getBytes:&cbuffer range:NSMakeRange(fileOffset, 1)]; fileOffset += 1;
+		[lang setObject:[NSNumber numberWithChar:cbuffer] forKey:@"shortNameGender"];
+		[data getBytes:&cbuffer range:NSMakeRange(fileOffset, 1)]; fileOffset += 1;
+		[lang setObject:[NSNumber numberWithChar:cbuffer] forKey:@"alternativeNameGender"];
+		[data getBytes:&cbuffer range:NSMakeRange(fileOffset, 1)]; fileOffset += 1;
+		[lang setObject:[NSNumber numberWithChar:cbuffer] forKey:@"alternativeShortNameGender"];
 		
 		[langs setObject:lang forKey:[NSNumber numberWithInt:ibuffer]];
 		[lang release];

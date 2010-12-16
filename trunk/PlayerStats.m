@@ -45,13 +45,17 @@ injuryProneness, versatility, naturalFitness, determination, composure, concentr
 	[self setCommandOfArea:100];
 	[self setCommunication:100];
 	[self setEccentricity:100];
-	[self setHandling:100];
-	[self setKicking:100];
-	[self setOneOnOnes:100];
-	[self setReflexes:100];
-	[self setRushingOut:100];
-	[self setTendencyToPunch:100];
-	[self setThrowing:100];
+	
+	if ([self goalkeeper]>=15) {
+		[self setHandling:100];
+		[self setKicking:100];
+		[self setOneOnOnes:100];
+		[self setReflexes:100];
+		[self setRushingOut:100];
+		[self setTendencyToPunch:100];
+		[self setThrowing:100];
+	}
+	
 	[self setAcceleration:100];
 	[self setAgility:100];
 	[self setBalance:100];
@@ -61,7 +65,7 @@ injuryProneness, versatility, naturalFitness, determination, composure, concentr
 	[self setPace:100];
 	[self setStamina:100];
 	[self setStrength:100];
-	[self setAggression:100];
+	[self setAggression:50];
 	[self setAnticipation:100];
 	[self setBravery:100];
 	[self setComposure:100];
@@ -70,7 +74,7 @@ injuryProneness, versatility, naturalFitness, determination, composure, concentr
 	[self setCreativity:100];
 	[self setDecisions:100];
 	[self setDetermination:100];
-	[self setDirtiness:100];
+	[self setDirtiness:1];
 	[self setFlair:100];
 	[self setImportantMatches:100];
 	[self setInfluence:100];

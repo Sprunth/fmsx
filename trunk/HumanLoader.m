@@ -146,6 +146,7 @@
 	[object setUnknownData13:[data subdataWithRange:NSMakeRange(offset, (sbuffer*8))]]; 
 	offset += (sbuffer*8);
 	
+	// date
 	[object setUnknownData12:[data subdataWithRange:NSMakeRange(offset, 4)]]; 
 	offset += 4;
 	
@@ -154,14 +155,16 @@
 	[object setUnknownData15:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
 	offset += (ibuffer*18);
 	
-	// ???
-	[object setUnknownData14:[data subdataWithRange:NSMakeRange(offset, 4)]]; 
-	offset += 4;
+	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
+	[object setUnknownInt3:ibuffer];
+	[object setUnknownData14:[data subdataWithRange:NSMakeRange(offset, (ibuffer*22))]]; 
+	offset += (ibuffer*22);
 	
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setUnknownInt2:ibuffer];
 	[object setUnknownData18:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
 	offset += (ibuffer*18);
+	
 	
 	// ???
 	[object setUnknownData16:[data subdataWithRange:NSMakeRange(offset, 21)]]; 

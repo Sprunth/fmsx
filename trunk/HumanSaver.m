@@ -90,6 +90,8 @@
 	[data appendBytes:&ibuffer length:4];
 	[data appendData:[object unknownData15]];
 	
+	ibuffer = [object unknownInt3];
+	[data appendBytes:&ibuffer length:4];
 	[data appendData:[object unknownData14]];
 	
 	ibuffer = [object unknownInt2];

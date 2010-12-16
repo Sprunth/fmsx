@@ -65,7 +65,7 @@ continentalCupID, futureContinentalCupID, teamContainerID, rowID, UID;
 @property(assign,readwrite) FMDate *lastSelectionDate, *unlockDate, *lastMatchDate;
 @property(copy,readwrite) NSString *name, *shortName;
 @property(readwrite,copy) NSData *unknownData1, *unknownData2, *unknownData3, *unknownData4;
-@property(copy,readwrite) NSMutableArray *playerReplacements, *physios, *players, *coaches, *selectedTeam, *fixtureBlocks,
+@property(retain,readwrite) NSMutableArray *playerReplacements, *physios, *players, *coaches, *selectedTeam, *fixtureBlocks,
 *unknown8s, *unknowns1;
 
 - (NSString *)teamString;
@@ -80,4 +80,5 @@ continentalCupID, futureContinentalCupID, teamContainerID, rowID, UID;
 - (int)averagePA;
 - (int)averageAge;
 
+- (void)healTeam;
 @end
