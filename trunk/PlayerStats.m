@@ -164,5 +164,7 @@ injuryProneness, versatility, naturalFitness, determination, composure, concentr
 	
 	return @"Unknown";
 }
-		
+	
+
+
 @end

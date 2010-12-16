@@ -358,7 +358,7 @@ teamsController, weatherController, currentDate, gameDBVersion, databaseChanges,
 	NSLog(@"Game Version: %d at %d",gameDBVersion, fileOffset);
 	
 	//Check version is compatiable with supported versions
-	if (gameDBVersion != FM2011_11_1) { 
+	if (gameDBVersion != FM2011_11_1 && gameDBVersion != FM2011_11_2) { 
 		NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"Incompatible Database Version - %hu",@"error"),gameDBVersion] defaultButton:@"OK" alternateButton:nil 
 										   otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The version of FM this game was saved under is not compatible with this editor",@"error message")];
 		NSLog(@"Incompatible Database Version.");

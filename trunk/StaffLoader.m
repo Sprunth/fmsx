@@ -78,7 +78,7 @@
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
 		[data getBytes:&cbuffer2 range:NSMakeRange(offset, 1)]; offset += 1;
-		[tempArray addObject:[ContractLoader readFromData:data atOffset:&offset type:cbuffer2]];
+		[tempArray addObject:[ContractLoader readFromData:data atOffset:&offset type:cbuffer2 version:version]];
 	}
 	[object setContracts:tempArray];
 	[tempArray release];
@@ -86,7 +86,7 @@
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 	tempArray = [[NSMutableArray alloc] init];
 	for (int i=0;i<cbuffer;i++) {
-		[tempArray addObject:[ContractOfferLoader readFromData:data atOffset:&offset]];
+		[tempArray addObject:[ContractOfferLoader readFromData:data atOffset:&offset version:version]];
 	}
 	[object setContractOffers:tempArray];
 	[tempArray release];

@@ -13,7 +13,7 @@
 
 @implementation ContractLoader
 
-+ (Contract *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset type:(char)type
++ (Contract *)readFromData:(NSData *)data atOffset:(unsigned int *)byteOffset type:(char)type version:(short)version
 {
 	int ibuffer;
 	short sbuffer;
@@ -68,7 +68,7 @@
 		[object setBonuses:tempArray];
 		[tempArray release];
 		
-		// ???
+		// ??? seen 100
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar2:cbuffer];
 	}
@@ -115,8 +115,15 @@
 		
 		[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 		[object setUnknownInt1:ibuffer];
-		[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
-		offset += (ibuffer*18);
+		
+		if (version < FM2011_11_2) {
+			[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, (ibuffer*18))]]; 
+			offset += (ibuffer*18);
+		}
+		else {
+			[object setUnknownData3:[data subdataWithRange:NSMakeRange(offset, (ibuffer*22))]]; 
+			offset += (ibuffer*22);
+		}
 		
 		[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
 		[object setUnknownChar6:cbuffer];
