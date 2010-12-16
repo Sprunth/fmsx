@@ -198,6 +198,9 @@
 			FBD0E0E312BA5F6900123DAB /* PBXTextBookmark */ = FBD0E0E312BA5F6900123DAB /* PBXTextBookmark */;
 			FBD0E0E412BA5F6900123DAB /* PBXTextBookmark */ = FBD0E0E412BA5F6900123DAB /* PBXTextBookmark */;
 			FBD0E0E512BA5F6900123DAB /* PBXTextBookmark */ = FBD0E0E512BA5F6900123DAB /* PBXTextBookmark */;
+			FBD0E0E812BA5F8D00123DAB /* PBXTextBookmark */ = FBD0E0E812BA5F8D00123DAB /* PBXTextBookmark */;
+			FBD0E0E912BA5F8D00123DAB /* PBXTextBookmark */ = FBD0E0E912BA5F8D00123DAB /* PBXTextBookmark */;
+			FBD0E0EA12BA5F8D00123DAB /* PBXTextBookmark */ = FBD0E0EA12BA5F8D00123DAB /* PBXTextBookmark */;
 		};
 		sourceControlManager = FB9D33D510923BAA000883FF /* Source Control */;
 		userBookmarkGroup = FB6B8E1510A1BE8F00993212 /* PBXBookmarkGroup */;
@@ -4246,6 +4249,36 @@
 		vrLen = 521;
 		vrLoc = 0;
 	};
+	FBD0E0E812BA5F8D00123DAB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBA1983B11FCCA41003B3F74 /* ContractClauseSaver.m */;
+		name = "ContractClauseSaver.m: 23";
+		rLen = 0;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 521;
+		vrLoc = 0;
+	};
+	FBD0E0E912BA5F8D00123DAB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBFD90791092AFE40023F307 /* Database.m */;
+		name = "Database.m: 1090";
+		rLen = 0;
+		rLoc = 38269;
+		rType = 0;
+		vrLen = 1223;
+		vrLoc = 37895;
+	};
+	FBD0E0EA12BA5F8D00123DAB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBFD90791092AFE40023F307 /* Database.m */;
+		name = "Database.m: 1090";
+		rLen = 0;
+		rLoc = 38272;
+		rType = 0;
+		vrLen = 1225;
+		vrLoc = 37895;
+	};
 	FBD189F210BC097600E66ADC /* Fixture.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {964, 650}}";
@@ -5391,9 +5424,9 @@
 	};
 	FBFD90791092AFE40023F307 /* Database.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 27196}}";
-			sepNavSelRange = "{38269, 0}";
-			sepNavVisRange = "{37895, 1223}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 27183}}";
+			sepNavSelRange = "{38272, 0}";
+			sepNavVisRange = "{37895, 1225}";
 			sepNavWindowFrame = "{{15, 189}, {717, 584}}";
 		};
 	};

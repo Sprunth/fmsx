@@ -291,14 +291,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
-									<integer>3</integer>
-									<integer>1</integer>
+									<integer>604</integer>
+									<integer>598</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 19}, {231, 652}}</string>
+							<string>{{0, 9817}, {231, 652}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +336,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ContractClauseSaver.m</string>
+								<string>Database.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -345,11 +344,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ContractClauseSaver.m</string>
+										<string>Database.m</string>
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>FBD0E0E512BA5F6900123DAB</string>
+										<string>FBD0E0EA12BA5F8D00123DAB</string>
 										<key>history</key>
 										<array>
 											<string>FBD0E0B312BA58D700123DAB</string>
@@ -364,14 +363,14 @@
 											<string>FBD0E0BC12BA58D700123DAB</string>
 											<string>FBD0E0BF12BA58D700123DAB</string>
 											<string>FBD0E0C212BA58D700123DAB</string>
-											<string>FBD0E0C312BA58D700123DAB</string>
 											<string>FBD0E0D112BA5AA400123DAB</string>
 											<string>FBD0E0DF12BA5F6900123DAB</string>
 											<string>FBD0E0E012BA5F6900123DAB</string>
 											<string>FBD0E0E112BA5F6900123DAB</string>
 											<string>FBD0E0E212BA5F6900123DAB</string>
 											<string>FBD0E0E312BA5F6900123DAB</string>
-											<string>FBD0E0E412BA5F6900123DAB</string>
+											<string>FBD0E0E812BA5F8D00123DAB</string>
+											<string>FBD0E0E912BA5F8D00123DAB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -911,6 +910,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
