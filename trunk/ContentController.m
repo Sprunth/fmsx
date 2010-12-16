@@ -1708,14 +1708,15 @@ clubLBCView, clubFacilitiesView;
 
 - (void)exportPlayersToCSV:(NSMutableArray *)array
 {
-	NSMutableString *csv = [[NSMutableString alloc] initWithString:@"\"Row ID\",\"UID\",\"Name\",\"Team\",\"Nation\",\"Age\",\"Position\",\"CA\",\"PA\",\"Home Rep\",\"Current Rep\",\"World Rep\",\"Condition\",\"Value\",\"Asking Price\"\n"];
+	NSMutableString *csv = [[NSMutableString alloc] initWithString:@"\"Row ID\",\"UID\",\"Name\",\"Team\",\"Nation\",\"Age\",\"Position\",\"CA\",\"PA\",\"Home Rep\",\"Current Rep\",\"World Rep\",\"Condition\",\"Value\",\"Asking Price\",\"PGP\"\n"];
 	
 	for (Person *item in array) {
-		[csv appendFormat:@"\"%d\",\"%d\",\"%@\",\"%@\",\"%@\",\"%d\",\"%@\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\"\n",
+		[csv appendFormat:@"\"%d\",\"%d\",\"%@\",\"%@\",\"%@\",\"%d\",\"%@\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%f\"\n",
 			[item rowID],[item UID],[item name],[item teamString],[item nationString],[item age],
 			[item positionString],[[item playerData] currentAbility],[[item playerData] potentialAbility],
 			[[item playerData] homeReputation],[[item playerData] currentReputation],[[item playerData] worldReputation],
-			[[item playerData] conditionPercent], [[item playerData] value],[[item playerData] askingPrice]];
+			[[item playerData] conditionPercent], [[item playerData] value],[[item playerData] askingPrice]],
+			[item playerGrowthPotentialVal];
 	}
 	
 	NSSavePanel *op = [NSSavePanel savePanel];
