@@ -51,4 +51,6 @@
 @property(assign,readwrite) char type, info;
 @property(assign,readwrite) int fee;
 
+- (NSArray *)typeStrings;
+
 @end

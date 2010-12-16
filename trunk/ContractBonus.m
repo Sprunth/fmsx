@@ -12,4 +12,15 @@
 
 @synthesize type, fee;
 
+- (NSArray *)typeStrings
+{
+	NSArray *strings = [NSArray arrayWithObjects:
+						NSLocalizedString(@"Appearance Fee",@"contract bonus type"),
+						NSLocalizedString(@"Goal Bonus",@"contract bonus type"),
+						NSLocalizedString(@"Clean Sheet Bonus",@"contract bonus type"),
+						NSLocalizedString(@"Team Of The Year Bonus (Division)",@"contract bonus type"),
+						nil];
+	return strings;
+}
+
 @end
