@@ -11,7 +11,10 @@
 // contract bonus type
 #define CBT_APPEARANCE_FEE					0
 #define CBT_GOAL_BONUS						1
-#define CBT_TEAM_OF_THE_YEAR_BONUS_DIVISION	2
+#define CBT_CLEAN_SHEET_BONUS				2
+#define CBT_TEAM_OF_THE_YEAR_BONUS_DIVISION	3
+
+#define CBT_MAX	3
 
 @interface ContractBonus : NSObject {
 	char type;

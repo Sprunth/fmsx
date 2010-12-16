@@ -1087,7 +1087,7 @@ unknownInt1, unknownInt2, unknownInt3, unknownInt4;
 			[object setController:controller];
 			[tempArray addObject:object]; 
 		}
-//		NSLog(@"person %d - %d at %d ( %@ )",i,[object UID],*byteOffset,[object name]);
+		NSLog(@"person %d - %d at %d ( %@ )",i,[object UID],*byteOffset,[object name]);
 	}
 	[self setStatus:NSLocalizedString(@"assigning people...", @"editor status")];
 	[self setPeople:tempArray];

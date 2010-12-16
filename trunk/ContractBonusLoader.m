@@ -24,6 +24,8 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setFee:ibuffer];
 	
+	if (cbuffer>CBT_MAX) { NSLog(@"CBT: %d - fee: %i",cbuffer, ibuffer); }
+	
 	*byteOffset = offset;
 	
 	return object;

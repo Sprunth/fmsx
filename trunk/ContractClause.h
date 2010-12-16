@@ -9,13 +9,25 @@
 #import <Cocoa/Cocoa.h>
 
 // contract clause types
-#define CCT_MIN_FEE_RELEASE					0
-#define CCT_RELEGATION_RELEASE				1
-#define CCT_NON_PROMOTION_RELEASE			2
-#define CCT_YEARLY_WAGE_RISE_PERCENTAGE		3
-#define CCT_PROMOTION_WAGE_INCREASE			4
-#define CCT_RELEGATION_WAGE_DECREASE		5
+#define CCT_MIN_FEE_RELEASE										0
+#define CCT_RELEGATION_RELEASE									1
+#define CCT_NON_PROMOTION_RELEASE								2
+#define CCT_YEARLY_WAGE_RISE_PERCENTAGE							3
+#define CCT_PROMOTION_WAGE_INCREASE								4
+#define CCT_RELEGATION_WAGE_DECREASE							5
+#define CCT_MANAGER_COACH_JOB_RELEASE							6
+#define CCT_SELL_ON_FEE_PERCENTAGE								8
+#define CCT_SELL_ON_FEE_PROFIT_PERCENTAGE						9
+#define CCT_SEASONAL_LANDMARK_GOAL_BONUS						10
+#define CCT_ONE_YEAR_EXTENSION_AFTER_LEAGUE_GAMES_FINAL_SEASON	11
+#define CCT_MATCH_HIGHEST_EARNER								12
+#define CCT_WAGE_AFTER_REACHING_CLUB_CAREER_LEAGUE_GAMES		13
+#define CCT_TOP_DIVISION_PROMOTION_WAGE_RISE					14
+#define CCT_TOP_DIVISION_RELEGATION_WAGE_DROP					15
+#define CCT_MIN_FEE_RELEASE_FOREIGN_CLUBS						16
+#define CCT_MIN_FEE_RELEASE_HIGHER_DIVISION_CLUBS				17
 
+#define CCT_MAX		17
 
 /*
 
@@ -32,11 +44,11 @@
 */
 
 @interface ContractClause : NSObject {
-	char type, unknownChar1;
+	char type, info;
 	int fee;
 }
 
-@property(assign,readwrite) char type, unknownChar1;
+@property(assign,readwrite) char type, info;
 @property(assign,readwrite) int fee;
 
 @end

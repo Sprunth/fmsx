@@ -11,6 +11,6 @@
 
 @implementation ContractClause
 
-@synthesize fee, type, unknownChar1;
+@synthesize fee, type, info;
 
 @end

@@ -2346,8 +2346,6 @@
 				FBE7F1F510B31A93004EF1CF /* PlayerReplacement.m */,
 				FBE7F1FA10B31F86004EF1CF /* FixtureBlock.h */,
 				FBE7F1FB10B31F86004EF1CF /* FixtureBlock.m */,
-				FB17EDDF10B6C23C006B17CE /* ContractClause.h */,
-				FB17EDE010B6C23C006B17CE /* ContractClause.m */,
 				FBE96FFA10B832C5001F3139 /* ShortFixture.h */,
 				FBE96FFB10B832C5001F3139 /* ShortFixture.m */,
 				FBD189F210BC097600E66ADC /* Fixture.h */,
@@ -2748,6 +2746,8 @@
 				FB46A77710BF13A50068D6FE /* StaffTendency.m */,
 				FBF4C9EB1292D1C5002E5632 /* ContractBonus.h */,
 				FBF4C9EC1292D1C5002E5632 /* ContractBonus.m */,
+				FB17EDDF10B6C23C006B17CE /* ContractClause.h */,
+				FB17EDE010B6C23C006B17CE /* ContractClause.m */,
 			);
 			name = "Person Sub-Entities";
 			sourceTree = "<group>";

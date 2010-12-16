@@ -24,9 +24,9 @@
 	[data getBytes:&ibuffer range:NSMakeRange(offset, 4)]; offset += 4;
 	[object setFee:ibuffer];
 	
-	// ???
+	// info - eg number of games before bonus
 	[data getBytes:&cbuffer range:NSMakeRange(offset, 1)]; offset += 1;
-	[object setUnknownChar1:cbuffer];
+	[object setInfo:cbuffer];
 	
 	*byteOffset = offset;
 	

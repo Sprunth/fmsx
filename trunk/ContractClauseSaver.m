@@ -20,7 +20,7 @@
 	[data appendBytes:&cbuffer length:1];
 	ibuffer = [object fee];
 	[data appendBytes:&ibuffer length:4];
-	cbuffer = [object unknownChar1];
+	cbuffer = [object info];
 	[data appendBytes:&cbuffer length:1];
 }
 
